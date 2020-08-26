@@ -1,0 +1,27 @@
+.Banner{
+    background-image: linear-gradient(to right, #4b44ff, #34bff3);
+    .bannerPatterns{
+        background-image: url("/assets/Banner/layer-14-copy@3x.png");
+        background-size: cover;
+        width: 70%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h3{
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin: 0;
+            span{
+                font-weight: 200;
+            }
+        }
+        .title{
+            color: white;
+            font-size: 2rem;
+        }
+    }
+}
