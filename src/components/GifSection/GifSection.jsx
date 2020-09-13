@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styles from "./GifSection.module.scss";
-import {GoogleMaps,GoogleIcon,MapIcon,MagicIcon} from "../SvgIcons/SvgIcons"
+import { GoogleMaps, GoogleIcon, MapIcon, MagicIcon } from "../SvgIcons/SvgIcons";
 class GifSection extends Component{
     render(){
         return(
@@ -27,7 +27,9 @@ to suit your business competence.
                 <div style={{backgroundImage:`url("/assets/Gif sections/layer-106@3x.png")`}} className={styles.imgContainer}>
                     {/* <img className={styles.background} src={"/assets/Gif sections/layer-106@3x.png"} alt="background"/> */}
 
-                    <img src={"/assets/Gif sections/layer-107@3x.png"} alt="mobile screen"/>
+                    <img src={"/assets/Gif sections/i-phone.png"} alt="mobile Cover" className={styles.mobileCover}/>
+                    <img src={"/assets/Gif sections/layer-107@3x.png"} alt="mobile screen" className={styles.mobileScreen}/>
+
                 </div>
             </div>
         )

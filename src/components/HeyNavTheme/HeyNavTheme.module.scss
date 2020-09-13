@@ -1,4 +1,4 @@
-.GifSection{
+.HeyNavTheme{
     display: flex;
     width: 60%;
     margin:4rem auto;
@@ -8,7 +8,7 @@
             font-weight: 500;
             margin: .5rem 0;
             span{
-                color: #4b44ff;
+                color: #14c570;
                 font-weight: bold;
             }
         }
@@ -45,10 +45,11 @@
                 display: flex;
                 align-items: center;
                 margin: 1rem;
-                svg{
-                    width:1.5rem;
-                    height: 1.5rem;
-                    margin-left: .8rem;
+                img{
+                    width:30px;
+                    height: 30px;
+                    margin-left: 12px;
+                    object-fit: contain;
                 }
             }
             .blueFilter{

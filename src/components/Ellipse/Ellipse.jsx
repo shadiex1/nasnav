@@ -1,9 +1,18 @@
 import React from 'react';
 import styles from "./Ellipse.module.scss";
 
-const Ellipse = props=>{
+const Ellipse = props => {
+    const {top,left,width,height,color,right} = props
     return(
-        <div className={styles.Ellipse}>
+        <div style={{
+            top: `${top}`,
+            left: `${left}`,
+            width: `${width}`,
+            height: `${height}`,
+            backgroundColor: `${color}`,
+            right:`${right}`
+        }}
+            className={styles.Ellipse}>
 
         </div>
     )

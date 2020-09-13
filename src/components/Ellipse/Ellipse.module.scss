@@ -3,18 +3,9 @@
     height: 1rem;
     background-color: red;
     border-radius: 50%;
-    -webkit-animation: 1s blink ease infinite;
-    -moz-animation: 1s blink ease infinite;
-    -ms-animation: 1s blink ease infinite;
-    -o-animation: 1s blink ease infinite;
-    animation: 1s blink ease infinite;    @keyframes blink {
-    from, to {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-  }
+    position: absolute;
+    top: 90%;
+    // left: 20%;
 
 }
 
