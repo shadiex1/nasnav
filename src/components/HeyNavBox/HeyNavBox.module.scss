@@ -1,4 +1,4 @@
-.HeyNavTheme {
+.GifSection {
   display: flex;
   width: 60%;
   margin: 4rem auto;
@@ -8,7 +8,7 @@
       font-weight: 500;
       margin: 0.5rem 0;
       span {
-        color: #14c570;
+        color: #4b44ff;
         font-weight: bold;
       }
     }
@@ -43,11 +43,10 @@
         display: flex;
         align-items: center;
         margin: 1rem;
-        img {
-          width: 30px;
-          height: 30px;
-          margin-left: 12px;
-          object-fit: contain;
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-left: 0.8rem;
         }
       }
       .blueFilter {
@@ -79,6 +78,7 @@
   .imgContainer {
     width: 100%;
     height: 20rem;
+    // object-fit: fill;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -89,19 +89,44 @@
       position: relative;
       transform: translateY(1rem);
       border-radius: 10px;
-      width: 50%;
+      // width: 50%;
       height: 100%;
       object-fit: contain;
       display: block;
     }
     .mobileScreen {
       position: absolute;
-      transform: translateY(4.5rem);
+      transform: translateY(3rem);
       border-radius: 10px;
       // width: 100%;
-      height: 380px;
-      object-fit: contain;
+      // height: 60%;
+      height: 350px;
+      width: 220px;
+      object-fit: cover;
       display: block;
+    }
+  }
+}
+
+@media screen and (max-width:1100px){
+  .GifSection{
+    flex-direction: column;
+    width: 80%;
+    .description{
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2{
+        font-size: 1.3rem;
+      }
+    }
+    .imgContainer{
+      .mobileScreen{
+        height: 290px;
+        width: 240px;
+        transform: translateY(1rem);
+      }
     }
   }
 }

@@ -1,0 +1,48 @@
+.Map{
+        position: relative;
+ max-width: 53rem;
+    margin: 2rem auto 0;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 680px) {
+      max-width: initial;
+      margin: 2rem -12rem 0 -16rem;
+    }
+  
+    @media screen and (max-width: 230px) {
+      margin: 2rem -15rem 0;
+    }
+
+    .list{
+        list-style: none;
+    padding-left: 0;
+    }
+    .flagItem{
+        position: absolute;
+    }
+    .egypt{
+         top: 35.5%;
+    left: 53%;
+    }
+    .saudi{  top: 39%;
+    left: 57.85%;
+        img{
+            width: 35px;
+        }
+}
+    .poland{   top: 20%;
+    left: 51%;}
+    .nigeria{  top: 51%;
+    left: 46%;}
+
+    .pointer{
+         display: block;
+    margin: -.2rem auto 0;
+    width: .55rem;
+    height: .55rem;
+    background-color: #2B7AF3;
+    border: .4rem solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba($color: #000, $alpha: .2)
+    }
+}

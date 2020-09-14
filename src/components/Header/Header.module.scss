@@ -1,6 +1,11 @@
-.Header{
-    background-color: #f2f2ff;
-    height: 750px;
-    overflow: hidden;
-    width: 100%;
+.Header {
+  background-color: #f2f2ff;
+  height: 750px;
+  overflow: hidden;
+  width: 100%;
+}
+@media screen and (max-width:1000px){
+  .Header{
+      height: 850px;
+  }
 }

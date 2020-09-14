@@ -1,121 +1,203 @@
-.Showcase{
-    .showcaseContainer{
+.Showcase {
+  .showcaseContainer {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .searchbar {
+      margin: 2rem auto;
+      width: 35%;
+      background-color: white;
+      // border: 1px solid black;
+      display: flex;
+      align-items: center;
+      border-radius: 10px 10px 10px 0;
+      justify-content: space-between;
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+        // margin-right: .5rem;
+        margin: 0 0.5rem;
+      }
+      input {
+        border: none;
+        padding: 0.8rem;
+        border-radius: 10px;
+        width: 15rem;
+        outline: none;
+        &::placeholder {
+          color: #4889f5;
+        }
+      }
+      .iconConatiner {
+        width: 3rem;
+        height: 2.5rem;
+        border-radius: 10px;
+        box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.07);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(to top, #4b44ff, #347df3);
+        cursor: pointer;
+        svg {
+          width: 1.3rem;
+
+          fill: white;
+        }
+      }
+    }
+    .title {
+      font-size: 1.8rem;
+      width: 80%;
+      h2 {
+        text-transform: uppercase;
         width: 70%;
         margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .searchbar{
-      
-            margin: 2rem auto;
-            width: 35%;
-            background-color: white;
-            // border: 1px solid black;
-            display: flex;
-            align-items: center;
-            border-radius: 10px 10px 10px 0;
-            justify-content: space-between;
-            img{
-                width: 1.5rem;
-                height: 1.5rem;
-                // margin-right: .5rem;
-                margin: 0 .5rem;
-            }
-            input{
-                border: none;
-                padding: .8rem;
-                border-radius: 10px;
-                width: 15rem;
-                outline: none;
-                &::placeholder{
-                    color:#4889f5                    ;
-                }
-            }
-            .iconConatiner{
-                width: 3rem;
-                height:2.5rem;
-                border-radius: 10px;
-                box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.07);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-  background-image: linear-gradient(to top, #4b44ff, #347df3);
-  cursor: pointer;
-                svg{width: 1.3rem;
-
-                    fill: white;
-                }
-            }
-            
-        }.title{
-            font-size: 1.8rem;
-            width: 80%;
-                h2{
-                    text-transform: uppercase;
-                    width: 70%;
-                    margin: auto;
-                    text-align: center;
-                    span{
-                        color: #4b44ff ;
-                    }
-                }
-            }
-            .btn{
-                
-                    margin: 1rem .4rem;
-                        display: block;
-                        width: 8rem;
-                        height: 1.2rem;
-                        background-color: white;
-                        padding: .5rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        border-radius: 10px 10px 0 10px;
-                        box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.07);
-                        font-size: .7rem;
-                        cursor: pointer;
-                        img{
-                            display: block;
-                            width: 1.1rem;
-                            height: 1.1rem;
-                            margin-right: .5rem;
-                        }
-                  
-               
-                        border-radius: 10px 10px 10px 0px;
-                        background: linear-gradient(90deg,rgba(75,68,255,1) 40%, rgba(52,191,243,1)130%, );
-                        // background-image: linear-gradient(to right, #4b44ff,  #34bff3);
-                        color: white;
-                    
-            }
-            .gallery{
-                display: flex;
-                margin: 2rem auto;
-                img{
-                    object-fit: contain;
-                    width: 20rem;
-                    height: 30rem;
-                    z-index: 2;
-                }
-                .sideLeft{
-                    // transform: translateX(120rem) ;
-                    // transform: translateX(20rem) rotate(22deg); //stacked
-                    transform:translateX(12rem) rotate(0); //left slide
-
-                    z-index: 1;
-                }
-                .sideRight{
-                    // transform: translateX(120rem) ;
-                    // transform: translateX(-20rem) rotate(-22deg);//stacked
-                    transform:translateX(-12rem) rotate(0); // right slide
-
-                    z-index: 1;
-                    &:hover{
-                        transform:translateX(-12rem) rotate(0);
-                    }
-                }
-            }
+        text-align: center;
+        span {
+          color: #4b44ff;
+        }
+      }
     }
+    .btn {
+      margin: 1rem 0.4rem;
+      display: block;
+      width: 8rem;
+      height: 1.2rem;
+      background-color: white;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px 10px 0 10px;
+      box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.07);
+      font-size: 0.7rem;
+      cursor: pointer;
+      img {
+        display: block;
+        width: 1.1rem;
+        height: 1.1rem;
+        margin-right: 0.5rem;
+      }
+
+      border-radius: 10px 10px 10px 0px;
+      background: linear-gradient(
+        90deg,
+        rgba(75, 68, 255, 1) 40%,
+        rgba(52, 191, 243, 1) 130%
+      );
+      // background-image: linear-gradient(to right, #4b44ff,  #34bff3);
+      color: white;
+    }
+    .gallery {
+      display: flex;
+      margin: 1rem auto;
+       animation-name: startup;
+  animation-duration: 5s;
+      img {
+        object-fit: contain;
+        width: 20rem;
+        height: 32rem;
+        z-index: 2;
+      }
+      .sideLeft {
+        // transform: translateX(120rem) ;
+        // transform: translateX(20rem) rotate(22deg); //stacked
+        transform: translateX(12rem) rotate(0); //left slide
+
+        z-index: 1;
+        animation-name: slideLeft;
+        animation-duration: 3s;
+      }
+      .sideRight {
+        // transform: translateX(120rem) ;
+        // transform: translateX(-20rem) rotate(-22deg);//stacked
+        transform: translateX(-12rem) rotate(0); // right slide
+        animation-name: slideRight;
+        animation-duration: 3s;
+        // animation-delay: 4s;
+        z-index: 1;
+        &:hover {
+          transform: translateX(-12rem) rotate(0);
+        }
+      }
+    }
+  }
+}
+
+@keyframes startup {
+  0%   {transform: translateY(400px);}
+  25%  {
+    transform: translateY(0px);
+    
+  }
+  100% {transform: translateY(0px);}
+}
+@keyframes slideRight {
+  0%   {
+              transform: translateX(-20rem) rotate(-22deg);//stacked
+
+  }
+  // 25%  {
+  //   transform: translateY(0px);
+    
+  // }
+  100% {
+        transform: translateX(-12rem) rotate(0); // right slide
+  
+  }
+}
+@keyframes slideLeft {
+  0%   {
+        transform: translateX(20rem) rotate(22deg); //stacked
+
+  }
+  // 25%  {
+  //   transform: translateY(0px);
+    
+  // }
+  100% {
+        transform: translateX(12rem) rotate(0); //left slide
+  
+  }
+}
+
+@media screen and (max-width:1000px){
+  .Showcase{
+      .showcaseContainer{
+    width: 100%;
+    .searchbar{
+      width: 50%;
+      margin:  auto;
+      margin-bottom: 1rem;
+    }
+    .title{
+      width: 100%;
+    }
+    .gallery{
+      margin: 1rem 0;
+      .sideLeft{
+        transform: translateX(20rem) rotate(22deg); //stacked
+
+      }
+      .sideRight{
+                transform: translateX(-20rem) rotate(-22deg);//stacked
+
+      }
+    }
+  }
+  }
+
+}
+
+@media screen and (max-width:500px){
+  .showcase{
+    .showcaseContainer{
+      .searchbar{
+        width: 80%;
+      }
+    }
+  }
 }

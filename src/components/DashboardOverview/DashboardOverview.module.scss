@@ -1,69 +1,70 @@
-.DashboardOverviewPattern{
-    background:  url("/assets/Banner/layer-14-copy@3x.png"), linear-gradient(90deg,rgba(75,68,255,1) 50%, rgba(52,191,243,1) 100%, );
-    background-size: cover;
-    background-position: center;
-    // height: 60vh;
-    height: 500px;
-    display: flex;
+.DashboardOverviewPattern {
+  background: url("/assets/Banner/layer-14-copy@3x.png"),
+    linear-gradient(90deg, rgba(75, 68, 255, 1) 50%, rgba(52, 191, 243, 1) 100%);
+  background-size: cover;
+  background-position: center;
+  // height: 60vh;
+  height: 500px;
+  display: flex;
 
-    .DashboardOverview{
-        width: 70%;
-        margin: auto auto;      
-    
-        h3{
-            text-align: center;
-            color: white;
-            font-size: 30px;
-            font-weight: normal;
-            span{
-                font-weight: bold;
-            }
-        }
-        p{
-            text-align: center;
-            color: white;
-            width: 50%;
-            margin: 20px auto;
-        }
-        .features{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .feature{
-                background-color: white;
-                margin: 10px;
-                border-radius: 20px 20px 5px 20px;
-                height: 150px;
-                padding: 15px;
-                .imgContainer{
-                    background-image: linear-gradient(to top, #4b44ff, #34bff3);
-                    width: 30%;
-                    height: 50px;
-                    border-radius: 10px 10px 0 10px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    img{
-                        width: 40px;
-                        height: 30px;
-                        object-fit: contain;
-                    }
-                }
-                h3{
-                    font-size: 16px;
-                    color: black;
-                    text-align: left;
-                    margin-bottom: 5px;;
-                    font-weight: bolder;
-                }
-                p{
-                    color: #35393a;
-                    text-align: left;
-                    font-size: 14px;
-                    margin-top: 5px;
-                    width: 100%;
-                }
-            }
-        }
+  .DashboardOverview {
+    width: 70%;
+    margin: auto auto;
+
+    h3 {
+      text-align: center;
+      color: white;
+      font-size: 30px;
+      font-weight: normal;
+      span {
+        font-weight: bold;
+      }
     }
+    p {
+      text-align: center;
+      color: white;
+      width: 50%;
+      margin: 20px auto;
+    }
+    .features {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .feature {
+        background-color: white;
+        margin: 10px;
+        border-radius: 20px 20px 5px 20px;
+        height: 150px;
+        padding: 15px;
+        .imgContainer {
+          background-image: linear-gradient(to top, #4b44ff, #34bff3);
+          width: 30%;
+          height: 50px;
+          border-radius: 10px 10px 0 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 40px;
+            height: 30px;
+            object-fit: contain;
+          }
+        }
+        h3 {
+          font-size: 16px;
+          color: black;
+          text-align: left;
+          margin-bottom: 5px;
+          font-weight: bolder;
+        }
+        p {
+          color: #35393a;
+          text-align: left;
+          font-size: 14px;
+          margin-top: 5px;
+          width: 100%;
+        }
+      }
+    }
+  }
 }

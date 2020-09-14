@@ -1,28 +1,38 @@
 import React, { Component } from "react";
-import styles from "./HeyNav360.module.scss";
-import { MagicIcon, RightArrowWide } from "../SvgIcons/SvgIcons";
-
-class HeyNav360 extends Component {
+import styles from "./HeyNavBox.module.scss";
+import {
+  GoogleMaps,
+  GoogleIcon,
+  MapIcon,
+  MagicIcon,
+} from "../SvgIcons/SvgIcons";
+class GifSection extends Component {
   render() {
+    const {data}=this.props
     return (
-      <div className={styles.HeyNav360}>
+      <div className={styles.GifSection}>
         <div className={styles.description}>
           <h2>
-            Impress Your <span>customers</span>
+            {data.title[0]} <span>{data.title[1]}</span>
           </h2>
           <span className={styles.subtitle}>
-            say hey to Nav360
+            {data.subtitle}
             <img src={"/assets/Gif sections/layer-104@3x.png"} alt="logo" />
           </span>
-          <p>
-            A unique buying experience that makes you the strongest among your
-            competitors in the market Through a completely real buying
-            experience, the user is now entering your branches and they are
-            closed.
-          </p>
-          <p className={styles.examples}>
-            see real examples <RightArrowWide />{" "}
-          </p>
+          <p>{data.description}</p>
+          <ul className={styles.list}>
+            <li>
+              {data.list[0]} <GoogleMaps />
+            </li>
+            <li>
+              {data.list[1]}
+              <GoogleIcon />
+            </li>
+            <li className={styles.blueFilter}>
+              {data.list[2]}
+              <MapIcon />
+            </li>
+          </ul>
           <div className={styles.magic}>
             <MagicIcon />{" "}
             <p>
@@ -34,19 +44,17 @@ class HeyNav360 extends Component {
 
         <div
           style={{
-            backgroundImage: `url("/assets/layer-106.png")`,
+            backgroundImage: `url("${data.BackgroundCover}")`,
           }}
           className={styles.imgContainer}
         >
-          {/* <img className={styles.background} src={"/assets/Gif sections/layer-106@3x.png"} alt="background"/> */}
-
           <img
             src={"/assets/Gif sections/i-phone.png"}
             alt="mobile Cover"
             className={styles.mobileCover}
           />
           <img
-            src={"/assets/01-view-copy.png"}
+            src={data.MobileScreen}
             alt="mobile screen"
             className={styles.mobileScreen}
           />
@@ -56,4 +64,4 @@ class HeyNav360 extends Component {
   }
 }
 
-export default HeyNav360;
+export default GifSection;

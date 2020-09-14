@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import styles from "./HeyNavTheme.module.scss";
-import {
-
-  MagicIcon,
-} from "../SvgIcons/SvgIcons";
+import { MagicIcon } from "../SvgIcons/SvgIcons";
 
 class HeyNavBox extends Component {
   render() {
@@ -23,20 +20,20 @@ class HeyNavBox extends Component {
           </p>
           <ul className={styles.list}>
             <li>
-                        Payment methods
-               <img src={"/assets/HeyNavTheme/layer-111.png"}/>
-               <img src={"/assets/HeyNavTheme/layer-112.png"}/>
-               <img src={"/assets/HeyNavTheme/layer-113.png"}/>
+              Payment methods
+              <img src={"/assets/HeyNavTheme/layer-111.png"} />
+              <img src={"/assets/HeyNavTheme/layer-112.png"} />
+              <img src={"/assets/HeyNavTheme/layer-113.png"} />
             </li>
             <li>
               Shipping methods
-              <img src={"/assets/HeyNavTheme/layer-108.png"}/>
-              <img src={"/assets/HeyNavTheme/layer-109.png"}/>
-              <img src={"/assets/HeyNavTheme/layer-110.png"}/>
+              <img src={"/assets/HeyNavTheme/layer-108.png"} />
+              <img src={"/assets/HeyNavTheme/layer-109.png"} />
+              <img src={"/assets/HeyNavTheme/layer-110.png"} />
             </li>
             <li className={styles.blueFilter}>
               A totally unique buying experience
-              <img src={"/assets/HeyNavTheme/arrow.png"}/>
+              <img src={"/assets/HeyNavTheme/arrow.png"} />
             </li>
             {/* <li>Your products in google map <MagicIcon/></li> */}
           </ul>

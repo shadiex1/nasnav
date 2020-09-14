@@ -1,64 +1,78 @@
 @import "../../VariablesScss/variables";
-.MenuContainer{
-    // background-image: linear-gradient(to top, #edecff, #44aeff);
-    background-color: #f2f2ff;
-
+.MenuContainer {
+  // background-image: linear-gradient(to top, #edecff, #44aeff);
+  background-color: #f2f2ff;
 }
-.Menu{
-    display: flex;
-    width: 80%;
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
-    .logoContainer{
-        width: 8rem;
-        img{
-            width: 100%;
-            height: 100%;
-        }
+.Menu {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  .logoContainer {
+    width: 8rem;
+    img {
+      width: 100%;
+      height: 100%;
     }
-    .navigation{      
-            //   width: 10rem;
+  }
+  .navigation {
+    //   width: 10rem;
 
-        ul{margin: 0;
-            padding: 0;
-            list-style-type: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            li{
-                display: inline-block;
-                margin: 1rem 1.5rem;
-                cursor: pointer;
-                font-weight: 500;
-                font-size: .8rem;
-                
-            }.btn{
-                margin: 1rem .4rem;
-                    display: block;
-                    width: 7.5rem;
-                    height: 1.2rem;
-                    background-color: $color-white;
-                    padding: .5rem;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 10px 10px 0 10px;
-                    box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.07);
-                    img{
-                        display: block;
-                        width: 1.1rem;
-                        height: 1.1rem;
-                        margin-right: .5rem;
-                    }
-                }
-                .gradientBtn{
-                    border-radius: 10px 10px 10px 0px;
-                    // background-image: linear-gradient(to right, #4b44ff , rgba(#34bff3,.9));
-                    background: linear-gradient(90deg,rgba(75,68,255,1) 0%, rgba(52,191,243,1) 100%, );
-
-                    color: $color-white;
-                }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li {
+        display: inline-block;
+        margin: 1rem 1.5rem;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 0.8rem;
+      }
+      .btn {
+        margin: 1rem 0.4rem;
+        display: block;
+        width: 7.5rem;
+        height: 1.2rem;
+        background-color: $color-white;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px 10px 0 10px;
+        box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.07);
+        img {
+          display: block;
+          width: 1.1rem;
+          height: 1.1rem;
+          margin-right: 0.5rem;
         }
+      }
+      .gradientBtn {
+        border-radius: 10px 10px 10px 0px;
+        // background-image: linear-gradient(to right, #4b44ff , rgba(#34bff3,.9));
+        background: linear-gradient(
+          90deg,
+          rgba(75, 68, 255, 1) 0%,
+          rgba(52, 191, 243, 1) 100%
+        );
+
+        color: $color-white;
+      }
     }
+  }
+}
+
+@media screen and (max-width:1000px){
+  .Menu{
+    flex-direction: column;
+    margin: 1rem auto;
+    .navigationList{
+      display: none;
+    }
+  }
 }
