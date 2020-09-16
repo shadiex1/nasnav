@@ -1,3 +1,30 @@
+.header{
+    max-width: 53rem;
+    margin: auto;
+    text-align: center;
+    h3{
+        width: 70%;
+        margin: 2rem auto;
+        font-weight: 500;
+        font-size: 35px;
+        span{
+            color: #4b44ff;
+            font-weight: bold;
+        }
+    }
+    p{
+        width: 70%;
+margin: 1rem auto; 
+color: #35393a
+
+;
+   }
+   img{
+       margin-bottom: 1rem;
+   }
+}
+
+
 .Map{
         position: relative;
  max-width: 53rem;

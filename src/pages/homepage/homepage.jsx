@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "../../components/Header/Header";
 import HeyNavBox from "../../components/HeyNavBox/HeyNavBox";
+import HowTo from "../../components/HowTo/HowTo"
 import HeyNavTheme from "../../components/HeyNavTheme/HeyNavTheme";
 import Banner from "../../components/Banner/Banner";
 import HeyNav360 from "../../components/HeyNav360/HeyNav360";
@@ -60,12 +61,13 @@ class Homepage extends Component {
       <div>
         <Header />
         <HeyNavBox data={this.state.HeynavBox} />
-        <Banner
+        {/* <Banner
           title={"you don't need marketing experts"}
           description={
             "A device that is linked to your website with each scan that increases your appearance on search engines"
           }
-        />
+        /> */}
+        <HowTo/>
         <HeyNavTheme data={this.state.HeyNavTheme} />
         <Banner
           title={"you don't need a professional designer"}

@@ -1,0 +1,102 @@
+.HowTo{
+     background: url("/assets/Banner/layer-14-copy@3x.png"),
+    linear-gradient(90deg, rgba(75, 68, 255, 1) 50%, rgba(52, 191, 243, 1) 100%);
+  background-size: cover;
+  background-position: center;
+  height: 24rem;
+  display: flex;
+  align-items: center;
+  .content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      margin: auto;
+      .description{
+        width: 40%;
+        .mainTitle{
+          color: white;
+        }
+        .firstSubtitle{
+          color: #ddefff;
+          opacity: .5;
+        }
+        .firstSubParagraph{
+          color: #ddefff;
+          opacity: .5;
+        }
+        .secondSubtitle{
+          color: #7bfffd;
+
+        }
+        .secondParagraph{
+          color: #ddefff;
+        }
+      }
+      .imgSection{
+        background-color: white;
+        border-radius: 20px 20px 20px 5px;
+        box-shadow: 0px 0px 20px 0 rgba(52, 48, 174, 0.49);
+        padding: 10px;
+        width: 25%;
+        height: 250px;
+        .check{
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         text-align: center;
+         img{
+           width: 100%;
+           height: 70px;
+           object-fit: contain;
+         }
+         p{
+           span{
+             font-weight: bold;
+           }
+         }
+        }
+        .wrapper{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 40%;
+
+        }
+        .analyze{
+          box-shadow: 0px 2px 7px 0 rgba(86, 86, 93, 0.3);
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-right: 20px;
+          color: #7f8b92;
+          border-radius: 10px;
+                    padding: 10px;
+                    height: 100px;
+
+          img{
+            object-fit: contain;
+            width: 100%;
+            height: 30px;
+
+          }
+        }
+        .upload{
+         background-image: linear-gradient(to top, #4b44ff, #34bff3);
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         color: #ffffff;
+                   border-radius: 10px;
+          padding: 10px;
+         img{
+           width: 100%;
+           object-fit: contain;
+           height: 30px;
+
+         }
+;
+        }
+      }
+  }
+}

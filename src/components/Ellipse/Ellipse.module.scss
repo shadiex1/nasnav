@@ -5,22 +5,29 @@
   border-radius: 50%;
   position: absolute;
   top: 90%;
-  // animation-name: blink;
-  // animation-duration: 3s;
-  // animation-iteration-count: infinite;
+  animation-name: blink;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  right: 100px !important;
 }
 
 
 @keyframes blink {
   0%   {
-opacity: 0;
+// opacity: 0;
+transform: translateX(20px) rotate(150deg) ;
+right: 200px !important;
+
   }
-  // 25%  {
-  //   transform: translateY(0px);
+  50%  {
+    transform: translateX(0) rotate(0);
+    right: 100px !important;
     
-  // }
+  }
   100% {
-        opacity: 1;
+        // opacity: 1;
+        transform: translateX(20px);
+
   
   }
 }

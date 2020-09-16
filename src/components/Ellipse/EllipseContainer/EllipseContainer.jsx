@@ -5,12 +5,16 @@ const EllipseContainer = props => {
     return (
       <div className={styles.EllipseContainer}>
         <Ellipse
-          color="#4b44ff"
+          color="black"
           width="15px"
           hieght="15px"
           top="50%"
           right="20%"
+          className={styles.Ellipse1}
         />
+        <div className={styles.new}>
+          
+        </div>
         <Ellipse
           color="#4b44ff"
           width="15px"

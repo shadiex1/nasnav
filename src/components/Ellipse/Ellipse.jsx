@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Ellipse.module.scss";
 
 const Ellipse = (props) => {
-  const { top, left, width, height, color, right } = props;
+  const { top, left, width, height, color, right, className } = props;
   return (
     <div
       style={{
@@ -13,7 +13,7 @@ const Ellipse = (props) => {
         backgroundColor: `${color}`,
         right: `${right}`,
       }}
-      className={styles.Ellipse}
+      className={[styles.Ellipse, className].join(" ")}
     ></div>
   );
 };
