@@ -22,9 +22,15 @@ class Showcase extends Component {
               sell more products with <span>google</span>
             </h2>
           </div>
-          <div className={styles.btn}>
+          <div className={styles.btnsContainer}>
+            <div className={styles.btn}>
             <img src={"/assets/Menu/layer-2@3x.png"} /> Watch how to do it
           </div>
+            <div className={styles.btn}>
+            <img src={"/assets/Menu/layer-2@3x.png"} /> Watch how to do it
+          </div>
+          </div>
+          
           <div className={styles.gallery}>
             <img
               className={styles.sideLeft}

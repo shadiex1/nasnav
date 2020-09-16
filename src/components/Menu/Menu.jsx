@@ -14,8 +14,8 @@ class Menu extends Component {
           <div className={styles.navigation}>
             <ul>
               <div className={styles.navigationList}>
-                 <li className={styles.link}>How it work </li>
-              <li className={styles.link}> Start Selling</li>
+                 {/* <li className={styles.link}>How it work </li>
+              <li className={styles.link}> Start Selling</li> */}
               <li className={styles.link}>Pricing</li>
               <li className={styles.link}>Contact us</li>
               </div>

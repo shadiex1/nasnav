@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import HeyNavBox from "../../components/HeyNavBox/HeyNavBox";
 import HowTo from "../../components/HowTo/HowTo"
 import HeyNavTheme from "../../components/HeyNavTheme/HeyNavTheme";
+import Benefits from "../../components/Benefits/Benefits";
 import Banner from "../../components/Banner/Banner";
 import HeyNav360 from "../../components/HeyNav360/HeyNav360";
 import NavBoxGrid from "../../components/NavboxGrid/NavBoxGrid";
@@ -69,12 +70,13 @@ class Homepage extends Component {
         /> */}
         <HowTo/>
         <HeyNavTheme data={this.state.HeyNavTheme} />
-        <Banner
+        {/* <Banner
           title={"you don't need a professional designer"}
           description={
             "Once youu've used the dashboard, you can design your website in just a few seconds"
           }
-        />
+        /> */}
+        <Benefits/>
         <HeyNav360 data={this.state.HeyNav360} />
         <NavBoxGrid data={this.state.NavBoxGrid} />
         <DashboardOverview data={this.state.DashboardOverview} />

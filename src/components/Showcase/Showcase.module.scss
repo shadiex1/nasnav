@@ -61,6 +61,11 @@
         }
       }
     }
+    .btnsContainer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .btn {
       margin: 1rem 0.4rem;
       display: block;

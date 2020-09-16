@@ -52,6 +52,9 @@ const Benefits = props => {
             </div>
           </div>
         </div>
+        <div className={styles.imgSection}>
+          <img src={"/assets/Showcase/group-33@3x.png"} alt="mobile screen" />
+        </div>
       </div>
     </div>
   );
