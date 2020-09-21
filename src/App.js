@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Route} from "react-router-dom";
 
 import Homepage from "./pages/homepage/homepage";
-import GetStarted from "./pages/GetStarted/GetStarted"
+import GetStarted from "./pages/GetStarted/GetStarted";
+import Contact from "./pages/Contact/Contact"
 import './App.css';
 
 class App extends Component{
@@ -14,6 +15,11 @@ class App extends Component{
           exact
           path={process.env.PUBLIC_URL + "/getstarted"}
           component={GetStarted}
+        />
+        <Route
+          exact
+          path={process.env.PUBLIC_URL + "/contact"}
+          component={Contact}
         />
 
       </React.Fragment>

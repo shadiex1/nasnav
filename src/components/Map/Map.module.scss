@@ -1,5 +1,11 @@
 @import "../../VariablesScss/variables";
 
+.MapContainer{
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  height: 100%;
+}
 .header {
   max-width: 53rem;
   margin: auto;
@@ -28,10 +34,13 @@
 
 .Map {
   position: relative;
+  width: 100%;
+  height: 100%;
   max-width: 53rem;
-  margin: 2rem auto 0;
+  margin: 0 auto 0;
   display: flex;
   justify-content: center;
+  
   @media screen and (max-width: 680px) {
     max-width: initial;
     margin: 2rem -12rem 0 -16rem;

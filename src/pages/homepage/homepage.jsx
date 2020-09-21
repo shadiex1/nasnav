@@ -254,7 +254,7 @@ class Homepage extends Component {
           data={this.state.ThreeSixtyView}
           shops={this.state.Shops}
         />
-        <Map data={this.state.Map} />
+        <Map mapImg="/assets/Map/map.png" data={this.state.Map} />
         <OurPartners data={this.state.OurPartners} />
         <Footer />
       </div>

@@ -1,0 +1,58 @@
+.ContactInfo{
+  background: url("/assets/Banner/layer-14-copy@3x.png"),
+    linear-gradient(90deg, rgba(75, 68, 255, 1) 50%, rgba(52, 191, 243, 1) 100%);
+    background-size: cover;
+  background-position: center/left;
+  // width: calc(50% - 100px);
+   width: calc(50% - 100px) !important;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 50px 10px 50px ;
+  .map{
+    padding: 0 40px;
+    margin-top: .5rem;
+    height: 45%;
+    // width: 90%;
+  }
+.information{
+  width: 100%;
+// padding: 50px;
+display: flex;
+justify-content: center;
+flex-direction: column;  
+align-items: center;
+    margin-left: 50px;
+// margin: auto;
+
+  h2{
+    color: white;
+    text-align: left;
+    font-size: 30px;
+    align-self: flex-start;    
+
+  }
+}
+.branches{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .branch{
+    width: 50%;
+    margin: 10px auto;
+    h3{
+      font-weight: bold;
+      color: white;
+      margin: 5px 0;
+    }
+    ul{     
+             list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+        li{
+          color: white;
+        }
+      }
+  }
+}
+}
