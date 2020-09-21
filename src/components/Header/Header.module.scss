@@ -1,11 +1,15 @@
+@import "../../VariablesScss/variables";
+
 .Header {
-  background-color: #f2f2ff;
+  background: url("/assets/Banner/layer-14-copy@3x.png"), $color-bg-2;
+  background-size: cover;
+  background-position: center;
   height: 750px;
   overflow: hidden;
   width: 100%;
 }
-@media screen and (max-width:1000px){
-  .Header{
-      height: 850px;
+@media screen and (max-width: 1000px) {
+  .Header {
+    height: 850px;
   }
 }

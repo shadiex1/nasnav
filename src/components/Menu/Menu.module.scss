@@ -1,8 +1,5 @@
 @import "../../VariablesScss/variables";
-.MenuContainer {
-  // background-image: linear-gradient(to top, #edecff, #44aeff);
-  background-color: #f2f2ff;
-}
+
 .Menu {
   display: flex;
   width: 80%;
@@ -11,6 +8,7 @@
   align-items: center;
   .logoContainer {
     width: 8rem;
+    z-index: 2;
     img {
       width: 100%;
       height: 100%;
@@ -26,12 +24,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      li {
+      li , a{
         display: inline-block;
         margin: 1rem 1.5rem;
         cursor: pointer;
         font-weight: 500;
         font-size: 0.8rem;
+        text-decoration: none;
       }
       .btn {
         margin: 1rem 0.4rem;
@@ -57,8 +56,8 @@
         // background-image: linear-gradient(to right, #4b44ff , rgba(#34bff3,.9));
         background: linear-gradient(
           90deg,
-          rgba(75, 68, 255, 1) 0%,
-          rgba(52, 191, 243, 1) 100%
+          $color-primary 0%,
+          $color-txt-4 100%
         );
 
         color: $color-white;
@@ -67,11 +66,11 @@
   }
 }
 
-@media screen and (max-width:1000px){
-  .Menu{
+@media screen and (max-width: 1000px) {
+  .Menu {
     flex-direction: column;
     margin: 1rem auto;
-    .navigationList{
+    .navigationList {
       display: none;
     }
   }

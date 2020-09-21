@@ -1,55 +1,25 @@
-import React from "react"
+import React from "react";
 import styles from "./Benefits.module.scss";
 
-const Benefits = props => {
+const Benefits = (props) => {
+  const { data } = props;
   return (
     <div className={styles.Benefits}>
       <div className={styles.content}>
         <div className={styles.description}>
           <h3>
-            Lots of Benefits on your site <span>for free</span>
+            {data.title} <span>{data.highlighted}</span>
           </h3>
           <div className={styles.sectionsContainer}>
-            <div className={styles.section}>
-              <img src="assets/Benefits/review.png" alt="icon" />
-              <div className={styles.container}>
-                <h3>shopping cart</h3>
-                <p>
-                  A cart or dray is a vehicle designed for transport two wheels
-                  and normally pulled
-                </p>
+            {data.list.map((section) => (
+              <div className={styles.section}>
+                <img src={section.img} alt="icon" />
+                <div className={styles.container}>
+                  <h3>{section.title}</h3>
+                  <p>{section.desc}</p>
+                </div>
               </div>
-            </div>
-            <div className={styles.section}>
-              <img src="assets/Benefits/open-24-hours.png" alt="icon" />
-              <div className={styles.container}>
-                <h3>Branch Location</h3>
-                <p>
-                  A cart or dray is a vehicle designed for transport two wheels
-                  and normally pulled
-                </p>
-              </div>
-            </div>
-            <div className={styles.section}>
-              <img src="assets/Benefits/cycle.png" alt="icon" />
-              <div className={styles.container}>
-                <h3>Payment Online</h3>
-                <p>
-                  A cart or dray is a vehicle designed for transport two wheels
-                  and normally pulled
-                </p>
-              </div>
-            </div>
-            <div className={styles.section}>
-              <img src="assets/Benefits/promotion.png" alt="icon" />
-              <div className={styles.container}>
-                <h3>All Products</h3>
-                <p>
-                  A cart or dray is a vehicle designed for transport two wheels
-                  and normally pulled
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
         <div className={styles.imgSection}>
@@ -58,6 +28,6 @@ const Benefits = props => {
       </div>
     </div>
   );
-}
+};
 
-export default Benefits
+export default Benefits;

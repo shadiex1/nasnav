@@ -1,75 +1,81 @@
-.header{
-    max-width: 53rem;
-    margin: auto;
-    text-align: center;
-    h3{
-        width: 70%;
-        margin: 2rem auto;
-        font-weight: 500;
-        font-size: 35px;
-        span{
-            color: #4b44ff;
-            font-weight: bold;
-        }
-    }
-    p{
-        width: 70%;
-margin: 1rem auto; 
-color: #35393a
+@import "../../VariablesScss/variables";
 
-;
-   }
-   img{
-       margin-bottom: 1rem;
-   }
+.header {
+  max-width: 53rem;
+  margin: auto;
+  text-align: center;
+  h3 {
+    width: 70%;
+    margin: 2rem auto;
+    font-weight: 500;
+    font-size: 35px;
+    span {
+      color: $color-primary;
+      font-weight: bold;
+    }
+  }
+  p {
+    width: 70%;
+    margin: 1rem auto;
+    color: $color-txt-3;
+  }
+  .brands {
+    img {
+      margin: 18px;
+    }
+  }
 }
 
+.Map {
+  position: relative;
+  max-width: 53rem;
+  margin: 2rem auto 0;
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 680px) {
+    max-width: initial;
+    margin: 2rem -12rem 0 -16rem;
+  }
 
-.Map{
-        position: relative;
- max-width: 53rem;
-    margin: 2rem auto 0;
-    display: flex;
-    justify-content: center;
-    @media screen and (max-width: 680px) {
-      max-width: initial;
-      margin: 2rem -12rem 0 -16rem;
-    }
-  
-    @media screen and (max-width: 230px) {
-      margin: 2rem -15rem 0;
-    }
+  @media screen and (max-width: 230px) {
+    margin: 2rem -15rem 0;
+  }
 
-    .list{
-        list-style: none;
+  .list {
+    list-style: none;
     padding-left: 0;
-    }
-    .flagItem{
-        position: absolute;
-    }
-    .egypt{
-         top: 35.5%;
+  }
+  .flagItem {
+    position: absolute;
+  }
+  .egypt {
+    top: 35.5%;
     left: 53%;
-    }
-    .saudi{  top: 39%;
+  }
+  .saudi {
+    top: 39%;
     left: 57.85%;
-        img{
-            width: 35px;
-        }
-}
-    .poland{   top: 20%;
-    left: 51%;}
-    .nigeria{  top: 51%;
-    left: 46%;}
-
-    .pointer{
-         display: block;
-    margin: -.2rem auto 0;
-    width: .55rem;
-    height: .55rem;
-    background-color: #2B7AF3;
-    border: .4rem solid #fff;
-    border-radius: 50%;
-    box-shadow: 0 4px 15px rgba($color: #000, $alpha: .2)
+    img {
+      width: 35px;
     }
+  }
+  .poland {
+    top: 20%;
+    left: 51%;
+  }
+  .nigeria {
+    top: 51%;
+    left: 46%;
+  }
+
+  .pointer {
+    display: block;
+    margin: -0.2rem auto 0;
+    width: 0.55rem;
+    height: 0.55rem;
+    background-color: #2b7af3;
+    border: 0.4rem solid $color-white;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba($color: #000, $alpha: 0.2);
+  }
 }

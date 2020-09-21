@@ -1,3 +1,5 @@
+@import "../../VariablesScss/variables";
+
 .Showcase {
   .showcaseContainer {
     width: 70%;
@@ -9,7 +11,7 @@
     .searchbar {
       margin: 2rem auto;
       width: 35%;
-      background-color: white;
+      background-color: $color-white;
       // border: 1px solid black;
       display: flex;
       align-items: center;
@@ -50,18 +52,18 @@
     }
     .title {
       font-size: 1.8rem;
-      width: 80%;
+      width: 70%;
       h2 {
         text-transform: uppercase;
         width: 70%;
         margin: auto;
         text-align: center;
         span {
-          color: #4b44ff;
+          color: $color-primary;
         }
       }
     }
-    .btnsContainer{
+    .btnsContainer {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -71,13 +73,12 @@
       display: block;
       width: 8rem;
       height: 1.2rem;
-      background-color: white;
+      background-color: $color-white;
       padding: 0.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 10px 10px 0 10px;
-      box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.07);
+      box-shadow: 0px 1px 4px 0 $color-black-overlay;
       font-size: 0.7rem;
       cursor: pointer;
       img {
@@ -87,20 +88,39 @@
         margin-right: 0.5rem;
       }
 
-      border-radius: 10px 10px 10px 0px;
-      background: linear-gradient(
-        90deg,
-        rgba(75, 68, 255, 1) 40%,
-        rgba(52, 191, 243, 1) 130%
-      );
+      border-radius: 10px 10px 0px 10px;
+      background: linear-gradient(90deg, $color-primary 40%, $color-txt-4 130%);
       // background-image: linear-gradient(to right, #4b44ff,  #34bff3);
-      color: white;
+      color: $color-white;
+    }
+    .btnSmall {
+      margin: 1rem 0.4rem;
+      display: block;
+      width: 1.5rem;
+      height: 1.2rem;
+      background-color: $color-white;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 1px 4px 0 $color-black-overlay;
+      font-size: 0.7rem;
+      border-radius: 10px 10px 10px 0;
+      background: linear-gradient(90deg, $color-primary 40%, $color-txt-4 130%);
+      // background-image: linear-gradient(to right, #4b44ff,  #34bff3);
+      color: $color-white;
+      svg {
+        width: 1.1rem;
+        height: 1.1rem;
+        fill: white;
+        cursor: pointer;
+      }
     }
     .gallery {
       display: flex;
       margin: 1rem auto;
-       animation-name: startup;
-  animation-duration: 5s;
+      animation-name: startup;
+      animation-duration: 5s;
       img {
         object-fit: contain;
         width: 20rem;
@@ -133,74 +153,70 @@
 }
 
 @keyframes startup {
-  0%   {transform: translateY(400px);}
-  25%  {
-    transform: translateY(0px);
-    
+  0% {
+    transform: translateY(400px);
   }
-  100% {transform: translateY(0px);}
+  25% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 @keyframes slideRight {
-  0%   {
-              transform: translateX(-20rem) rotate(-22deg);//stacked
-
+  0% {
+    transform: translateX(-20rem) rotate(-22deg); //stacked
   }
   // 25%  {
   //   transform: translateY(0px);
-    
+
   // }
   100% {
-        transform: translateX(-12rem) rotate(0); // right slide
-  
+    transform: translateX(-12rem) rotate(0); // right slide
   }
 }
 @keyframes slideLeft {
-  0%   {
-        transform: translateX(20rem) rotate(22deg); //stacked
-
+  0% {
+    transform: translateX(20rem) rotate(22deg); //stacked
   }
   // 25%  {
   //   transform: translateY(0px);
-    
+
   // }
   100% {
-        transform: translateX(12rem) rotate(0); //left slide
-  
+    transform: translateX(12rem) rotate(0); //left slide
   }
 }
 
-@media screen and (max-width:1000px){
-  .Showcase{
-      .showcaseContainer{
-    width: 100%;
-    .searchbar{
-      width: 50%;
-      margin:  auto;
-      margin-bottom: 1rem;
-    }
-    .title{
+@media screen and (max-width: 1000px) {
+  .Showcase {
+    .showcaseContainer {
       width: 100%;
-    }
-    .gallery{
-      margin: 1rem 0;
-      .sideLeft{
-        transform: translateX(20rem) rotate(22deg); //stacked
-
+      .searchbar {
+        width: 50%;
+        margin: auto;
+        margin-bottom: 1rem;
       }
-      .sideRight{
-                transform: translateX(-20rem) rotate(-22deg);//stacked
-
+      .title {
+        width: 100%;
+      }
+      .gallery {
+        margin: 1rem 0;
+        .sideLeft {
+          transform: translateX(20rem) rotate(22deg); //stacked
+        }
+        .sideRight {
+          transform: translateX(-20rem) rotate(-22deg); //stacked
+        }
       }
     }
   }
-  }
-
 }
 
-@media screen and (max-width:500px){
-  .showcase{
-    .showcaseContainer{
-      .searchbar{
+@media screen and (max-width: 500px) {
+  .showcase {
+    .showcaseContainer {
+      .searchbar {
         width: 80%;
       }
     }

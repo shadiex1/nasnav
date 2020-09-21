@@ -1,0 +1,14 @@
+.GetStarted{
+  position: relative;
+  .menu{
+    position: absolute;
+    width: 100vw;
+  }
+  .flexcContainer{
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    width: 100%;
+    min-height: 100vh;
+  }
+}

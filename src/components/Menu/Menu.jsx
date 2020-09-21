@@ -1,31 +1,34 @@
 import React from "react";
 import styles from "./Menu.module.scss";
 import { Component } from "react";
-import Ellipse from "../Ellipse/Ellipse";
+import { Link } from "react-router-dom";
 
 class Menu extends Component {
   render() {
+    const {white}=this.props
     return (
-      <div className={styles.MenuContainer}>
-        <div className={styles.Menu}>
-          <div className={styles.logoContainer}>
+      <div className={styles.Menu}>
+        <Link to="/" className={styles.logoContainer}>
+          {white ? (
+            <img src={"/assets/logo-white.png"} alt="logo" />
+          ) : (
             <img src={"/assets/Menu/layer-1@3x.png"} alt="logo" />
-          </div>
-          <div className={styles.navigation}>
-            <ul>
-              <div className={styles.navigationList}>
-                 {/* <li className={styles.link}>How it work </li>
-              <li className={styles.link}> Start Selling</li> */}
+          )}
+        </Link>
+        <div className={styles.navigation}>
+          <ul>
+            <div className={styles.navigationList}>
               <li className={styles.link}>Pricing</li>
               <li className={styles.link}>Contact us</li>
-              </div>
-             
-              <li className={styles.btn}>Shop Login</li>
-              <li className={[styles.btn, styles.gradientBtn].join(" ")}>
-                <img src={"/assets/Menu/layer-2@3x.png"} /> Get Started
-              </li>
-            </ul>
-          </div>
+            </div>
+
+            <Link
+              to="/getstarted"
+              className={[styles.btn, styles.gradientBtn].join(" ")}
+            >
+              <img src={"/assets/Menu/layer-2@3x.png"} /> Get Started
+            </Link>
+          </ul>
         </div>
       </div>
     );

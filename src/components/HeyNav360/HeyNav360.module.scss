@@ -1,3 +1,5 @@
+@import "../../VariablesScss/variables";
+
 .HeyNav360 {
   display: flex;
   width: 60%;
@@ -8,7 +10,7 @@
       font-weight: 500;
       margin: 0.5rem 0;
       span {
-        color: #44aeff;
+        color: $color-bg-3;
         font-weight: bold;
       }
     }
@@ -24,47 +26,20 @@
       }
     }
     p {
-      color: #35393a;
+      color: $color-txt-3;
       width: 75%;
     }
-    .list {
-      padding: 0;
-      list-style: none;
-      li::before {
-        content: "\2022";
-        color: #e1e1f7;
-        font-weight: bolder;
-        display: inline-block;
-        width: 1em;
-        margin-left: -1em;
-      }
-      li {
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        margin: 1rem;
-        svg {
-          width: 1.5rem;
-          height: 1.5rem;
-          margin-left: 0.8rem;
-        }
-      }
-      .blueFilter {
-        svg {
-          fill: #4b44ff;
-        }
-      }
-    }
+
     .magic {
       display: flex;
       align-items: center;
       p {
-        color: #8ca6b4;
-        width: 80%;
+        color: $color-txt-6;
+        width: 70%;
         margin-right: 1rem;
 
         span {
-          color: #544efd;
+          color: $color-txt-5;
           font-weight: bold;
         }
       }
@@ -75,20 +50,34 @@
       }
     }
     .examples {
-      color: #34bff3;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      svg {
-        fill: #34bff3;
-        width: 16px;
-        height: 16px;
-        margin-left: 5px;
-        stroke: #34bff3;
+      .btn {
+        margin: 1rem 0.4rem;
+        display: block;
+        width: 8.5rem;
+        height: 1.2rem;
+        background-color: $color-white;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px 10px 0 10px;
+        box-shadow: 0px 1px 4px 0 $color-black-overlay;
+        img {
+          display: block;
+          width: 1.1rem;
+          height: 1.1rem;
+          margin-right: 0.5rem;
+        }
       }
-      &:hover {
-        text-decoration: underline;
+      .gradientBtn {
+        border-radius: 10px 10px 10px 0px;
+        background: linear-gradient(
+          90deg,
+          $color-primary 0%,
+          $color-txt-4 100%
+        );
+
+        color: $color-white;
       }
     }
   }

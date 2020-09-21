@@ -1,10 +1,33 @@
 
 $color-white: #fff;
 $grey: #808080;
-
-
-// Colors
+$color-primary:#4b44ff;
 $color-black: #000;
+$color-black-overlay:rgba(0, 0, 0, 0.75);
+
+$color-txt-1:#7bfffd;
+$color-txt-2:#dde5fc;
+$color-txt-3:#35393a;
+$color-txt-4:#34bff3;
+$color-txt-5:#544efd;
+$color-txt-6:#8ca6b4;
+$color-txt-7:#14c570;
+$color-txt-8:#ddefff;
+// Colors
+
+$color-bg-1:#e9f0f4;
+$color-bg-2:#f2f2ff;
+$color-bg-3:#44aeff;
+
+$color-grid-1:#41af4b;
+$color-grid-2:#ee5153;
+$color-grid-3:#074469;
+$color-grid-4:#3b8787;
+$color-grid-5:#75b691;
+$color-grid-6:#4942fd;
+
+$color-border-1:rgba(217, 226, 232, 0.3) ; 
+
 $color-black-light: #332c34;
 $color-white: #fff;
 $color-white-light:  #f5f8f9;
@@ -16,37 +39,36 @@ $color-gray-dark: #f5f5f5;
 
 // $color-primary: #c20a05;
 // $color-secondary: #000;
-$color-primary: var(--primary-color);
-$color-secondary: var(--secondary-color);
-$color-success: #86c871;
+// $color-secondary: var(--secondary-color);
+// $color-success: #86c871;
 
-$color-bg-1: #f4f4f4;
-$color-bg-2: #e7e5e5;
-$color-bg-3: #666666;
+// $color-bg-1: #f4f4f4;
+// $color-bg-2: #e7e5e5;
+// $color-bg-3: #666666;
 
-$color-border-1: #b2b8b8;
-$color-border-2: #e39496;
-$color-border-3: #c41230;
-$color-border-4: #d8d8d8;
-$color-border-5: #cccccc;
-$color-border-6: #e3e3e3;
+// $color-border-1: #b2b8b8;
+// $color-border-2: #e39496;
+// $color-border-3: #c41230;
+// $color-border-4: #d8d8d8;
+// $color-border-5: #cccccc;
+// $color-border-6: #e3e3e3;
 
-$color-shadow-1: #cccccc;
+// $color-shadow-1: #cccccc;
 
-$color-scrollbar-base: #dddddd;
-$color-scrollbar-head: #c3c3c3;
-// Fonts
-$font-size-base: .91rem;
-$font-size-lg: ($font-size-base * 1.25);
-$font-size-sm: ($font-size-base * .875);
-$font-size-xs: ($font-size-base * .775);
-$h2-font-size: $font-size-base * 2;
-$h3-font-size: $font-size-base * 1.75;
-$h4-font-size: $font-size-base * 1.5;
-$h5-font-size: $font-size-base * 1.25;
-$h6-font-size: $font-size-base * 1.1;
+// $color-scrollbar-base: #dddddd;
+// $color-scrollbar-head: #c3c3c3;
+// // Fonts
+// $font-size-base: .91rem;
+// $font-size-lg: ($font-size-base * 1.25);
+// $font-size-sm: ($font-size-base * .875);
+// $font-size-xs: ($font-size-base * .775);
+// $h2-font-size: $font-size-base * 2;
+// $h3-font-size: $font-size-base * 1.75;
+// $h4-font-size: $font-size-base * 1.5;
+// $h5-font-size: $font-size-base * 1.25;
+// $h6-font-size: $font-size-base * 1.1;
 
-$font-family: 'Chivo', sans-serif;
-$Roboto: 'Roboto', sans-serif;
-$CenturyGothic: "Century Gothic", sans-serif;
+// $font-family: 'Chivo', sans-serif;
+// $Roboto: 'Roboto', sans-serif;
+// $CenturyGothic: "Century Gothic", sans-serif;
 

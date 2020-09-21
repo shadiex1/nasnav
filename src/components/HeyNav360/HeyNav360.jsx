@@ -4,24 +4,23 @@ import { MagicIcon, RightArrowWide } from "../SvgIcons/SvgIcons";
 
 class HeyNav360 extends Component {
   render() {
+    const { data } = this.props;
     return (
       <div className={styles.HeyNav360}>
         <div className={styles.description}>
           <h2>
-            Impress Your <span>customers</span>
+            {data.title}
+            <span>{data.highlighted}</span>
           </h2>
           <span className={styles.subtitle}>
-            say hey to Nav360
+            {data.subtitle}
             <img src={"/assets/Gif sections/layer-104@3x.png"} alt="logo" />
           </span>
-          <p>
-            A unique buying experience that makes you the strongest among your
-            competitors in the market Through a completely real buying
-            experience, the user is now entering your branches and they are
-            closed.
-          </p>
+          <p>{data.description}</p>
           <p className={styles.examples}>
-            see real examples <RightArrowWide />{" "}
+            <span className={[styles.btn, styles.gradientBtn].join(" ")}>
+              <img src={"/assets/Menu/layer-2@3x.png"} /> See Examples
+            </span>
           </p>
           <div className={styles.magic}>
             <MagicIcon />{" "}
@@ -46,7 +45,7 @@ class HeyNav360 extends Component {
             className={styles.mobileCover}
           />
           <img
-            src={"/assets/01-view-copy.png"}
+            src={data.img}
             alt="mobile screen"
             className={styles.mobileScreen}
           />

@@ -8,7 +8,7 @@ import {
 } from "../SvgIcons/SvgIcons";
 class GifSection extends Component {
   render() {
-    const {data}=this.props
+    const { data } = this.props;
     return (
       <div className={styles.GifSection}>
         <div className={styles.description}>
@@ -22,15 +22,16 @@ class GifSection extends Component {
           <p>{data.description}</p>
           <ul className={styles.list}>
             <li>
-              {data.list[0]} <GoogleMaps />
+              <GoogleMaps />
+              {data.list[0]}
             </li>
             <li>
-              {data.list[1]}
               <GoogleIcon />
+              {data.list[1]}
             </li>
             <li className={styles.blueFilter}>
-              {data.list[2]}
               <MapIcon />
+              {data.list[2]}
             </li>
           </ul>
           <div className={styles.magic}>

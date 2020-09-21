@@ -4,38 +4,31 @@ import { MagicIcon } from "../SvgIcons/SvgIcons";
 
 class HeyNavBox extends Component {
   render() {
+    const { data } = this.props;
     return (
       <div className={styles.HeyNavTheme}>
         <div className={styles.description}>
           <h2>
-            Design Your site <span>easily</span>
+            {data.title[0]}
+            <span>{data.title[1]}</span>
           </h2>
           <span className={styles.subtitle}>
-            say hey to NavTheme
+            {data.subtitle}
             <img src={"/assets/Gif sections/layer-104@3x.png"} alt="logo" />
           </span>
-          <p>
-            Through the dashboard you can easily build your site design and
-            choose between multiple formats to suit your business competence.
-          </p>
+          <p>{data.description}</p>
           <ul className={styles.list}>
-            <li>
-              Payment methods
-              <img src={"/assets/HeyNavTheme/layer-111.png"} />
-              <img src={"/assets/HeyNavTheme/layer-112.png"} />
-              <img src={"/assets/HeyNavTheme/layer-113.png"} />
-            </li>
-            <li>
-              Shipping methods
-              <img src={"/assets/HeyNavTheme/layer-108.png"} />
-              <img src={"/assets/HeyNavTheme/layer-109.png"} />
-              <img src={"/assets/HeyNavTheme/layer-110.png"} />
-            </li>
-            <li className={styles.blueFilter}>
-              A totally unique buying experience
-              <img src={"/assets/HeyNavTheme/arrow.png"} />
-            </li>
-            {/* <li>Your products in google map <MagicIcon/></li> */}
+            {data.lists.map((item) => (
+              <li>
+                <img src={item.leftImg} alt="icon" />
+                <span>{item.title}</span>
+
+                {item.rightImgs &&
+                  item.rightImgs.map((img) => (
+                    <img className={styles.left} src={img} alt="logo" />
+                  ))}
+              </li>
+            ))}
           </ul>
           <div className={styles.magic}>
             <MagicIcon />{" "}
@@ -60,7 +53,7 @@ class HeyNavBox extends Component {
             className={styles.mobileCover}
           />
           <img
-            src={"/assets/HeyNavTheme/layer-119.png"}
+            src={data.MobileScreen}
             alt="mobile screen"
             className={styles.mobileScreen}
           />

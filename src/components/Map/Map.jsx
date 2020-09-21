@@ -1,8 +1,7 @@
 import React from "react";
 
-import "./Map.scss";
-import styles from "./Map.module.scss"
-const Map = () => {
+import styles from "./Map.module.scss";
+const Map = (props) => {
   const countryFlags = [
     {
       country: "egypt",
@@ -30,18 +29,19 @@ const Map = () => {
     },
   ];
 
+  const { data } = props;
   return (
     <React.Fragment>
       <div className={styles.header}>
         <h3>
-          We started and we are growing <span> right around the world</span>
+          {data.title[0]} <span> {data.title[1]}</span>
         </h3>
-        <p>
-          We can provide you with a complete Business-in-a-Box solution Join our
-          franchising scheme and be a part of the team Build your business with
-          confidence knowing you are backed by expert
-        </p>
-        <img src="/assets/Map/rectangle-3.png" alt="brands"/>
+        <p>{data.description}</p>
+        <div className={styles.brands}>
+          {data.brands.map((brand) => (
+            <img src={brand} alt="brand" />
+          ))}
+        </div>
       </div>
       <div className={styles.Map}>
         <img

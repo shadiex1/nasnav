@@ -1,49 +1,47 @@
 import React from "react";
 import styles from "./HowTo.module.scss";
 
-const HowTo = props => {
-    return (
-      <div className={styles.HowTo}>
-        <div className={styles.content}>
-          <div className={styles.description}>
-            <h2 className={styles.mainTitle}>
-              How to get your products to the website ?
-            </h2>
-            <h3 className={styles.firstSubtitle}>Use a Navbox</h3>
-            <p className={styles.firstSubParagraph}>
-              A device that is linked to your website each scan that increase
-              your appearance.
-            </p>
-            <h3 className={styles.secondSubtitle}>Use a CSV File</h3>
-            <p className={styles.secondParagraph}>
-              A device that is linked to your website each scan that increase
-              your appearance
-            </p>
-          </div>
-          <div className={styles.imgSectionContainer}>
+const HowTo = (props) => {
+  const { data } = props;
+  return (
+    <div className={styles.HowTo}>
+      <div className={styles.content}>
+        <div className={styles.description}>
+          <h2 className={styles.mainTitle}>
+            {data.title[0]} <span>{data.title[1]}</span>
+          </h2>
+          <h3 className={styles.firstSubtitle}>{data.firstSubtitle}</h3>
+          <p className={styles.firstSubParagraph}>{data.firstParagraph}</p>
+          <h3 className={styles.secondSubtitle}>{data.secondSubtitle}</h3>
+          <p className={styles.secondParagraph}>{data.secondParagraph}</p>
+        </div>
+        <div className={styles.imgSectionContainer}>
           <div className={styles.imgSection}>
             <div className={styles.check}>
               <img src="/assets/HowTo/google-sheets@3x.png" alt="simCard" />
               <p>
-                <span>Easily check your files and </span> then upload them
+                <span>{data.check[0]}</span> {data.check[1]}
               </p>
             </div>
             <div className={styles.wrapper}>
-                <div className={styles.analyze}>
-              <img src="/assets/HowTo/647.png" alt="upload" />
-              <p><span>Analyze</span> CSV file</p>
+              <div className={styles.analyze}>
+                <img src="/assets/HowTo/647.png" alt="upload" />
+                <p>
+                  <span>{data.analyze[0]}</span> {data.analyze[1]}
+                </p>
+              </div>
+              <div className={styles.upload}>
+                <img src="/assets/HowTo/8.png" alt="upload" />
+                <p>
+                  <span>{data.upload[0]}</span> {data.upload[1]}
+                </p>
+              </div>
             </div>
-            <div className={styles.upload}>
-              <img src="/assets/HowTo/8.png" alt="upload" />
-              <p><span>Upload</span> CSV file</p>
-            </div>
-            </div>
-          
-          </div>
           </div>
         </div>
       </div>
-    );
-}
+    </div>
+  );
+};
 
-export default HowTo
+export default HowTo;

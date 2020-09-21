@@ -1,0 +1,63 @@
+ .gallery{
+background: url("/assets/Banner/layer-14-copy@3x.png"),
+    linear-gradient(90deg, rgba(75, 68, 255, 1) 50%, rgba(52, 191, 243, 1) 100%);
+    background-size: cover;
+  background-position: center/top;
+  width: 50%;
+  // display: flex;
+  align-items: center;
+  .slider{
+   transform: translateY(30%);
+  }
+   .card{
+     .imgContainer {
+    // width: 100%;
+    height: 22rem;
+    // object-fit: fill;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .mobileCover {
+      position: relative;
+      transform: translateY(.8rem);
+      border-radius: 10px;
+      // width: 60%;
+      height: 90%;
+      object-fit: contain;
+      display: block;
+      overflow: hidden;
+    }
+    .mobileScreen {
+      overflow: hidden;
+      position: absolute;
+      border-radius: 10px;
+      height: 60%;
+      width: 200px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+  }
+  h3{
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    margin: 1rem auto;
+    width: 40%;
+    // width: 60%;
+    span{
+      font-weight: bold;
+    }
+  }
+  p{
+    text-align: center;
+    color: white;
+    width: 65%;
+    margin:0 auto;
+  }
+   }
+ }
+ 
