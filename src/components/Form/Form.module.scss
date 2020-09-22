@@ -12,7 +12,8 @@
       font-weight: bold;
     }
 }
-button{
+a{
+  display: block;
   width: 100%;
   padding: 15px;
   border: none;
@@ -22,6 +23,8 @@ button{
   border-radius: 5px;
   cursor: pointer;
   outline: none;
+  text-decoration: none;
+  text-align: center;
 }
 }
 

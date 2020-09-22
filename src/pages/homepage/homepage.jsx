@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styles from "./homepage.module.scss"
 import Header from "../../components/Header/Header";
 import HeyNavBox from "../../components/HeyNavBox/HeyNavBox";
 import HowTo from "../../components/HowTo/HowTo";
@@ -248,6 +249,11 @@ class Homepage extends Component {
         <Benefits data={this.state.Benefits} />
         <HeyNav360 data={this.state.HeyNav360} />
         <NavBoxGrid data={this.state.NavBoxGrid} />
+        <div className={styles.formBtn}>
+          <button>
+            
+          </button>
+        </div>
         <DashboardOverview data={this.state.DashboardOverview} />
         <YoutubeVideoSlide videoUrl="8V1LI_EwGUM" />
         <ThreeSixtyView
@@ -255,6 +261,7 @@ class Homepage extends Component {
           shops={this.state.Shops}
         />
         <Map mapImg="/assets/Map/map.png" data={this.state.Map} />
+      
         <OurPartners data={this.state.OurPartners} />
         <Footer />
       </div>

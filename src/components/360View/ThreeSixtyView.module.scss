@@ -4,10 +4,11 @@
     linear-gradient(90deg, rgba(75, 68, 255, 1) 50%, rgba(52, 191, 243, 1) 100%);
   background-size: cover;
   background-position: center;
-  height: 500px;
+  // height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 30px;
   .header {
     text-align: center;
     margin-bottom: 16px;
@@ -25,6 +26,16 @@
       color: $color-white;
       width: 40%;
       margin: auto;
+    }
+  }
+  @media screen and (max-width:1100px){
+    .header{
+      h2{
+        width: 100%;
+      }
+      p{
+        width: 80%;
+      }
     }
   }
 }

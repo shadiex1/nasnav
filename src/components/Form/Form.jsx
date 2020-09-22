@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styles from "./Form.module.scss";
-import FormInput from "./FormInput/FormInput"
+import FormInput from "./FormInput/FormInput";
+import {Link} from "react-router-dom"
    class Form extends Component {
      state = {
        StoreName: "",
@@ -63,7 +64,10 @@ import FormInput from "./FormInput/FormInput"
                label="Your Name"
                required
              />
-             <button>Next</button>
+
+             <Link to="/form" >
+               Next
+             </Link>
            </form>
          </div>
        );

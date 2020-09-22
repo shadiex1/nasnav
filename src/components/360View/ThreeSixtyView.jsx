@@ -12,7 +12,7 @@ const ThreeSixtyView = (props) => {
     autoplay: shopsLength > 3 ? true : false,
     speed: 500,
     centerPadding: "60px",
-    arrows: true,
+    arrows: false,
     className: styles.slider,
     accessibility: true,
     focusOnSelect: true,
@@ -31,7 +31,23 @@ const ThreeSixtyView = (props) => {
     ),
     responsive: [
       {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 4,
+          infinite: shopsLength > 2 ? true : false,
+          autoplay: shopsLength > 2 ? true : false,
+        },
+      },
+      {
         breakpoint: 860,
+        settings: {
+          slidesToShow: 3,
+          infinite: shopsLength > 2 ? true : false,
+          autoplay: shopsLength > 2 ? true : false,
+        },
+      },
+      {
+        breakpoint: 660,
         settings: {
           slidesToShow: 2,
           infinite: shopsLength > 2 ? true : false,
@@ -39,7 +55,7 @@ const ThreeSixtyView = (props) => {
         },
       },
       {
-        breakpoint: 640,
+        breakpoint: 440,
         settings: {
           slidesToShow: 1,
           infinite: shopsLength > 1 ? true : false,

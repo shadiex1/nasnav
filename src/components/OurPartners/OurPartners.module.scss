@@ -71,4 +71,14 @@
       }
     }
   }
+  @media screen and (max-width:800px){
+    width: 100%;
+      .PartnersLogos{
+        flex-wrap: wrap;
+        justify-content: center;
+        img{
+          margin: 10px;
+        }
+      }
+  }
 }

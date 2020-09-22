@@ -4,7 +4,7 @@
     linear-gradient(90deg, rgba(75, 68, 255, 1) 50%, rgba(52, 191, 243, 1) 100%);
   background-size: cover;
   background-position: center;
-  height: 24rem;
+  // height: 24rem;
   display: flex;
   align-items: center;
   .content {
@@ -128,6 +128,23 @@
             display: block;
           }
         }
+      }
+    }
+  }
+  @media screen and (max-width:1100px){
+    .content{
+      flex-direction: column;
+      width: 80%;
+      .description{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .imgSection{
+        margin: 2rem auto;
       }
     }
   }
