@@ -62,7 +62,7 @@ const EllipseContainer = props => {
           width="20px"
           height="20px"
           top="60%"
-          right="70%"
+          // right="70%"
         />
       </div>
     );

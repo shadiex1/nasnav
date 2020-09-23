@@ -30,6 +30,21 @@
       margin: 18px;
     }
   }
+
+  @media screen and (max-width:800px){
+    padding: 20px;
+h3{
+  width: 100%;
+}
+p{
+  width: 100%;
+}
+.brands{
+  img{
+      margin: 10px;
+  }
+}
+  }
 }
 
 .Map {

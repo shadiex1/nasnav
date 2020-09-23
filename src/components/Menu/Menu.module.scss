@@ -16,6 +16,7 @@
   }
   .navigation {
     //   width: 10rem;
+    z-index: 2;
 
     ul {
       margin: 0;
@@ -69,8 +70,8 @@
 @media screen and (max-width: 1000px) {
   .Menu {
     flex-direction: column;
-    margin: 1rem auto;
-    .navigationList {
+    margin: 3rem auto;
+    .navigation {
       display: none;
     }
   }

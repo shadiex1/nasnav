@@ -1,5 +1,6 @@
 .EllipseContainer {
   overflow: hidden;
+  z-index: 1 !important;
   .Ellipse1 {
     animation-duration: 5s;
   }

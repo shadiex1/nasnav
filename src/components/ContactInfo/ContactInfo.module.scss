@@ -4,15 +4,15 @@
     background-size: cover;
   background-position: center/left;
   // width: calc(50% - 100px);
-   width: calc(50% - 100px) !important;
+   width: calc(50% - 100px) ;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 60px 50px 10px 50px ;
   .map{
-    padding: 0 40px;
-    margin-top: .5rem;
-    height: 45%;
+    padding: 0 20px ;
+    margin-top: 1.5rem;
+    height: 50%;
     // width: 90%;
   }
 .information{
@@ -54,5 +54,27 @@ align-items: center;
         }
       }
   }
+}
+@media screen and (max-width:1000px){
+padding: 100px 0 40px 0;
+width: 100%;
+.map{
+  width: 100%;
+  padding: 0;
+}
+.information{
+  margin: auto;
+  h2{
+    align-self: center;
+  }
+}
+.branches{
+  .branch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 }
 }

@@ -7,7 +7,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    position: relative;
+    z-index: 2;
     .searchbar {
       margin: 2rem auto;
       width: 35%;
@@ -53,9 +54,10 @@
     .title {
       font-size: 1.8rem;
       width: 70%;
+      margin-bottom: 1rem;
       h2 {
         text-transform: uppercase;
-        width: 70%;
+        // width: 70%;
         margin: auto;
         text-align: center;
         span {
@@ -118,7 +120,8 @@
     }
     .gallery {
       display: flex;
-      margin: 1rem auto;
+      // margin: 1rem auto;
+      margin-top: 1rem;
       animation-name: startup;
       animation-duration: 5s;
       img {
@@ -199,25 +202,38 @@
       }
       .title {
         width: 100%;
+       h2{
+         width: 100%;
+       }
       }
-      .gallery {
-        margin: 1rem 0;
-        .sideLeft {
-          transform: translateX(20rem) rotate(22deg); //stacked
-        }
-        .sideRight {
-          transform: translateX(-20rem) rotate(-22deg); //stacked
-        }
+      .gallery{
+            //  transform: translateY(100px);
+
       }
+      // .gallery {
+      //   margin: 1rem 0;
+      //   .sideLeft {
+      //     transform: translateX(20rem) rotate(22deg); //stacked
+      //   }
+      //   .sideRight {
+      //     transform: translateX(-20rem) rotate(-22deg); //stacked
+      //   }
+      // }
     }
   }
 }
 
 @media screen and (max-width: 500px) {
-  .showcase {
+  .Showcase {
     .showcaseContainer {
       .searchbar {
         width: 80%;
+      }
+      .gallery{
+        img{
+          width: auto;
+          height: 27rem;
+        }
       }
     }
   }

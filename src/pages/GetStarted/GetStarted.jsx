@@ -11,7 +11,7 @@ class GetStarted extends Component {
         title: "Get your website with all the products for free ",
         description:
           "You can simply get your website and all your products online and Google in minutes few",
-        BackgroundCover: "/assets/Gif sections/layer-106@3x.png",
+        BackgroundCover: "/assets/layer-106.png",
         img: "/assets/Gif sections/layer-107@3x.png",
       },
       {
@@ -25,7 +25,7 @@ class GetStarted extends Component {
         title: "Get your website with all the products for free ",
         description:
           "You can simply get your website and all your products online and Google in minutes few",
-        BackgroundCover: "/assets/Gif sections/layer-106@3x.png",
+        BackgroundCover: "/assets/layer-106.png",
         img: "/assets/01-view-copy.png",
       },
     ],

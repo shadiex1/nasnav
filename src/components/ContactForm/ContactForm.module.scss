@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 50%;
     padding: 100px;
-       width: calc(50% - 100px) !important;
+       width: calc(50% - 100px) ;
 
     .title{
     text-align: center;
@@ -24,6 +24,11 @@ button{
   border-radius: 5px;
   cursor: pointer;
   outline: none;
+}
+@media screen and (max-width:1000px){
+  margin: auto;
+  width: 90%;
+padding: 0 20px;
 }
 }
 

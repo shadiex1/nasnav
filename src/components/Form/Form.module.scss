@@ -15,7 +15,7 @@
 a{
   display: block;
   width: 100%;
-  padding: 15px;
+  padding: 15px 0;
   border: none;
   background-image: linear-gradient(to top, #4b44ff, #34bff3);
   color: white;
@@ -25,6 +25,11 @@ a{
   outline: none;
   text-decoration: none;
   text-align: center;
+}
+@media screen and (max-width:1000px){
+  margin: auto;
+  width: 90%;
+padding: 0 20px;
 }
 }
 

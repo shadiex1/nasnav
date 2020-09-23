@@ -63,5 +63,12 @@ background: url("/assets/Banner/layer-14-copy@3x.png"),
     margin:0 auto;
   }
    }
+   @media screen and (max-width:1000px){
+     width: 100%;
+     height: 700px;
+     .mobileScreen{
+       transform:translateY(15px);
+     }
+   }
  }
  

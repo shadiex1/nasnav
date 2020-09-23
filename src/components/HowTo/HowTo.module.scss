@@ -131,21 +131,33 @@
       }
     }
   }
-  @media screen and (max-width:1100px){
+  @media screen and (max-width:800px){
     height: auto;
     .content{
       flex-direction: column;
-      width: 80%;
+      width: 100%;
+     
       .description{
-        width: 100%;
-        text-align: center;
+        padding: 15px;
+        width: 90%;
+        // text-align: center;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        // justify-content: center;
+        // align-items: center;
+        order: 2; .mainTitle{
+        
+                  width: 100%;
+
+        
+      }
+        h2,h3,p{
+          width: 100%;
+        }
       }
       .imgSection{
         margin: 2rem auto;
+        order:1;
       }
     }
   }
