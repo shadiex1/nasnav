@@ -11,13 +11,16 @@ const Gallery = props => {
     autoplay: shopsLength > 3 ? true : false,
     speed: 500,
     centerPadding: "60px",
-    arrows: true,
+    arrows: false,
     className: styles.slider,
     accessibility: true,
     focusOnSelect: true,
     lazyLoad: "ondemand",
     slidesToShow: 1,
     slidesToScroll: 1,
+    // dots: true,
+    dotsClass:styles.dots,
+    
     // nextArrow: (
     //   //  <NextArrow>
     //   // <RightArrowWide className={styles.arrows} />

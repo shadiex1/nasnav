@@ -8,6 +8,7 @@ import {Link} from "react-router-dom"
        Email: "",
        Phone: "",
        Name: "",
+       complete:false
      };
 
      handleSubmit = async (e) => {
@@ -20,6 +21,13 @@ import {Link} from "react-router-dom"
 
      };
 
+     checkData = () => {
+       const { StoreName, Email, Phone, Name } = this.props;
+       if (StoreName && Email && Phone && Name !== " ") {
+         this.setState({complete:true})
+       }
+     
+     }
      handleChange = (e) => {
        const { name, value } = e.target;
        this.setState({ [name]: value });
@@ -40,6 +48,7 @@ import {Link} from "react-router-dom"
                label="Store Name"
                required
              />
+             {console.log(this.state,"al state")}
              <FormInput
                type="email"
                name="Email"

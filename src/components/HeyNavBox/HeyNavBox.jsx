@@ -59,6 +59,8 @@ class GifSection extends Component {
             alt="mobile screen"
             className={styles.mobileScreen}
           />
+          <img src="/assets/invalid-name.png" alt="priceTag" className={styles.PriceTag} />
+
         </div>
       </div>
     );

@@ -3,10 +3,11 @@ import styles from "./FormBtn.module.scss";
 
 
 const FormBtn = props => {
-  const {data}=props
+  const {data ,img }=props
   return (
-  <button>
-    {data}
+  <button className={styles.FormBtn}>
+      {/* {data} */}
+      {img ? <img src={img} alt="logo" />: <p>{data}</p>}
   </button>
   )
 

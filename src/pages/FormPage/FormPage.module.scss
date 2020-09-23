@@ -1,11 +1,11 @@
 .FormPage{
-  height: 100vh;
+  // height: 100vh;
   width: 100%;
   background: url("/assets/Banner/layer-14-copy@3x.png"),
     linear-gradient(90deg, rgba(75, 68, 255, 1) 50%, rgba(52, 191, 243, 1) 100%);
     background-size: cover;
   background-position: center/top;
-  // padding: 50px;
+  padding-bottom: 50px;
   .header{
     position: relative;
     h3{
@@ -13,7 +13,7 @@
       // justify-content: center;
       color: white;
       font-weight: 400;
-      font-size: 30px;
+      font-size: 25px;
       text-align: center;
       width: 40%;
       margin: auto;
@@ -41,5 +41,22 @@
       }
     }
    
+  }
+  .sectionsContainer{
+    margin:  auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .section{
+      text-align: center;
+      width: 50%;
+      margin: auto;
+      .title{
+        color: white;
+        font-size: 18px;
+      }
+    }
   }
 }

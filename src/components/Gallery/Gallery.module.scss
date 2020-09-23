@@ -6,8 +6,12 @@ background: url("/assets/Banner/layer-14-copy@3x.png"),
   width: 50%;
   // display: flex;
   align-items: center;
+  .dots{
+    //  background-color: green;
+   }
   .slider{
    transform: translateY(30%);
+   
   }
    .card{
      .imgContainer {

@@ -5,6 +5,7 @@ import Homepage from "./pages/homepage/homepage";
 import GetStarted from "./pages/GetStarted/GetStarted";
 import FormPage from "./pages/FormPage/FormPage"
 import Contact from "./pages/Contact/Contact"
+import Prices from "./pages/Prices/Prices"
 import './App.css';
 
 class App extends Component{
@@ -26,6 +27,11 @@ class App extends Component{
           exact
           path={process.env.PUBLIC_URL + "/contact"}
           component={Contact}
+        />
+        <Route
+          exact
+          path={process.env.PUBLIC_URL + "/prices"}
+          component={Prices}
         />
 
       </React.Fragment>

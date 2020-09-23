@@ -4,6 +4,7 @@
   display: flex;
   width: 60%;
   margin: 4rem auto;
+  position: relative;
   .description {
     h2 {
       font-size: 1.9rem;
@@ -97,6 +98,14 @@
       object-fit: cover;
       display: block;
     }
+  }
+  .PriceTag{
+    position: absolute;
+    top: 50%;
+    left: 85%;    
+    width: 90px;
+      height: 90px;
+    
   }
 }
 

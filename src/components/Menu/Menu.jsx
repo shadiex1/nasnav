@@ -18,11 +18,12 @@ class Menu extends Component {
         <div className={styles.navigation}>
           <ul>
             <div className={styles.navigationList}>
-              <li className={styles.link}>Pricing</li>
-              <Link to="/contact"
-                className={styles.link}>
-                <li className={styles.link}>Contact us</li>
-                </Link>
+              <Link to="/prices" className={styles.link}>
+                <li>Pricing</li>
+              </Link>
+              <Link to="/contact" className={styles.link}>
+                <li>Contact us</li>
+              </Link>
             </div>
 
             <Link
