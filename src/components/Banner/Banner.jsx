@@ -12,7 +12,7 @@ const Banner = (props) => {
         <p className={styles.title}>{title}</p>
         <p className={styles.description}>{description}</p>
         <div className={styles.btn}>
-          <img src={"/assets/Menu/layer-2@3x.png"} /> Get Started
+          <img src={"/home/assets/Menu/layer-2@3x.png"} /> Get Started
         </div>
       </div>
     </div>

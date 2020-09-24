@@ -17,7 +17,10 @@ class GifSection extends Component {
           </h2>
           <span className={styles.subtitle}>
             {data.subtitle}
-            <img src={"/assets/Gif sections/layer-104@3x.png"} alt="logo" />
+            <img
+              src={"/home/assets/Gif sections/layer-104@3x.png"}
+              alt="logo"
+            />
           </span>
           <p>{data.description}</p>
           <ul className={styles.list}>
@@ -50,7 +53,7 @@ class GifSection extends Component {
           className={styles.imgContainer}
         >
           <img
-            src={"/assets/Gif sections/i-phone.png"}
+            src={"/home/assets/Gif sections/i-phone.png"}
             alt="mobile Cover"
             className={styles.mobileCover}
           />
@@ -59,8 +62,11 @@ class GifSection extends Component {
             alt="mobile screen"
             className={styles.mobileScreen}
           />
-          <img src="/assets/invalid-name.png" alt="priceTag" className={styles.PriceTag} />
-
+          {/* <img
+            src="/home/assets/invalid-name.png"
+            alt="priceTag"
+            className={styles.PriceTag}
+          /> */}
         </div>
       </div>
     );

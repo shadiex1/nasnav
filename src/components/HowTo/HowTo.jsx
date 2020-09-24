@@ -18,20 +18,23 @@ const HowTo = (props) => {
         <div className={styles.imgSectionContainer}>
           <div className={styles.imgSection}>
             <div className={styles.check}>
-              <img src="/assets/HowTo/google-sheets@3x.png" alt="simCard" />
+              <img
+                src="/home/assets/HowTo/google-sheets@3x.png"
+                alt="simCard"
+              />
               <p>
                 <span>{data.check[0]}</span> {data.check[1]}
               </p>
             </div>
             <div className={styles.wrapper}>
               <div className={styles.analyze}>
-                <img src="/assets/HowTo/647.png" alt="upload" />
+                <img src="/home/assets/HowTo/647.png" alt="upload" />
                 <p>
                   <span>{data.analyze[0]}</span> {data.analyze[1]}
                 </p>
               </div>
               <div className={styles.upload}>
-                <img src="/assets/HowTo/8.png" alt="upload" />
+                <img src="/home/assets/HowTo/8.png" alt="upload" />
                 <p>
                   <span>{data.upload[0]}</span> {data.upload[1]}
                 </p>

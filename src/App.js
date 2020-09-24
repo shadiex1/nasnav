@@ -12,25 +12,25 @@ class App extends Component{
   render(){
     return (
       <React.Fragment>
-        <Route exact path={process.env.PUBLIC_URL + "/"} component={Homepage} />
+        <Route exact path="/" component={Homepage} />
         <Route
           exact
-          path={process.env.PUBLIC_URL + "/getstarted"}
+          path="/getstarted"
           component={GetStarted}
         />
         <Route
           exact
-          path={process.env.PUBLIC_URL + "/form"}
+          path="/form"
           component={FormPage}
         />
         <Route
           exact
-          path={process.env.PUBLIC_URL + "/contact"}
+          path="/contact"
           component={Contact}
         />
         <Route
           exact
-          path={process.env.PUBLIC_URL + "/prices"}
+          path="/prices"
           component={Prices}
         />
 

@@ -10,9 +10,9 @@ class Menu extends Component {
       <div className={styles.Menu}>
         <Link to="/" className={styles.logoContainer}>
           {white ? (
-            <img src={"/assets/logo-white.png"} alt="logo" />
+            <img src={"/home/assets/logo-white.png"} alt="logo" />
           ) : (
-            <img src={"/assets/Menu/layer-1@3x.png"} alt="logo" />
+            <img src={"/home/assets/Menu/layer-1@3x.png"} alt="logo" />
           )}
         </Link>
         <div className={styles.navigation}>
@@ -30,7 +30,7 @@ class Menu extends Component {
               to="/getstarted"
               className={[styles.btn, styles.gradientBtn].join(" ")}
             >
-              <img src={"/assets/Menu/layer-2@3x.png"} /> Get Started
+              <img src={"/home/assets/Menu/layer-2@3x.png"} /> Get Started
             </Link>
           </ul>
         </div>

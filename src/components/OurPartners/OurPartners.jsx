@@ -20,7 +20,7 @@ const OurPartners = (props) => {
           {data.bannerTitle[0]} <span>{data.bannerTitle[1]}</span>
         </h3>
         <div className={styles.btn}>
-          <img src={"/assets/Menu/layer-2@3x.png"} /> Get Started
+          <img src={"/home/assets/Menu/layer-2@3x.png"} /> Get Started
         </div>
       </div>
     </div>

@@ -34,7 +34,7 @@ const NavBoxGrid = (props) => {
         </h2>
         <span className={styles.subtitle}>
           {data.subtitle}
-          <img src={"/assets/Gif sections/layer-104@3x.png"} alt="logo" />
+          <img src={"/home/assets/Gif sections/layer-104@3x.png"} alt="logo" />
         </span>
         <p>{data.description}</p>
         <div className={styles.magic}>

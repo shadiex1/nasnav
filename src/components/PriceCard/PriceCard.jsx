@@ -18,7 +18,7 @@ const PriceCard = props => {
           <li>Credit and debit cards</li>
         </ul>
         <button className={styles.getStarted}>
-          <img src={"/assets/Menu/layer-2@3x.png"} /> Get Started
+          <img src={"/home/assets/Menu/layer-2@3x.png"} /> Get Started
         </button>
       </div>
     </div>

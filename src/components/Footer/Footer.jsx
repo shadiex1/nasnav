@@ -11,7 +11,7 @@ const Footer = (props) => {
   return (
     <React.Fragment>
       <div className={styles.Footer}>
-        <img src={"/assets/layer-1.png"} alt="nasnav logo" />
+        <img src={"/home/assets/layer-1.png"} alt="nasnav logo" />
         <div className={styles.newsletter}>
           <input placeholder="Subscribe to nasnav newsletter" type="text" />
           <SendIcon />

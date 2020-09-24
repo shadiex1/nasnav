@@ -8,9 +8,27 @@ background: url("/assets/Banner/layer-14-copy@3x.png"),
   align-items: center;
   .dots{
     //  background-color: green;
-   }
+    list-style-type: none;
+    display: flex;
+justify-content: center;
+padding: 0;
+  
+   }  .dot{
+      background-color: white;
+      // border-radius: 3px;
+      opacity: 0.3;
+      width: 35px;
+      height: 5px;
+      margin: 10px;
+      &:hover{
+        opacity: 1;
+      }
+    }
   .slider{
    transform: translateY(30%);
+   div{
+     outline: none;
+   }
    
   }
    .card{
@@ -66,6 +84,8 @@ background: url("/assets/Banner/layer-14-copy@3x.png"),
    @media screen and (max-width:1000px){
      width: 100%;
      height: 700px;
+         padding: 5rem 0 3rem 0;
+
      .mobileScreen{
        transform:translateY(15px);
      }

@@ -18,8 +18,13 @@ const Gallery = props => {
     lazyLoad: "ondemand",
     slidesToShow: 1,
     slidesToScroll: 1,
-    // dots: true,
-    dotsClass:styles.dots,
+    dots: true,
+    dotsClass: styles.dots,
+    appendDots: dots => <ul>{dots}</ul>,
+    customPaging: i => (
+      <div className={styles.dot} >
+     
+      </div>),
     
     // nextArrow: (
     //   //  <NextArrow>
@@ -64,7 +69,7 @@ const Gallery = props => {
               {/* <img className={styles.background} src={"/assets/Gif sections/layer-106@3x.png"} alt="background"/> */}
 
               <img
-                src={"/assets/Gif sections/i-phone.png"}
+                src={"/home/assets/Gif sections/i-phone.png"}
                 alt="mobile Cover"
                 className={styles.mobileCover}
               />

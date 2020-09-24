@@ -14,7 +14,10 @@ class HeyNavBox extends Component {
           </h2>
           <span className={styles.subtitle}>
             {data.subtitle}
-            <img src={"/assets/Gif sections/layer-104@3x.png"} alt="logo" />
+            <img
+              src={"/home/assets/Gif sections/layer-104@3x.png"}
+              alt="logo"
+            />
           </span>
           <p>{data.description}</p>
           <ul className={styles.list}>
@@ -41,14 +44,14 @@ class HeyNavBox extends Component {
 
         <div
           style={{
-            backgroundImage: `url("/assets/HeyNavTheme/layer-118.png")`,
+            backgroundImage: `url("/home/assets/HeyNavTheme/layer-118.png")`,
           }}
           className={styles.imgContainer}
         >
           {/* <img className={styles.background} src={"/assets/Gif sections/layer-106@3x.png"} alt="background"/> */}
 
           <img
-            src={"/assets/Gif sections/i-phone.png"}
+            src={"/home/assets/Gif sections/i-phone.png"}
             alt="mobile Cover"
             className={styles.mobileCover}
           />

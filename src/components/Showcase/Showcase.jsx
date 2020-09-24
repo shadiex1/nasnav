@@ -9,7 +9,7 @@ class Showcase extends Component {
       <div className={styles.Showcase}>
         <div className={styles.showcaseContainer}>
           <div className={styles.searchbar}>
-            <img src={"/assets/Showcase/layer-15@3x.png"} alt="logo" />
+            <img src={"/home/assets/Showcase/layer-15@3x.png"} alt="logo" />
             <input type="text" placeholder="Find your products on goolge" />
             <div className={styles.iconConatiner}>
               <SearchIcon />
@@ -23,10 +23,11 @@ class Showcase extends Component {
           </div>
           <div className={styles.btnsContainer}>
             <div className={styles.btn}>
-              <img src={"/assets/Menu/layer-2@3x.png"} /> Watch how to do it
+              <img src={"/home/assets/Menu/layer-2@3x.png"} /> Watch how to do
+              it
             </div>
             <div className={styles.btnSmall}>
-              <PlayArrow/>
+              <PlayArrow />
             </div>
           </div>
 

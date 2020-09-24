@@ -18,28 +18,28 @@ class Prices extends Component {
       description:
         "We can provide you with a complete Business-in-a-Box solution Join our franchising scheme and be a part of the team Build your business with confidence knowing you are backed by expert",
       brands: [
-        "/assets/brands/layer-636.png",
-        "/assets/brands/layer-637.png",
-        "/assets/brands/layer-638.png",
-        "/assets/brands/layer-639.png",
-        "/assets/brands/layer-640.png",
-        "/assets/brands/layer-641.png",
-        "/assets/brands/layer-642.png",
-        "/assets/brands/layer-643.png",
-        "/assets/brands/layer-644.png",
-        "/assets/brands/layer-645.png",
+        "/home/assets/brands/layer-636.png",
+        "/home/assets/brands/layer-637.png",
+        "/home/assets/brands/layer-638.png",
+        "/home/assets/brands/layer-639.png",
+        "/home/assets/brands/layer-640.png",
+        "/home/assets/brands/layer-641.png",
+        "/home/assets/brands/layer-642.png",
+        "/home/assets/brands/layer-643.png",
+        "/home/assets/brands/layer-644.png",
+        "/home/assets/brands/layer-645.png",
       ],
     },
     OurPartners: {
       title: ["Our", "Partners"],
       subtitle: "Join our family now wherever you are",
       logos: [
-        "/assets/Our partners/layer-110.png",
-        "/assets/Our partners/layer-165.png",
-        "/assets/Our partners/layer-166.png",
-        "/assets/Our partners/layer-163.png",
-        "/assets/Our partners/layer-164.png",
-        "/assets/Our partners/layer-167.png",
+        "/home/assets/Our partners/layer-110.png",
+        "/home/assets/Our partners/layer-165.png",
+        "/home/assets/Our partners/layer-166.png",
+        "/home/assets/Our partners/layer-163.png",
+        "/home/assets/Our partners/layer-164.png",
+        "/home/assets/Our partners/layer-167.png",
       ],
       bannerTitle: ["start selling on", "google for free"],
     },
@@ -86,8 +86,8 @@ class Prices extends Component {
     // if (window.innerWidth < 500) {
     //   this.setState({ width: 450 });
     // } else {
-      let update_width = window.innerWidth;
-      this.setState({ width: update_width });
+    let update_width = window.innerWidth;
+    this.setState({ width: update_width });
     // }
   }
   componentDidMount() {
@@ -126,7 +126,7 @@ class Prices extends Component {
           )}
         </FullScreenWrapper>
         <FullScreenWrapper>
-          <Map mapImg="/assets/Map/map.png" data={this.state.Map} />
+          <Map mapImg="/home/assets/Map/map.png" data={this.state.Map} />
           <OurPartners data={this.state.OurPartners} />
         </FullScreenWrapper>
         <Footer />

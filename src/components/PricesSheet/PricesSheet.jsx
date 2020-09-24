@@ -30,7 +30,7 @@ const PricesSheet = props => {
                   <span className={styles.price}>{plan.price}</span>
                   <p className={styles.per}>Per month</p>
                   <button className={styles.getStarted}>
-                    <img src={"/assets/Menu/layer-2@3x.png"} /> Get Started
+                    <img src={"/home/assets/Menu/layer-2@3x.png"} /> Get Started
                   </button>
                 </div>
               ))}

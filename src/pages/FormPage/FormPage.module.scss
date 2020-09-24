@@ -53,9 +53,26 @@
       text-align: center;
       width: 50%;
       margin: auto;
+      opacity: 0.3;
       .title{
         color: white;
         font-size: 18px;
+      }
+    }
+  }
+  @media screen and (max-width:1000px){
+    .header{
+      h3{
+        width: 100%;
+      }
+      p{
+        top: 20%;
+        left: 5%;
+      }
+    }
+    .sectionsContainer{
+      .section{
+        width: 100%;
       }
     }
   }

@@ -32,6 +32,7 @@
         font-weight: 500;
         font-size: 0.8rem;
         text-decoration: none;
+        color: black;
       }
       .btn {
         margin: 1rem 0.4rem;
@@ -72,7 +73,17 @@
     flex-direction: column;
     margin: 3rem auto;
     .navigation {
-      display: none;
+      // display: none;
+      ul{
+  flex-direction: column;
+  .btn{
+    width: 100%;
+  }
+}
+      .navigationList{
+        display: flex;
+
+      }
     }
   }
 }

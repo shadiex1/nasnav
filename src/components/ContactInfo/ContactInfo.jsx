@@ -7,25 +7,22 @@ const ContactInfo = props => {
     <div className={styles.ContactInfo}>
       {/* <img src="" alt="map" /> */}
       <div className={styles.map}>
-              <Map mapImg ="/assets/layer-184.png"/>
-
+        <Map mapImg="/home/assets/layer-184.png" />
       </div>
       <div className={styles.information}>
         <h2>Contact information</h2>
         <div className={styles.branches}>
-          {data.map(branch => (
-          <div className={styles.branch}>
-          <h3>{branch.title}</h3>
-          <ul>
-              {branch.list.map(item => (
-                <li>{item}</li>
-            ))}
-          </ul>
+          {data.map((branch) => (
+            <div className={styles.branch}>
+              <h3>{branch.title}</h3>
+              <ul>
+                {branch.list.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
-        ))}
-        </div>
-        
-        
       </div>
     </div>
   );
