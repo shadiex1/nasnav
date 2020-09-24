@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/nasnav/static/css/main.459354e8.chunk.css",
+    "main.js": "/nasnav/static/js/main.2455c3f7.chunk.js",
+    "main.js.map": "/nasnav/static/js/main.2455c3f7.chunk.js.map",
+    "runtime-main.js": "/nasnav/static/js/runtime-main.093a8af0.js",
+    "runtime-main.js.map": "/nasnav/static/js/runtime-main.093a8af0.js.map",
+    "static/css/2.2ee197a2.chunk.css": "/nasnav/static/css/2.2ee197a2.chunk.css",
+    "static/js/2.f029959b.chunk.js": "/nasnav/static/js/2.f029959b.chunk.js",
+    "static/js/2.f029959b.chunk.js.map": "/nasnav/static/js/2.f029959b.chunk.js.map",
+    "index.html": "/nasnav/index.html",
+    "precache-manifest.07d812d7629a888c197bb00c58c3a24c.js": "/nasnav/precache-manifest.07d812d7629a888c197bb00c58c3a24c.js",
+    "service-worker.js": "/nasnav/service-worker.js",
+    "static/css/2.2ee197a2.chunk.css.map": "/nasnav/static/css/2.2ee197a2.chunk.css.map",
+    "static/css/main.459354e8.chunk.css.map": "/nasnav/static/css/main.459354e8.chunk.css.map",
+    "static/js/2.f029959b.chunk.js.LICENSE.txt": "/nasnav/static/js/2.f029959b.chunk.js.LICENSE.txt",
+    "static/media/slick-theme.css": "/nasnav/static/media/slick.f97e3bbf.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.093a8af0.js",
+    "static/css/2.2ee197a2.chunk.css",
+    "static/js/2.f029959b.chunk.js",
+    "static/css/main.459354e8.chunk.css",
+    "static/js/main.2455c3f7.chunk.js"
+  ]
+}
