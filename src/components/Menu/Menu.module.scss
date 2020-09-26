@@ -6,6 +6,31 @@
   margin: auto;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  .toggler {
+        display: none;
+        flex-direction: column;
+        width: 10%;
+        margin: 0;
+        cursor: pointer;
+        span {
+          display: block;
+          width: 25px;
+          height: 3px;
+          margin-bottom: 5px;
+          position: relative;
+
+          background: black;
+          border-radius: 2px;
+
+          z-index: 1;
+          cursor: pointer;
+
+          // &:nth-of-type(2) {
+          //   width: 20px;
+          // }
+        }
+      }
   .logoContainer {
     width: 8rem;
     z-index: 2;
@@ -16,7 +41,8 @@
   }
   .navigation {
     //   width: 10rem;
-    z-index: 2;
+    z-index: 20;
+    position: relative;
 
     ul {
       margin: 0;
@@ -70,10 +96,22 @@
 
 @media screen and (max-width: 1000px) {
   .Menu {
-    flex-direction: column;
+    // flex-direction: column;
+    justify-content: center;
     margin: 3rem auto;
+    position: relative;
+    .logoContainer{
+      justify-self: flex-start;
+    }
+    .toggler{
+      margin: auto;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      display: flex;
+    }
     .navigation {
-      // display: none;
+      display: none;
       ul{
   flex-direction: column;
   .btn{

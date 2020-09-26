@@ -14,6 +14,7 @@ import YoutubeVideoSlide from "../../components/YoutubeVideoSlide/YoutubeVideoSl
 import OurPartners from "../../components/OurPartners/OurPartners";
 import Map from "../../components/Map/Map";
 import Footer from "../../components/Footer/Footer";
+import FullScreenWrapper from "../../components/FullScreenContainer/FullScreenWrapper";
 class Homepage extends Component {
   state = {
     Showcase: {
@@ -239,26 +240,34 @@ class Homepage extends Component {
   render() {
     return (
       <div>
+        <FullScreenWrapper>
+
         <Header ShowcaseData={this.state.Showcase} />
-        <HeyNavBox data={this.state.HeynavBox} />
+          <HeyNavBox data={this.state.HeynavBox} />
 
-        <HowTo data={this.state.HowTo} />
-        <HeyNavTheme data={this.state.HeyNavTheme} />
+          <HowTo data={this.state.HowTo} />
+          <HeyNavTheme data={this.state.HeyNavTheme} />
 
-        <Benefits data={this.state.Benefits} />
-        <HeyNav360 data={this.state.HeyNav360} />
-        <NavBoxGrid data={this.state.NavBoxGrid} />
+          <Benefits data={this.state.Benefits} />
+          <HeyNav360 data={this.state.HeyNav360} />
+          <NavBoxGrid data={this.state.NavBoxGrid} />
 
-        <DashboardOverview data={this.state.DashboardOverview} />
-        <YoutubeVideoSlide videoUrl="8V1LI_EwGUM" />
+          <DashboardOverview data={this.state.DashboardOverview} />
+          <YoutubeVideoSlide videoUrl="8V1LI_EwGUM" />
+        </FullScreenWrapper>
+
         <ThreeSixtyView
           data={this.state.ThreeSixtyView}
           shops={this.state.Shops}
         />
+        <FullScreenWrapper>
+
         <Map mapImg="/home/assets/Map/map.png" data={this.state.Map} />
 
         <OurPartners data={this.state.OurPartners} />
-        <Footer />
+          <Footer />
+        </FullScreenWrapper>
+
       </div>
     );
   }
