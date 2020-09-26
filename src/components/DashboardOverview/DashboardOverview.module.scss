@@ -1,110 +1,91 @@
 @import "../../VariablesScss/variables";
 
-.DashboardOverviewPattern {
-  background: url("/assets/Banner/layer-14-copy@3x.png"),
-    linear-gradient(90deg, rgba(75, 68, 255, 1) 50%, rgba(52, 191, 243, 1) 100%);
-  background-size: cover;
-  background-position: center;
-  // height: 60vh;
-  // height: 550px;
-    height: 24rem;
-
-  display: flex;
-      @media screen and (max-width:1100px){
-        height: auto;
-      }
-
-  .DashboardOverview {
-    width: 70%;
-    margin: auto auto;
-
-    h3 {
-      text-align: center;
-      color: $color-white;
-      font-size: 30px;
-      font-weight: normal;
-      margin: 0;
-      span {
-        font-weight: bold;
-      }
+.DashboardOverview {
+  width: 100%;
+  margin: auto auto;
+  height: 24rem;
+  @media screen and (max-width: 1100px) {
+    height: auto;
+  }
+  h3 {
+    text-align: center;
+    color: $color-white;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0;
+    span {
+      font-weight: bold;
     }
-    p {
-      text-align: center;
-      color: $color-white;
-      width: 50%;
-      margin: 30px auto;
-    }
-    .features {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-              // flex-wrap: wrap;
+  }
+  p {
+    text-align: center;
+    color: $color-white;
+    width: 50%;
+    margin: 30px auto;
+  }
+  .features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // flex-wrap: wrap;
 
-      .feature {
-        background-color: $color-white;
-        margin: 10px;
-        border-radius: 20px 20px 5px 20px;
-        height: 140px;
-        padding: 20px;
-        .imgContainer {
-          background-image: linear-gradient(
-            to top,
-            $color-primary,
-            $color-txt-4
-          );
-          width: 30%;
-          height: 50px;
-          border-radius: 10px 10px 0 10px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 10px;
-          img {
-            width: 40px;
-            height: 30px;
-            object-fit: contain;
-          }
-        }
-        h3 {
-          font-size: 16px;
-          color: $color-black;
-          text-align: left;
-          margin-bottom: 5px;
-          font-weight: bolder;
-        }
-        p {
-          color: $color-txt-3;
-          text-align: left;
-          font-size: 14px;
-          margin-top: 5px;
-          width: 100%;
+    .feature {
+      background-color: $color-white;
+      margin: 10px;
+      border-radius: 20px 20px 5px 20px;
+      height: 140px;
+      padding: 20px;
+      .imgContainer {
+        background-image: linear-gradient(to top, $color-primary, $color-txt-4);
+        width: 30%;
+        height: 50px;
+        border-radius: 10px 10px 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        img {
+          width: 40px;
+          height: 30px;
+          object-fit: contain;
         }
       }
-    }
-    @media screen and (max-width:1100px){
-      width: 100%;
-      p{
+      h3 {
+        font-size: 16px;
+        color: $color-black;
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bolder;
+      }
+      p {
+        color: $color-txt-3;
+        text-align: left;
+        font-size: 14px;
+        margin-top: 5px;
         width: 100%;
       }
     }
-    @media screen and (max-width:750px){
-      .features{
-        // flex-direction: column;
-        flex-wrap: wrap !important;
-        .feature{
-          width: 30%;
-        }
-      }
-
+  }
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    p {
+      width: 100%;
     }
-    @media screen and (max-width:480px){
-      .features{
-        
-        .feature{
-          width: 50%;
-        }
+  }
+  @media screen and (max-width: 750px) {
+    .features {
+      // flex-direction: column;
+      flex-wrap: wrap !important;
+      .feature {
+        width: 30%;
       }
-
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .features {
+      .feature {
+        width: 50%;
+      }
     }
   }
 }

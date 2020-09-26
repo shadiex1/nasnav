@@ -1,9 +1,9 @@
 @import "../../VariablesScss/variables";
 .HowTo {
-  background: url("/assets/Banner/layer-14-copy@3x.png"),
-    linear-gradient(90deg, rgba(75, 68, 255, 1) 50%, rgba(52, 191, 243, 1) 100%);
-  background-size: cover;
-  background-position: center;
+  // background: url("/assets/Banner/layer-14-copy@3x.png"),
+  //   linear-gradient(90deg, rgba(75, 68, 255, 1) 50%, rgba(52, 191, 243, 1) 100%);
+  // background-size: cover;
+  // background-position: center;
   height: 24rem;
   display: flex;
   align-items: center;
@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
+    width: 100%;
     margin: auto;
     .description {
       width: 80%;
@@ -56,7 +56,7 @@
       width: 70%;
       height: 250px;
       margin-left: auto;
-      margin-right: 70px;
+      // margin-right: 70px;
       .check {
         display: flex;
         flex-wrap: wrap;
@@ -131,13 +131,13 @@
       }
     }
   }
-  @media screen and (max-width:800px){
+  @media screen and (max-width: 800px) {
     height: auto;
-    .content{
+    .content {
       flex-direction: column;
       width: 100%;
-     
-      .description{
+
+      .description {
         padding: 15px;
         width: 90%;
         // text-align: center;
@@ -145,19 +145,19 @@
         flex-direction: column;
         // justify-content: center;
         // align-items: center;
-        order: 2; .mainTitle{
-        
-                  width: 100%;
-
-        
-      }
-        h2,h3,p{
+        order: 2;
+        .mainTitle {
+          width: 100%;
+        }
+        h2,
+        h3,
+        p {
           width: 100%;
         }
       }
-      .imgSection{
+      .imgSection {
         margin: 2rem auto;
-        order:1;
+        order: 1;
       }
     }
   }

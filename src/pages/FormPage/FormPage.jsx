@@ -4,13 +4,6 @@ import FormBtn from "../../components/FormBtn/FormBtn";
 import { Link } from "react-router-dom";
 class FormPage extends Component {
   state = {
-    // counter: 0,
-    //   questionId: 1,
-    //   question: '',
-    //   answerOptions: [],
-    //   answer: '',
-    //   answersCount: {},
-    //   result: '',
     Form: [
       {
         title: "Do you have a physical retail store?",
@@ -72,12 +65,18 @@ checked:true      },
      const current = Form.find((item) => item.id === id )
      const nextQuestion = Form.find((item) => item.id === id + 1)
      if (prevQuestion.checked && current.checked) {
+       if (!nextQuestion) {
+        this.setState({
+          nextBtn: true,
+        });
+     }else
        nextQuestion.checked = true
-
-     }
-     this.setState({
+this.setState({
        Form:Form
      })
+     }
+    
+     
   
    }
   
@@ -105,7 +104,6 @@ checked:true      },
               }}
               className={styles.section}
             >
-              {console.log(section,"al sec")}
               <p className={styles.title}>{section.title}</p>
               {section.options.map((option) => {
                 return section.imgs ? (
@@ -126,6 +124,12 @@ checked:true      },
 
           
         </div>
+        <div className={styles.next}>
+          {this.state.nextBtn && <button className={styles.btn}>
+          finish
+          </button>}
+        </div>
+        
       </div>
     );
   }

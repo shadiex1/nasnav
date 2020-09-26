@@ -103,9 +103,11 @@ class Prices extends Component {
 
     return (
       <div className={styles.Prices}>
-        <div className={styles.menu}>
+        <FullScreenWrapper className={styles.menu}>
+
           <Menu />
-        </div>
+        </FullScreenWrapper>
+
         <FullScreenWrapper className={styles.PricesSheet}>
           <h3 className={styles.header}>
             <span>
@@ -125,11 +127,12 @@ class Prices extends Component {
             <PricesSheet data={this.state.PriceSheet} />
           )}
         </FullScreenWrapper>
-        <FullScreenWrapper>
+        <FullScreenWrapper className={styles.map}>
           <Map mapImg="/home/assets/Map/map.png" data={this.state.Map} />
           <OurPartners data={this.state.OurPartners} />
+          <Footer />
         </FullScreenWrapper>
-        <Footer />
+
       </div>
     );
   }

@@ -5,7 +5,6 @@ import HeyNavBox from "../../components/HeyNavBox/HeyNavBox";
 import HowTo from "../../components/HowTo/HowTo";
 import HeyNavTheme from "../../components/HeyNavTheme/HeyNavTheme";
 import Benefits from "../../components/Benefits/Benefits";
-import Banner from "../../components/Banner/Banner";
 import HeyNav360 from "../../components/HeyNav360/HeyNav360";
 import NavBoxGrid from "../../components/NavboxGrid/NavBoxGrid";
 import ThreeSixtyView from "../../components/360View/ThreeSixtyView";
@@ -240,32 +239,47 @@ class Homepage extends Component {
   render() {
     return (
       <div>
+        <FullScreenWrapper className={styles.HeaderFullSreen}>
+
+          <Header  ShowcaseData={this.state.Showcase} />
+        </FullScreenWrapper>
         <FullScreenWrapper>
+                    <HeyNavBox data={this.state.HeynavBox} />
 
-        <Header ShowcaseData={this.state.Showcase} />
-          <HeyNavBox data={this.state.HeynavBox} />
-
+</FullScreenWrapper>
+<FullScreenWrapper className={styles.HowToFullScrn}>
           <HowTo data={this.state.HowTo} />
+        </FullScreenWrapper>
+                <FullScreenWrapper>
+
           <HeyNavTheme data={this.state.HeyNavTheme} />
+          </FullScreenWrapper>
+<FullScreenWrapper className={styles.HowToFullScrn}>
 
           <Benefits data={this.state.Benefits} />
-          <HeyNav360 data={this.state.HeyNav360} />
+        </FullScreenWrapper>
+        <FullScreenWrapper>
+             <HeyNav360 data={this.state.HeyNav360} />
           <NavBoxGrid data={this.state.NavBoxGrid} />
+        </FullScreenWrapper>
+       
+<FullScreenWrapper className={styles.HowToFullScrn}>
 
           <DashboardOverview data={this.state.DashboardOverview} />
+          </FullScreenWrapper>
           <YoutubeVideoSlide videoUrl="8V1LI_EwGUM" />
-        </FullScreenWrapper>
 
         <ThreeSixtyView
           data={this.state.ThreeSixtyView}
           shops={this.state.Shops}
         />
         <FullScreenWrapper>
-
+        <FullScreenWrapper>
         <Map mapImg="/home/assets/Map/map.png" data={this.state.Map} />
 
         <OurPartners data={this.state.OurPartners} />
-          <Footer />
+            <Footer />
+          </FullScreenWrapper>
         </FullScreenWrapper>
 
       </div>

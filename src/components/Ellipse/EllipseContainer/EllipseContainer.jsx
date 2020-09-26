@@ -54,7 +54,7 @@ const EllipseContainer = props => {
           color="#44aeff"
           width="20px"
           height="20px"
-          top="60%"
+          top="35%"
           right="90%"
         />
         <Ellipse

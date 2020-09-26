@@ -3,7 +3,8 @@ import { Component } from "react";
 import styles from "./GetStarted.module.scss";
 import Menu from "../../components/Menu/Menu";
 import Gallery from "../../components/Gallery/Gallery";
-import Form from "../../components/Form/Form"
+import Form from "../../components/Form/Form";
+import FullScreenWrapper from "../../components/FullScreenContainer/FullScreenWrapper"
 class GetStarted extends Component {
   state = {
     Gallery: [
@@ -33,13 +34,19 @@ class GetStarted extends Component {
   render() {
     return (
       <div className={styles.GetStarted}>
-        <div className={styles.menu}>
-          <Menu white />
+        <div >
+          <FullScreenWrapper className={styles.menu}>
+                      <Menu white />
+
+          </FullScreenWrapper>
         </div>
-        <div className={styles.flexcContainer}>
+        {/* <FullScreenWrapper > */}
+        
+          <div className={styles.flexcContainer}>
           <Gallery data={this.state.Gallery} />
           <Form />
-        </div>
+          </div>
+        {/* </FullScreenWrapper> */}
       </div>
     );
   }

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Menu.module.scss";
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import MenuSidebar from "../MenuSidebar/MenuSidebar"
+import MenuSidebar from "../MenuSidebar/MenuSidebar";
 class Menu extends Component {
   state = {
     showMenuSidebar: false,
@@ -17,13 +17,12 @@ class Menu extends Component {
   };
   render() {
     const { white } = this.props;
+    const {showMenuSidebar} =this.state
     return (
       <React.Fragment>
         <MenuSidebar
-
-          open={this.state.showMenuSidebar}
+          open={showMenuSidebar}
           closed={this.showMenuSidebarClosedHandler}
-
         />
         <div className={styles.Menu}>
           <div

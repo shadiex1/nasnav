@@ -1,24 +1,43 @@
 import React from "react";
+import { Component } from "react";
 import styles from "./FormBtn.module.scss";
 
-const FormBtn = (props) => {
-  const { data, img, active } = props;
-  let stylesArr = [styles.FormBtn];
-  const clicked = () => {
-    active();
-    stylesArr.push(styles.clicked);
+class FormBtn extends Component {
+  state = {
+    clickedBtn: false,
   };
-
-  return (
-    <button
-      onClick={clicked}
-      style={{
-      }}
-      className={stylesArr.join(' ')}
-    >
-      {img ? <img src={img} alt="logo" /> : <p>{data}</p>}
-    </button>
-  );
-};
+  render() {
+    const { data, img, active } = this.props;
+    const { clickedBtn } = this.state;
+    const clicked = () => {
+      active();
+      this.setState({
+        clickedBtn: !clickedBtn,
+      });
+    };
+    return (
+      <button
+        onClick={clicked}
+        style={{
+          backgroundColor: clickedBtn && " #13d79d",
+          color: "white",
+        }}
+        className={styles.FormBtn}
+      >
+        {img ? (
+          <img src={img} alt="logo" />
+        ) : (
+          <p
+            style={{
+              color: clickedBtn && "white",
+            }}
+          >
+            {data}
+          </p>
+        )}
+      </button>
+    );
+  }
+}
 
 export default FormBtn;

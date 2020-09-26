@@ -3,12 +3,12 @@ import styles from "./Gallery.module.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-const Gallery = props => {
-  const { data } = props
-  const sliderSettingsBuilder = (shopsLength) => ({
+const Gallery = (props) => {
+  const { data } = props;
+  const sliderSettingsBuilder = (data) => ({
     dragging: true,
-    infinite: shopsLength > 3 ? true : false,
-    autoplay: shopsLength > 3 ? true : false,
+    infinite: data > 3 ? true : false,
+    autoplay: data > 3 ? true : false,
     speed: 500,
     centerPadding: "60px",
     arrows: false,
@@ -20,44 +20,31 @@ const Gallery = props => {
     slidesToScroll: 1,
     dots: true,
     dotsClass: styles.dots,
-    appendDots: dots => <ul>{dots}</ul>,
-    customPaging: i => (
-      <div className={styles.dot} >
-     
-      </div>),
-    
-    // nextArrow: (
-    //   //  <NextArrow>
-    //   // <RightArrowWide className={styles.arrows} />
-    //   //  </NextArrow>
-    // ),
-    // prevArrow: (
-    //   //  <PrevArrow>
-    //   // <LeftArrowWide className={styles.arrows} />
-    //   //  </PrevArrow>
-    // ),
+    appendDots: (dots) => <ul>{dots}</ul>,
+    customPaging: (i) => <div className={styles.dot}></div>,
+
     responsive: [
       {
         breakpoint: 860,
         settings: {
           slidesToShow: 2,
-          infinite: shopsLength > 2 ? true : false,
-          autoplay: shopsLength > 2 ? true : false,
+          infinite: data > 2 ? true : false,
+          autoplay: data > 2 ? true : false,
         },
       },
       {
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
-          infinite: shopsLength > 1 ? true : false,
-          autoplay: shopsLength > 1 ? true : false,
+          infinite: data > 1 ? true : false,
+          autoplay: data > 1 ? true : false,
         },
       },
     ],
   });
   return (
     <div className={styles.gallery}>
-      <Slider {...sliderSettingsBuilder(10)}>
+      <Slider {...sliderSettingsBuilder(data.length)}>
         {data.map((item) => (
           <div className={styles.card}>
             <div
@@ -66,10 +53,9 @@ const Gallery = props => {
               }}
               className={styles.imgContainer}
             >
-              {/* <img className={styles.background} src={"/assets/Gif sections/layer-106@3x.png"} alt="background"/> */}
 
               <img
-                src={"/home/assets/Gif sections/i-phone.png"}
+                src="/home/assets/Gif sections/i-phone.png"
                 alt="mobile Cover"
                 className={styles.mobileCover}
               />
@@ -91,5 +77,5 @@ const Gallery = props => {
       </Slider>
     </div>
   );
-}
-export default Gallery
+};
+export default Gallery;

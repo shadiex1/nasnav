@@ -4,8 +4,7 @@ import styles from "./Benefits.module.scss";
 const Benefits = (props) => {
   const { data } = props;
   return (
-    <div className={styles.Benefits}>
-      <div className={styles.content}>
+      <div className={styles.Benefits}>
         <div className={styles.description}>
           <h3>
             {data.title} <span>{data.highlighted}</span>
@@ -29,7 +28,6 @@ const Benefits = (props) => {
           />
         </div>
       </div>
-    </div>
   );
 };
 

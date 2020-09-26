@@ -1,17 +1,8 @@
 import React from "react";
 import styles from "./MenuSidebar.module.scss";
-import Backdrop from "../Backdrop/Backdrop"
-// import {
-//   CloseIcon,
-//   CartIcon,
-//   HeartIcon,
-//   UserIcon,
-//   AngelRightThin,
-// } from "../../Svg/Svg";
 import{CloseIcon} from "../SvgIcons/SvgIcons"
 import { Link } from "react-router-dom";
 import { Component } from "react";
-// import AccountOptions from "../accountOptions/accountOptions";
 
 class MenuSidebar extends Component {
   state = {
@@ -42,7 +33,6 @@ class MenuSidebar extends Component {
 
     return (
       <React.Fragment>
-        {/* <Backdrop show={open} clicked={closed} /> */}
         <div className={attachdstyles.join(" ")}>
           <div className={styles.title}>
             <img src="/home/assets/layer-1.png" alt="navlogo" />
@@ -52,14 +42,12 @@ class MenuSidebar extends Component {
           </div>
           <div className={styles.navigation}>
             <ul>
-              {/* <div className={styles.navigationList}> */}
               <Link to="/prices" onClick={closed} className={styles.link}>
                 <li>Pricing</li>
               </Link>
               <Link to="/contact" onClick={closed} className={styles.link}>
                 <li>Contact us</li>
               </Link>
-              {/* </div> */}
 
               <Link
                 to="/getstarted"

@@ -4,7 +4,6 @@
     linear-gradient(90deg, rgba(75, 68, 255, 1) 50%, rgba(52, 191, 243, 1) 100%);
   background-size: cover;
   background-position: center;
-  // height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,15 +27,15 @@
       margin: auto;
     }
   }
-  @media screen and (max-width:800px){
+  @media screen and (max-width: 800px) {
     padding: 20px;
-    .header{
-      h2{
+    .header {
+      h2 {
         width: 100%;
         margin-bottom: 1rem;
       }
-      p{
-        width:100%;
+      p {
+        width: 100%;
       }
     }
   }

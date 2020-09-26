@@ -29,22 +29,24 @@ const Map = (props) => {
     },
   ];
 
-  const { data , mapImg } = props;
+  const { data, mapImg } = props;
   return (
     <React.Fragment>
       <div className={styles.MapContainer}>
-        {data &&      <div className={styles.header}>
-          <h3>
-            {data.title[0]} <span> {data.title[1]}</span>
-          </h3>
-          <p>{data.description}</p>
-          <div className={styles.brands}>
-            {data.brands.map((brand) => (
-              <img src={brand} alt="brand" />
-            ))}
+        {data && (
+          <div className={styles.header}>
+            <h3>
+              {data.title[0]} <span> {data.title[1]}</span>
+            </h3>
+            <p>{data.description}</p>
+            <div className={styles.brands}>
+              {data.brands.map((brand) => (
+                <img src={brand} alt="brand" />
+              ))}
+            </div>
           </div>
-        </div>}
-   
+        )}
+
         <div className={styles.Map}>
           <img
             src={mapImg}

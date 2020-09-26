@@ -1,80 +1,78 @@
-.ContactInfo{
+.ContactInfo {
   background: url("/assets/Banner/layer-14-copy@3x.png"),
     linear-gradient(90deg, rgba(75, 68, 255, 1) 50%, rgba(52, 191, 243, 1) 100%);
-    background-size: cover;
+  background-size: cover;
   background-position: center/left;
-  // width: calc(50% - 100px);
-   width: calc(50% - 100px) ;
+  width: calc(50% - 100px);
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 60px 50px 10px 50px ;
-  .map{
-    padding: 0 20px ;
+  padding: 60px 50px 10px 50px;
+  .map {
+    padding: 0 20px;
     margin-top: 1.5rem;
     height: 50%;
     // width: 90%;
   }
-.information{
-  width: 100%;
-// padding: 50px;
-display: flex;
-justify-content: center;
-flex-direction: column;  
-align-items: center;
+  .information {
+    width: 100%;
+    // padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-left: 50px;
-// margin: auto;
+    // margin: auto;
 
-  h2{
-    color: white;
-    text-align: left;
-    font-size: 30px;
-    align-self: flex-start;    
-
-  }
-}
-.branches{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  .branch{
-    width: 50%;
-    margin: 10px auto;
-    h3{
-      font-weight: bold;
+    h2 {
       color: white;
-      margin: 5px 0;
+      text-align: left;
+      font-size: 30px;
+      align-self: flex-start;
     }
-    ul{     
-             list-style-type: none;
-            padding: 0;
-            margin: 10px 0;
-        li{
+  }
+  .branches {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .branch {
+      width: 50%;
+      margin: 10px auto;
+      h3 {
+        font-weight: bold;
+        color: white;
+        margin: 5px 0;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 10px 0;
+        li {
           color: white;
         }
       }
+    }
   }
-}
-@media screen and (max-width:1000px){
+  @media screen and (max-width: 1000px) {
     padding: 5rem 0 3rem 0;
-width: 100%;
-.map{
-  width: 100%;
-  padding: 0;
-}
-.information{
-  margin: auto;
-  h2{
-    align-self: center;
+    width: 100%;
+    .map {
+      width: 100%;
+      padding: 0;
+    }
+    .information {
+      margin: auto;
+      h2 {
+        align-self: center;
+      }
+    }
+    .branches {
+      .branch {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
   }
-}
-.branches{
-  .branch{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
-}
 }

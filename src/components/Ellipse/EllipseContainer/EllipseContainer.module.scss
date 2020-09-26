@@ -1,34 +1,34 @@
 .EllipseContainer {
   overflow: hidden;
-  z-index: 1 !important;
+  z-index: 1 ;
   .Ellipse1 {
     animation-duration: 5s;
   }
-  .new {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    border-radius: 50%;
-    animation-name: blink;
-    animation-duration: 150s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    &::after {
-      content: "";
-      background-color: orange;
-      border-radius: 50%;
-      opacity: .5;
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      top: 0;
-      left: 0;
+  // .new {
+  //   width: 200px;
+  //   height: 200px;
+  //   position: absolute;
+  //   top: 100px;
+  //   left: 100px;
+  //   border-radius: 50%;
+  //   animation-name: blink;
+  //   animation-duration: 150s;
+  //   animation-iteration-count: infinite;
+  //   animation-timing-function: linear;
+  //   &::after {
+  //     content: "";
+  //     background-color: orange;
+  //     border-radius: 50%;
+  //     opacity: .5;
+  //     width: 20px;
+  //     height: 20px;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
 
-      //mixin 
-    }
-  }
+  //     //mixin 
+  //   }
+  // }
 }
 
 @keyframes blink {

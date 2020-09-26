@@ -1,11 +1,10 @@
 import React from "react";
 import styles from "./ContactInfo.module.scss";
-import Map from '../Map/Map';
-const ContactInfo = props => {
-  const {data}=props
+import Map from "../Map/Map";
+const ContactInfo = (props) => {
+  const { data } = props;
   return (
     <div className={styles.ContactInfo}>
-      {/* <img src="" alt="map" /> */}
       <div className={styles.map}>
         <Map mapImg="/home/assets/layer-184.png" />
       </div>
@@ -26,6 +25,6 @@ const ContactInfo = props => {
       </div>
     </div>
   );
-}
+};
 
-export default ContactInfo
+export default ContactInfo;

@@ -15,14 +15,14 @@ class HeyNav360 extends Component {
           <span className={styles.subtitle}>
             {data.subtitle}
             <img
-              src={"/home/assets/Gif sections/layer-104@3x.png"}
+              src="/home/assets/Gif sections/layer-104@3x.png"
               alt="logo"
             />
           </span>
           <p>{data.description}</p>
           <p className={styles.examples}>
             <span className={[styles.btn, styles.gradientBtn].join(" ")}>
-              <img src={"/home/assets/Menu/layer-2@3x.png"} /> See Examples
+              <img src="/home/assets/Menu/layer-2@3x.png" /> See Examples
             </span>
           </p>
           <div className={styles.magic}>
@@ -40,10 +40,9 @@ class HeyNav360 extends Component {
           }}
           className={styles.imgContainer}
         >
-          {/* <img className={styles.background} src={"/assets/Gif sections/layer-106@3x.png"} alt="background"/> */}
 
           <img
-            src={"/home/assets/Gif sections/i-phone.png"}
+            src="/home/assets/Gif sections/i-phone.png"
             alt="mobile Cover"
             className={styles.mobileCover}
           />

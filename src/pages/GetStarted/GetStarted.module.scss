@@ -1,15 +1,19 @@
 .GetStarted{
   position: relative;
+  height: 100vh;
+    @media screen and (max-width:1000px){
+      height: auto;
+    }
   .menu{
     position: absolute;
-    width: 100vw;
+    width: 100%;
   }
   .flexcContainer{
     display: flex;
     justify-content: space-between;
     // align-items: center;
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     @media screen and (max-width:1000px){
       flex-direction: column;
       height: auto;

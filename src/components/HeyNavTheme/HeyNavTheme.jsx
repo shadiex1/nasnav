@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styles from "./HeyNavTheme.module.scss";
 import { MagicIcon } from "../SvgIcons/SvgIcons";
 
-class HeyNavBox extends Component {
+class HeyNavTheme extends Component {
   render() {
     const { data } = this.props;
     return (
@@ -48,8 +48,6 @@ class HeyNavBox extends Component {
           }}
           className={styles.imgContainer}
         >
-          {/* <img className={styles.background} src={"/assets/Gif sections/layer-106@3x.png"} alt="background"/> */}
-
           <img
             src={"/home/assets/Gif sections/i-phone.png"}
             alt="mobile Cover"
@@ -66,4 +64,4 @@ class HeyNavBox extends Component {
   }
 }
 
-export default HeyNavBox;
+export default HeyNavTheme;

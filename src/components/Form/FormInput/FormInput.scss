@@ -10,13 +10,13 @@ $main-color: black;
 .group {
   position: relative;
   margin: 45px 0;
-  svg{
+  svg {
     width: 1rem;
     height: 1rem;
-    fill:#20b88f ;
+    fill: #20b88f;
     position: absolute;
     top: 30%;
-    left: 98%;
+    left: 95%;
   }
 
   .form-input {
@@ -31,9 +31,9 @@ $main-color: black;
     border-radius: 0;
     border: 2px solid #e4f5f9;
     margin: 25px 0;
-   
-    &::placeholder{
-      color:#56686d;
+
+    &::placeholder {
+      color: #56686d;
     }
     &:focus {
       outline: none;
@@ -44,7 +44,7 @@ $main-color: black;
     }
   }
 
-  input[type='password'] {
+  input[type="password"] {
     letter-spacing: 0.3em;
   }
 

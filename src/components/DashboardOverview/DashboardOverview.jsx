@@ -5,7 +5,6 @@ const DashboardOverview = (props) => {
   const { data } = props;
 
   return (
-    <div className={styles.DashboardOverviewPattern}>
       <div className={styles.DashboardOverview}>
         <h3>
           {data.title} <span>{data.highlighted}</span>
@@ -23,7 +22,6 @@ const DashboardOverview = (props) => {
           ))}
         </div>
       </div>
-    </div>
   );
 };
 export default DashboardOverview;

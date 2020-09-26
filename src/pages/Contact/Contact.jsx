@@ -3,6 +3,7 @@ import styles from "./Contact.module.scss";
 import Menu from "../../components/Menu/Menu";
 import ContactInfo from "../../components/ContactInfo/ContactInfo";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import FullScreenWrapper from "../../components/FullScreenContainer/FullScreenWrapper"
 class Contact extends Component {
   state = {
     ContactInfo: [
@@ -27,12 +28,12 @@ class Contact extends Component {
   render() {
     return (
       <div className={styles.Contact}>
-        <div className={styles.menu}>
+        <FullScreenWrapper className={styles.menu}>
           <Menu white />
-        </div>
+        </FullScreenWrapper>
         <div className={styles.flexContainer}>
           <ContactInfo data={this.state.ContactInfo} />
-          <ContactForm/>
+          <ContactForm />
         </div>
       </div>
     );

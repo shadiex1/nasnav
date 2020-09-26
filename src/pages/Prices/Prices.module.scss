@@ -8,12 +8,16 @@
     background-color: #f2f2ff;
     padding: 5rem 0;
     position: relative;
+    height: 1100px;
+    @media screen and (max-width:1200px){
+      height: auto;
+    }
     .header{
   font-size: 45px;
   font-weight: 400;
   text-align: center;
   width: 40%;
-  margin: 100px auto 50px auto ;
+  margin: 30px auto 30px auto ;
   @media screen and (max-width:1200px){
     width: 90%;
     padding: 0 0 3rem 0;
@@ -25,6 +29,15 @@
     }
   }
 }
+  }
+  .map{
+    margin-top: 10rem;
+    // transform: translateY(-10rem);
+    z-index: 2;
+    position: relative;
+    @media screen and (max-width:1200px){
+     margin-top: 2rem;
+    }
   }
 }
 

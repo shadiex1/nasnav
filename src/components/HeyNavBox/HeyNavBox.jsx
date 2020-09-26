@@ -6,11 +6,11 @@ import {
   MapIcon,
   MagicIcon,
 } from "../SvgIcons/SvgIcons";
-class GifSection extends Component {
+class HeyNavBox extends Component {
   render() {
     const { data } = this.props;
     return (
-      <div className={styles.GifSection}>
+      <div className={styles.HeyNavBox}>
         <div className={styles.description}>
           <h2>
             {data.title[0]} <span>{data.title[1]}</span>
@@ -53,7 +53,7 @@ class GifSection extends Component {
           className={styles.imgContainer}
         >
           <img
-            src={"/home/assets/Gif sections/i-phone.png"}
+            src="/home/assets/Gif sections/i-phone.png"
             alt="mobile Cover"
             className={styles.mobileCover}
           />
@@ -73,4 +73,4 @@ class GifSection extends Component {
   }
 }
 
-export default GifSection;
+export default HeyNavBox;

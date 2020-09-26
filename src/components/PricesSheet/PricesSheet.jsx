@@ -5,14 +5,6 @@ const PricesSheet = props => {
   const { data } = props
   
   return (
-    <div className={styles.PricesSheet}>
-      {/* <h3 className={styles.header}>
-        <span>
-          {" "}
-          <span className={styles.blue}>Prices</span> to match the
-        </span>{" "}
-        size of your busisness
-      </h3> */}
       <div className={styles.sheet}>
         <div className={styles.prices}>
           <div className={styles.plans}>
@@ -89,7 +81,6 @@ const PricesSheet = props => {
 
         {/* //////////// */}
       </div>
-    </div>
   );
 }
 
