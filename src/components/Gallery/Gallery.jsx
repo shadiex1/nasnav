@@ -53,7 +53,6 @@ const Gallery = (props) => {
               }}
               className={styles.imgContainer}
             >
-
               <img
                 src="/home/assets/Gif sections/i-phone.png"
                 alt="mobile Cover"

@@ -11,11 +11,6 @@ class ContactForm extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    const { displayName, email, password, confirmPassword } = this.state;
-    if (password !== confirmPassword) {
-      alert("passwords don't match");
-      return;
-    }
   };
 
   handleChange = (e) => {

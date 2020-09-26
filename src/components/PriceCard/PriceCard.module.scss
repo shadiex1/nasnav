@@ -1,15 +1,15 @@
+@import "../../VariablesScss/variables";
 .Card {
   width: 250px;
-  background-color: #4b44ff;
-  background-color: white;
+  background-color: $color-primary;
+  background-color: $color-white;
   margin: 20px;
   padding: 80px 20px 80px 20px;
-  // border: 2px solid #e4f5f9;
   border-radius: 25px;
-  box-shadow: 0 0 10px -5px grey ;
-  
+  box-shadow: 0 0 10px -5px grey;
+
   h2 {
-    color: black;
+    color: $color-black;
     text-align: center;
     text-transform: uppercase;
     margin: 5px;
@@ -21,7 +21,7 @@
     justify-content: center;
     margin: 2rem auto;
     .price {
-      color: #4b44ff;
+      color: $color-primary;
       font-size: 45px;
       font-weight: bold;
     }
@@ -52,9 +52,8 @@
     justify-content: center;
     border-radius: 10px 10px 10px 0;
     cursor: pointer;
-    color: black;
+    color: $color-black;
     font-weight: 600;
-    // box-shadow: 0px 0px 1px 0 $color-black-overlay;
     outline: none;
     border: none;
     img {
@@ -65,22 +64,22 @@
     }
   }
   &:hover {
-    background-color: #4b44ff;
-  box-shadow: 0 0 15px -5px grey ;
+    background-color: $color-primary;
+    box-shadow: 0 0 15px -5px grey;
     h2,
     .price {
-      color: white;
+      color: $color-white;
     }
     .per {
       color: #42dafa;
     }
     ul {
       li {
-        color: white;
+        color: $color-white;
       }
     }
     .getStarted {
-      background-color: white;
+      background-color: $color-white;
     }
   }
 }

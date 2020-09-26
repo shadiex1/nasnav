@@ -7,57 +7,57 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 50px;
-  .gridConainer{
+  .gridConainer {
     display: flex;
     justify-content: flex-start;
     width: 100%;
- .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 120px);
-    gap: 5px;
-    div {
-      width: 120px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 120px);
+      gap: 5px;
+      div {
+        width: 120px;
 
-      // margin: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        object-fit: contain;
-        width: 4rem;
-        height: 4rem;
+        // margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          object-fit: contain;
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+      .topLeft {
+        background: $color-grid-1;
+        border-radius: 20px 20px 5px 10px;
+        height: 100px;
+      }
+      .topCenter {
+        background: $color-grid-2;
+        border-radius: 20px 20px 5px 20px;
+      }
+      .topRight {
+        background: $color-grid-3;
+        border-radius: 20px 20px 20px 5px;
+        // height: 70px;
+      }
+      .bottomLeft {
+        background: $color-grid-4;
+        border-radius: 10px 10px 5px 10px;
+      }
+      .bottomCenter {
+        background: $color-grid-5;
+        border-radius: 20px 20px 5px 5px;
+        height: 120px;
+      }
+      .bottomRight {
+        background: $color-grid-6;
+        border-radius: 20px 20px 20px 5px;
       }
     }
-    .topLeft {
-      background: $color-grid-1;
-      border-radius: 20px 20px 5px 10px;
-      height: 100px;
-    }
-    .topCenter {
-      background: $color-grid-2;
-      border-radius: 20px 20px 5px 20px;
-    }
-    .topRight {
-      background: $color-grid-3;
-      border-radius: 20px 20px 20px 5px;
-      // height: 70px;
-    }
-    .bottomLeft {
-      background: $color-grid-4;
-      border-radius: 10px 10px 5px 10px;
-    }
-    .bottomCenter {
-      background: $color-grid-5;
-      border-radius: 20px 20px 5px 5px;
-      height: 120px;
-    }
-    .bottomRight {
-      background: $color-grid-6;
-      border-radius: 20px 20px 20px 5px;
-    }
   }
-  }
- 
+
   .description {
     margin-left: 150px;
     width: 100%;
@@ -107,27 +107,24 @@
       }
     }
   }
-  @media screen and (max-width:800px){
+  @media screen and (max-width: 800px) {
     padding: 20px;
     flex-direction: column;
     width: 90%;
-    .gridConainer{
-      width:auto;
+    .gridConainer {
+      width: auto;
     }
-    .grid{
+    .grid {
       margin-bottom: 2rem;
     }
-    .description{
+    .description {
       display: flex;
       flex-direction: column;
-      // align-items: center;
       margin-left: 0;
-      p{
-        // margin: 0;
-        // padding: 0;
+      p {
         width: 100%;
       }
-      .magic{
+      .magic {
         justify-content: center;
         width: 100%;
       }

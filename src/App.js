@@ -12,6 +12,8 @@ class App extends Component{
   render(){
     return (
       <React.Fragment>
+          <React.StrictMode>
+
         <Route exact path="/" component={Homepage} />
         <Route
           exact
@@ -33,6 +35,7 @@ class App extends Component{
           path="/prices"
           component={Prices}
         />
+  </React.StrictMode>
 
       </React.Fragment>
     );

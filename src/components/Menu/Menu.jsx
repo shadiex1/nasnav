@@ -17,7 +17,7 @@ class Menu extends Component {
   };
   render() {
     const { white } = this.props;
-    const {showMenuSidebar} =this.state
+    const { showMenuSidebar } = this.state;
     return (
       <React.Fragment>
         <MenuSidebar
@@ -33,7 +33,6 @@ class Menu extends Component {
             <span></span>
             <span></span>
           </div>
-          {/* /////////////////////// */}
           <Link to="/" className={styles.logoContainer}>
             {white ? (
               <img src={"/home/assets/logo-white.png"} alt="logo" />

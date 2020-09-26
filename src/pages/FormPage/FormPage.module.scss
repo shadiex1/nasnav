@@ -1,75 +1,71 @@
-.FormPage{
-  // height: 100vh;
+.FormPage {
   width: 100%;
   background: url("/assets/Banner/layer-14-copy@3x.png"),
     linear-gradient(90deg, rgba(75, 68, 255, 1) 50%, rgba(52, 191, 243, 1) 100%);
-    background-size: cover;
+  background-size: cover;
   background-position: center/top;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  .header{
+  .header {
     position: relative;
-    h3{
-      // display: flex;
-      // justify-content: center;
+    h3 {
       color: white;
       font-weight: 400;
       font-size: 25px;
       text-align: center;
       width: 40%;
       margin: auto;
-      span{
+      span {
         font-weight: bold;
       }
     }
-     p{
-        color: white;
-        margin: 0;
-        cursor: pointer;
-        position: absolute;
-        top: 30%;
-        left: 10%;
-      }
-    .menu{
+    p {
+      color: white;
+      margin: 0;
+      cursor: pointer;
+      position: absolute;
+      top: 30%;
+      left: 10%;
+    }
+    .menu {
       display: flex;
       align-items: center;
-     justify-content: center;
-      img{
+      justify-content: center;
+      img {
         margin: 2rem auto;
         width: 170px;
         // height: 90px;
         object-fit: contain;
       }
     }
-   
   }
-  .sectionsContainer{
-    margin:  auto;
+  .sectionsContainer {
+    margin: auto;
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    .section{
+    .section {
       text-align: center;
       width: 50%;
       margin: auto;
       opacity: 0.3;
-      .title{
+      .title {
         color: white;
         font-size: 18px;
       }
     }
   }
-  .next{
+  .next {
     width: 90%;
     display: flex;
     justify-content: flex-end;
     margin: auto;
   }
-  .btn{
+  .btn {
     width: 180px;
     height: 50px;
     display: block;
@@ -77,26 +73,24 @@
     border-radius: 20px;
     border: none;
     outline: none;
-    // margin:3rem  auto;
     margin-top: 3rem;
-    // margin-right: auto;
     color: white;
     cursor: pointer;
     justify-self: end;
     text-transform: capitalize;
   }
-  @media screen and (max-width:1000px){
-    .header{
-      h3{
+  @media screen and (max-width: 1000px) {
+    .header {
+      h3 {
         width: 100%;
       }
-      p{
+      p {
         top: 20%;
         left: 5%;
       }
     }
-    .sectionsContainer{
-      .section{
+    .sectionsContainer {
+      .section {
         width: 100%;
       }
     }

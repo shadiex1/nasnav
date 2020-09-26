@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./MenuSidebar.module.scss";
-import{CloseIcon} from "../SvgIcons/SvgIcons"
+import { CloseIcon } from "../SvgIcons/SvgIcons";
 import { Link } from "react-router-dom";
 import { Component } from "react";
 
@@ -9,7 +9,8 @@ class MenuSidebar extends Component {
     showMenuSidebar: false,
   };
   componentDidUpdate() {
-    if (this.props.open) {
+    const { open } = this.props;
+    if (open) {
       document.body.style.overflow = "hidden";
     } else document.body.style.overflow = "unset";
   }
@@ -21,15 +22,14 @@ class MenuSidebar extends Component {
   showMenuSidebarClosedHandler = () => {
     this.setState({ showMenuSidebar: false });
   };
-  componentWillUnmount () {
-  }
+  componentWillUnmount() {}
   render() {
+    const { closed, open } = this.props;
+
     let attachdstyles = [styles.sidebar, styles.Close];
-    if (this.props.open) {
+    if (open) {
       attachdstyles = [styles.sidebar, styles.Open];
     }
-
-    const { closed, open } = this.props;
 
     return (
       <React.Fragment>
@@ -49,12 +49,7 @@ class MenuSidebar extends Component {
                 <li>Contact us</li>
               </Link>
 
-              <Link
-                to="/getstarted"
-                className={styles.link}
-                onClick={closed}
-                // className={[styles.btn, styles.gradientBtn].join(" ")}
-              >
+              <Link to="/getstarted" className={styles.link} onClick={closed}>
                 <li>Get Started</li>
               </Link>
             </ul>

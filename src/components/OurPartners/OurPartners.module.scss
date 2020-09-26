@@ -23,7 +23,6 @@
     margin-top: 2rem;
     justify-content: space-between;
     img {
-      // margin-right: 40px;
       width: 100px;
       height: 40px;
       object-fit: contain;
@@ -46,7 +45,7 @@
       color: $color-white;
       font-weight: normal;
       font-size: 30px;
-      @media screen and (max-width:800px){
+      @media screen and (max-width: 800px) {
         font-size: 20px;
       }
       span {
@@ -75,15 +74,15 @@
       }
     }
   }
-  @media screen and (max-width:800px){
+  @media screen and (max-width: 800px) {
     padding: 20px;
     width: 90%;
-      .PartnersLogos{
-        flex-wrap: wrap;
-        justify-content: center;
-        img{
-          margin: 5px;
-        }
+    .PartnersLogos {
+      flex-wrap: wrap;
+      justify-content: center;
+      img {
+        margin: 5px;
       }
+    }
   }
 }

@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import styles from "./Prices.module.scss";
 import Menu from "../../components/Menu/Menu";
 import EllipseContainer from "../../components/Ellipse/EllipseContainer/EllipseContainer";
@@ -6,14 +6,14 @@ import Map from "../../components/Map/Map";
 import OurPartners from "../../components/OurPartners/OurPartners";
 import Footer from "../../components/Footer/Footer";
 import FullScreenWrapper from "../../components/FullScreenContainer/FullScreenWrapper";
-import PriceCard from "../../components/PriceCard/PriceCard"
-import PricesSheet from "../../components/PricesSheet/PricesSheet"
+import PriceCard from "../../components/PriceCard/PriceCard";
+import PricesSheet from "../../components/PricesSheet/PricesSheet";
 import { Component } from "react";
 
 class Prices extends Component {
   state = {
     width: 1100,
-    Map: {
+    MapData: {
       title: ["We started and we are growing", "right around the world"],
       description:
         "We can provide you with a complete Business-in-a-Box solution Join our franchising scheme and be a part of the team Build your business with confidence knowing you are backed by expert",
@@ -30,7 +30,7 @@ class Prices extends Component {
         "/home/assets/brands/layer-645.png",
       ],
     },
-    OurPartners: {
+    OurPartnersData: {
       title: ["Our", "Partners"],
       subtitle: "Join our family now wherever you are",
       logos: [
@@ -43,7 +43,7 @@ class Prices extends Component {
       ],
       bannerTitle: ["start selling on", "google for free"],
     },
-    PriceSheet: {
+    PriceSheetData: {
       PricesPlan: [
         {
           type: "Free",
@@ -83,12 +83,8 @@ class Prices extends Component {
     },
   };
   updateDimensions() {
-    // if (window.innerWidth < 500) {
-    //   this.setState({ width: 450 });
-    // } else {
     let update_width = window.innerWidth;
     this.setState({ width: update_width });
-    // }
   }
   componentDidMount() {
     this.updateDimensions();
@@ -99,12 +95,10 @@ class Prices extends Component {
     window.removeEventListener("resize", this.updateDimensions.bind(this));
   }
   render() {
-    // const { Map } = this.state;
-
+    const { MapData, OurPartnersData, PriceSheetData, width } = this.state;
     return (
       <div className={styles.Prices}>
         <FullScreenWrapper className={styles.menu}>
-
           <Menu />
         </FullScreenWrapper>
 
@@ -117,25 +111,24 @@ class Prices extends Component {
             size of your busisness
           </h3>
           <EllipseContainer />
-          {this.state.width <= 1200 ? (
+          {width <= 1200 ? (
             <div className={styles.priceCardsContainer}>
-              <PriceCard />
-              <PriceCard />
-              <PriceCard />
+              {PriceSheetData.PricesPlan.map((plan) => (
+                <PriceCard header={plan} info={PriceSheetData.Features} />
+              ))}
             </div>
           ) : (
-            <PricesSheet data={this.state.PriceSheet} />
+            <PricesSheet data={PriceSheetData} />
           )}
         </FullScreenWrapper>
         <FullScreenWrapper className={styles.map}>
-          <Map mapImg="/home/assets/Map/map.png" data={this.state.Map} />
-          <OurPartners data={this.state.OurPartners} />
+          <Map mapImg="/home/assets/Map/map.png" data={MapData} />
+          <OurPartners data={OurPartnersData} />
           <Footer />
         </FullScreenWrapper>
-
       </div>
     );
   }
 }
 
-export default Prices
+export default Prices;

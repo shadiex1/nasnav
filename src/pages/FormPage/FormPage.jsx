@@ -4,12 +4,13 @@ import FormBtn from "../../components/FormBtn/FormBtn";
 import { Link } from "react-router-dom";
 class FormPage extends Component {
   state = {
-    Form: [
+    FormData: [
       {
         title: "Do you have a physical retail store?",
         options: ["yes", "no"],
         id: 1,
-checked:true      },
+        checked: true,
+      },
       {
         title: "What type of products do you sell?",
         options: [
@@ -17,7 +18,7 @@ checked:true      },
           "Other products",
         ],
         id: 2,
-        checked:false
+        checked: false,
       },
       {
         title: "What's the brand of your Point of Sale?",
@@ -31,14 +32,14 @@ checked:true      },
         ],
         imgs: true,
         id: 3,
-        checked:false
+        checked: false,
       },
 
       {
         title: "Great! Do you use it at your POS?",
         options: ["yes", "no"],
         id: 4,
-        checked:false
+        checked: false,
       },
       {
         title: "Great! Do you use it at your POS?",
@@ -47,40 +48,37 @@ checked:true      },
           "My scanner is wireless",
         ],
         id: 5,
-        checked:false
+        checked: false,
       },
       {
         title: "do you use manufacturers' (UPC or EAN) barcodes?",
         options: ["yes", "no", "Not sure"],
         id: 6,
-        checked:false
+        checked: false,
       },
     ],
-    nextBtn:false
+    nextBtn: false,
   };
-  
-   Clicked = (id,index) => {
-     const { Form } = this.state
-     const prevQuestion = Form.find((item) => item.id === ((id - 1) || 1) )
-     const current = Form.find((item) => item.id === id )
-     const nextQuestion = Form.find((item) => item.id === id + 1)
-     if (prevQuestion.checked && current.checked) {
-       if (!nextQuestion) {
+
+  Clicked = (id, index) => {
+    const { FormData } = this.state;
+    const prevQuestion = FormData.find((item) => item.id === (id - 1 || 1));
+    const current = FormData.find((item) => item.id === id);
+    const nextQuestion = FormData.find((item) => item.id === id + 1);
+    if (prevQuestion.checked && current.checked) {
+      if (!nextQuestion) {
         this.setState({
           nextBtn: true,
         });
-     }else
-       nextQuestion.checked = true
-this.setState({
-       Form:Form
-     })
-     }
-    
-     
-  
-   }
-  
+      } else nextQuestion.checked = true;
+      this.setState({
+        FormData,
+      });
+    }
+  };
+
   render() {
+    const { FormData, nextBtn } = this.state;
     return (
       <div className={styles.FormPage}>
         <div className={styles.header}>
@@ -97,7 +95,7 @@ this.setState({
         </div>
 
         <div className={styles.sectionsContainer}>
-          {this.state.Form.map((section, i) => (
+          {FormData.map((section, i) => (
             <div
               style={{
                 opacity: `${section.checked && "1"}`,
@@ -120,16 +118,10 @@ this.setState({
               })}
             </div>
           ))}
-
-
-          
         </div>
         <div className={styles.next}>
-          {this.state.nextBtn && <button className={styles.btn}>
-          finish
-          </button>}
+          {nextBtn && <button className={styles.btn}>finish</button>}
         </div>
-        
       </div>
     );
   }

@@ -14,10 +14,7 @@ class HeyNav360 extends Component {
           </h2>
           <span className={styles.subtitle}>
             {data.subtitle}
-            <img
-              src="/home/assets/Gif sections/layer-104@3x.png"
-              alt="logo"
-            />
+            <img src="/home/assets/Gif sections/layer-104@3x.png" alt="logo" />
           </span>
           <p>{data.description}</p>
           <p className={styles.examples}>
@@ -40,7 +37,6 @@ class HeyNav360 extends Component {
           }}
           className={styles.imgContainer}
         >
-
           <img
             src="/home/assets/Gif sections/i-phone.png"
             alt="mobile Cover"

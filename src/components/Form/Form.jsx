@@ -13,7 +13,7 @@ class Form extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    const { displayName, email, password, confirmPassword } = this.state;
+    const {password, confirmPassword } = this.state;
     if (password !== confirmPassword) {
       alert("passwords don't match");
       return;
@@ -37,7 +37,7 @@ class Form extends Component {
         <h2 className={styles.title}>
           <span>Get</span> Started in seconds
         </h2>
-        <form className="sign-up-form" onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
             name="StoreName"

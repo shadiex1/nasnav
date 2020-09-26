@@ -67,7 +67,6 @@ const Map = (props) => {
                     alt={flag}
                     className={`flagList__flag flagList__flag_country_${country}`}
                   />
-                  {/* <span className="flagList__pointer" /> */}
                   <span className={styles.pointer} />
                 </li>
               );

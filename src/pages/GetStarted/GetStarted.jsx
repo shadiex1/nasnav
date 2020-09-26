@@ -4,10 +4,10 @@ import styles from "./GetStarted.module.scss";
 import Menu from "../../components/Menu/Menu";
 import Gallery from "../../components/Gallery/Gallery";
 import Form from "../../components/Form/Form";
-import FullScreenWrapper from "../../components/FullScreenContainer/FullScreenWrapper"
+import FullScreenWrapper from "../../components/FullScreenContainer/FullScreenWrapper";
 class GetStarted extends Component {
   state = {
-    Gallery: [
+    GalleryData: [
       {
         title: "Get your website with all the products for free ",
         description:
@@ -32,24 +32,22 @@ class GetStarted extends Component {
     ],
   };
   render() {
+    const { GalleryData } = this.state;
     return (
       <div className={styles.GetStarted}>
-        <div >
+        <div>
           <FullScreenWrapper className={styles.menu}>
-                      <Menu white />
-
+            <Menu white />
           </FullScreenWrapper>
         </div>
-        {/* <FullScreenWrapper > */}
-        
-          <div className={styles.flexcContainer}>
-          <Gallery data={this.state.Gallery} />
+
+        <div className={styles.flexcContainer}>
+          <Gallery data={GalleryData} />
           <Form />
-          </div>
-        {/* </FullScreenWrapper> */}
+        </div>
       </div>
     );
   }
 }
 
-export default GetStarted
+export default GetStarted;

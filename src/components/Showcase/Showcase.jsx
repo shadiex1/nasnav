@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import styles from "./Showcase.module.scss";
-import { SearchIcon,PlayArrow } from "../SvgIcons/SvgIcons";
+import { SearchIcon, PlayArrow } from "../SvgIcons/SvgIcons";
 
 class Showcase extends Component {
   render() {
     const { data } = this.props;
     return (
-      <div className={styles.Showcase}>
-        <div className={styles.showcaseContainer}>
+        <div className={styles.Showcase}>
           <div className={styles.searchbar}>
-            <img src={"/home/assets/Showcase/layer-15@3x.png"} alt="logo" />
+            <img src="/home/assets/Showcase/layer-15@3x.png" alt="logo" />
             <input type="text" placeholder="Find your products on goolge" />
             <div className={styles.iconConatiner}>
               <SearchIcon />
@@ -23,8 +22,7 @@ class Showcase extends Component {
           </div>
           <div className={styles.btnsContainer}>
             <div className={styles.btn}>
-              <img src={"/home/assets/Menu/layer-2@3x.png"} /> Watch how to do
-              it
+              <img src="/home/assets/Menu/layer-2@3x.png" /> Watch how to do it
             </div>
             <div className={styles.btnSmall}>
               <PlayArrow />
@@ -45,7 +43,6 @@ class Showcase extends Component {
             />
           </div>
         </div>
-      </div>
     );
   }
 }

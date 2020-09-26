@@ -68,11 +68,8 @@
     }
   }
   .imgContainer {
-    // width: 50%;
     width: 320px;
     height: 20rem;
-    // object-fit: fill;
-    // margin-left: auto;;
     margin: auto;
     background-position: center;
     background-size: contain;
@@ -85,7 +82,6 @@
       position: relative;
       transform: translateY(1rem);
       border-radius: 10px;
-      // width: 50%;
       height: 100%;
       object-fit: contain;
       display: block;
@@ -94,8 +90,6 @@
       position: absolute;
       transform: translateY(3rem);
       border-radius: 10px;
-      // width: 100%;
-      // height: 60%;
       height: 290px;
       width: 220px;
       object-fit: cover;
@@ -114,17 +108,12 @@
 @media screen and (max-width: 800px) {
   .HeyNavBox {
     flex-direction: column;
-    // width: 80%;
     width: 100%;
     .description {
       padding: 15px;
       order: 2;
-      // display: flex;
-      // flex-direction: column;
-      // align-items: center;
       h2 {
         font-size: 1.6rem;
-        // text-align: center;
       }
       .subtitle {
         text-align: left;

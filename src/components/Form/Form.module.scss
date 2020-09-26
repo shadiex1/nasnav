@@ -1,3 +1,5 @@
+@import "../../VariablesScss/variables";
+
 .Form {
   display: flex;
   flex-direction: column;
@@ -8,7 +10,7 @@
     font-weight: 400;
     font-size: 30px;
     span {
-      color: #4b44ff;
+      color: $color-primary;
       font-weight: bold;
     }
   }
@@ -17,7 +19,7 @@
     width: 100%;
     padding: 15px 0;
     border: none;
-    background-image: linear-gradient(to top, #4b44ff, #34bff3);
+    background-image: linear-gradient(to top, $color-primary, $color-txt-4);
     color: white;
     font-weight: bold;
     border-radius: 5px;
