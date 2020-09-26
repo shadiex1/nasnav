@@ -5,8 +5,8 @@
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
+  justify-content: space-between;
+  margin-bottom: 50px;
   .gridConainer{
     display: flex;
     justify-content: flex-start;
@@ -59,7 +59,7 @@
   }
  
   .description {
-    // margin-left: 100px;
+    margin-left: 150px;
     width: 100%;
     h2 {
       font-size: 1.9rem;
