@@ -177,8 +177,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .Showcase {
-    .showcaseContainer {
+    .Showcase {
       width: 100%;
       .searchbar {
         width: 70%;
@@ -192,12 +191,11 @@
         }
       }
     }
-  }
+  
 }
 
 @media screen and (max-width: 500px) {
-  .Showcase {
-    .showcaseContainer {
+    .Showcase {
       .searchbar {
         width: 80%;
       }
@@ -208,5 +206,5 @@
         }
       }
     }
-  }
+  
 }
