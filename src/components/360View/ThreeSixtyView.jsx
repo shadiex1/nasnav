@@ -18,7 +18,7 @@ const ThreeSixtyView = (props) => {
     focusOnSelect: true,
     lazyLoad: "ondemand",
     slidesToShow: 6,
-    slidesToScroll: 1,
+    // slidesToScroll: 1,
     nextArrow: (
       //  <NextArrow>
       <RightArrowWide className={styles.arrows} />

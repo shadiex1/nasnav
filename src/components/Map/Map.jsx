@@ -51,7 +51,7 @@ const Map = (props) => {
           <img
             src={mapImg}
             alt="Map"
-            className="image image_size_full mapImage"
+            className={styles.mapImg}
           />
 
           <ul className={styles.list}>

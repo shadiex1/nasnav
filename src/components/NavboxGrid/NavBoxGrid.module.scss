@@ -1,12 +1,13 @@
 @import "../../VariablesScss/variables";
 
 .NavBoxGrid {
-  width: 100%;
+  // width: 100%;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 50px;
+  padding: 0 10px;
   .gridConainer {
     display: flex;
     justify-content: flex-start;

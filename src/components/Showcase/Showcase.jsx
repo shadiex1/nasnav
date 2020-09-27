@@ -17,7 +17,7 @@ class Showcase extends Component {
           <div className={styles.title}>
             <h2>
               {data.title[0]}
-              <span>{data.title[1]}</span>
+               <span> {data.title[1]} </span>
             </h2>
           </div>
           <div className={styles.btnsContainer}>

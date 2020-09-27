@@ -2,9 +2,9 @@
 
 .HeyNavBox {
   display: flex;
-  width: 100%;
   margin: 2rem auto;
   position: relative;
+  padding: 0 10px;
   .description {
     h2 {
       font-size: 1.9rem;
@@ -111,7 +111,7 @@
 @media screen and (max-width: 800px) {
   .HeyNavBox {
     flex-direction: column;
-    width: 100%;
+    // width: 100%;
     .description {
       padding: 15px;
       order: 2;
