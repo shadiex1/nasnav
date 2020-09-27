@@ -44,7 +44,7 @@ class HeyNavTheme extends Component {
 
         <div
           style={{
-            backgroundImage: `url(process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-118.png")`,
+            backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-118.png"})`,
           }}
           className={styles.imgContainer}
         >

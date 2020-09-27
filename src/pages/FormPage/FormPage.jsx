@@ -89,7 +89,7 @@ class FormPage extends Component {
       } else nextQuestion.checked = true;
       this.setState({
         FormData,
-        scroll: scroll + 150
+        scroll: scroll + 250
 
       });
     }
