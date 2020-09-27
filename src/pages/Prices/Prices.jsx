@@ -18,28 +18,28 @@ class Prices extends Component {
       description:
         "We can provide you with a complete Business-in-a-Box solution Join our franchising scheme and be a part of the team Build your business with confidence knowing you are backed by expert",
       brands: [
-        "/home/assets/brands/layer-636.png",
-        "/home/assets/brands/layer-637.png",
-        "/home/assets/brands/layer-638.png",
-        "/home/assets/brands/layer-639.png",
-        "/home/assets/brands/layer-640.png",
-        "/home/assets/brands/layer-641.png",
-        "/home/assets/brands/layer-642.png",
-        "/home/assets/brands/layer-643.png",
-        "/home/assets/brands/layer-644.png",
-        "/home/assets/brands/layer-645.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-636.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-637.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-638.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-639.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-640.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-641.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-642.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-643.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-644.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-645.png",
       ],
     },
     OurPartnersData: {
       title: ["Our", "Partners"],
       subtitle: "Join our family now wherever you are",
       logos: [
-        "/home/assets/Our partners/layer-110.png",
-        "/home/assets/Our partners/layer-165.png",
-        "/home/assets/Our partners/layer-166.png",
-        "/home/assets/Our partners/layer-163.png",
-        "/home/assets/Our partners/layer-164.png",
-        "/home/assets/Our partners/layer-167.png",
+        process.env.PUBLIC_URL + "/assets/Our partners/layer-110.png",
+        process.env.PUBLIC_URL + "/assets/Our partners/layer-165.png",
+        process.env.PUBLIC_URL + "/assets/Our partners/layer-166.png",
+        process.env.PUBLIC_URL + "/assets/Our partners/layer-163.png",
+        process.env.PUBLIC_URL + "/assets/Our partners/layer-164.png",
+        process.env.PUBLIC_URL + "/assets/Our partners/layer-167.png",
       ],
       bannerTitle: ["start selling on", "google for free"],
     },
@@ -122,7 +122,7 @@ class Prices extends Component {
           )}
         </FullScreenWrapper>
         <FullScreenWrapper className={styles.map}>
-          <Map mapImg="/home/assets/Map/map.png" data={MapData} />
+          <Map mapImg={process.env.PUBLIC_URL + "/assets/Map/map.png"} data={MapData} />
           <OurPartners data={OurPartnersData} />
           <Footer />
         </FullScreenWrapper>

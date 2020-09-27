@@ -6,7 +6,7 @@ const ContactInfo = (props) => {
   return (
     <div className={styles.ContactInfo}>
       <div className={styles.map}>
-        <Map mapImg="/home/assets/layer-184.png" />
+        <Map mapImg={process.env.PUBLIC_URL + "/assets/layer-184.png"} />
       </div>
       <div className={styles.information}>
         <h2>Contact information</h2>

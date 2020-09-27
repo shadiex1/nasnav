@@ -19,9 +19,9 @@ class Homepage extends Component {
     ShowcaseData: {
       title: ["sell more products with", "google"],
       screens: {
-        screenLeft: "/home/assets/Showcase/rounded-rectangle-41-copy@3x.png",
-        screenCenter: "/home/assets/Showcase/group-33@3x.png",
-        screenRight: "/home/assets/Showcase/layer-81@3x.png",
+        screenLeft: process.env.PUBLIC_URL + "/assets/Showcase/rounded-rectangle-41-copy@3x.png",
+        screenCenter: process.env.PUBLIC_URL + "/assets/Showcase/group-33@3x.png",
+        screenRight: process.env.PUBLIC_URL + "/assets/Showcase/layer-81@3x.png",
       },
     },
     HeynavBoxData: {
@@ -34,8 +34,8 @@ class Homepage extends Component {
         "Your products in google",
         "Your products appear to those close to you",
       ],
-      MobileScreen: "/home/assets/Gif sections/layer-107@3x.png",
-      BackgroundCover: "/home/assets/Gif sections/layer-106@3x.png",
+      MobileScreen: process.env.PUBLIC_URL + "/assets/Gif sections/layer-107@3x.png",
+      BackgroundCover: process.env.PUBLIC_URL + "/assets/Gif sections/layer-106@3x.png",
     },
     HeyNavThemeData: {
       title: ["Design Your site ", "easily"],
@@ -44,30 +44,30 @@ class Homepage extends Component {
         " Through the dashboard you can easily build your site design and choose between multiple formats to suit your business competence.",
       lists: [
         {
-          leftImg: "/home/assets/HeyNavTheme/ast-pay.png",
+          leftImg: process.env.PUBLIC_URL + "/assets/HeyNavTheme/ast-pay.png",
           title: "Payment methods",
           rightImgs: [
-            "/home/assets/HeyNavTheme/layer-111.png",
-            "/home/assets/HeyNavTheme/layer-112.png",
-            "/home/assets/HeyNavTheme/layer-113.png",
+            process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-111.png",
+            process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-112.png",
+            process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-113.png",
           ],
         },
         {
-          leftImg: "/home/assets/HeyNavTheme/ast-trolley.png",
+          leftImg: process.env.PUBLIC_URL + "/assets/HeyNavTheme/ast-trolley.png",
           title: "Shipping methods",
           rightImgs: [
-            "/home/assets/HeyNavTheme/layer-108.png",
-            "/home/assets/HeyNavTheme/layer-109.png",
-            "/home/assets/HeyNavTheme/layer-110.png",
+            process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-108.png",
+            process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-109.png",
+            process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-110.png",
           ],
         },
         {
-          leftImg: "/home/assets/HeyNavTheme/ast-gps.png",
+          leftImg: process.env.PUBLIC_URL + "/assets/HeyNavTheme/ast-gps.png",
           title: "All your branches are online",
         },
       ],
-      MobileScreen: "/home/assets/HeyNavTheme/layer-119.png",
-      BackgroundCover: "/home/assets/HeyNavTheme/layer-118.png",
+      MobileScreen: process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-119.png",
+      BackgroundCover: process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-118.png",
     },
 
     NavBoxGridData: {
@@ -76,47 +76,47 @@ class Homepage extends Component {
       description:
         " Just connect a NavBox to your barcode scanner, or if you use one of the POS systems below, you can download our free app.",
       brands: [
-        "/home/assets/NavBoxGrid/layer-125.png",
-        "/home/assets/NavBoxGrid/layer-126.png",
-        "/home/assets/NavBoxGrid/layer-128@3x.png",
-        "/home/assets/NavBoxGrid/layer-127@3x.png",
-        "/home/assets/NavBoxGrid/kindpng-1030408.png",
-        "/home/assets/NavBoxGrid/layer-129@3x.png",
+        process.env.PUBLIC_URL + "/assets/NavBoxGrid/layer-125.png",
+        process.env.PUBLIC_URL + "/assets/NavBoxGrid/layer-126.png",
+        process.env.PUBLIC_URL + "/assets/NavBoxGrid/layer-128@3x.png",
+        process.env.PUBLIC_URL + "/assets/NavBoxGrid/layer-127@3x.png",
+        process.env.PUBLIC_URL + "/assets/NavBoxGrid/kindpng-1030408.png",
+        process.env.PUBLIC_URL + "/assets/NavBoxGrid/layer-129@3x.png",
       ],
     },
     ShopsData: [
       {
-        img: "/home/assets/shops/1.png",
+        img: process.env.PUBLIC_URL + "/assets/shops/1.png",
         title: "nike shop",
         id: 1,
       },
       {
-        img: "/home/assets/shops/2.png",
+        img: process.env.PUBLIC_URL + "/assets/shops/2.png",
         title: "nike shop",
         id: 2,
       },
       {
-        img: "/home/assets/shops/3.png",
+        img: process.env.PUBLIC_URL + "/assets/shops/3.png",
         title: "reebok shop",
         id: 3,
       },
       {
-        img: "/home/assets/shops/4.png",
+        img: process.env.PUBLIC_URL + "/assets/shops/4.png",
         title: "levi's shop",
         id: 4,
       },
       {
-        img: "/home/assets/shops/5.png",
+        img: process.env.PUBLIC_URL + "/assets/shops/5.png",
         title: "H&M shop",
         id: 5,
       },
       {
-        img: "/home/assets/shops/6.png",
+        img: process.env.PUBLIC_URL + "/assets/shops/6.png",
         title: "nike shop",
         id: 6,
       },
       {
-        img: "/home/assets/shops/1.png",
+        img: process.env.PUBLIC_URL + "/assets/shops/1.png",
         title: "nike shop",
         id: 7,
       },
@@ -135,25 +135,25 @@ class Homepage extends Component {
           title: "Shopping Cart",
           desc:
             "A cart or dray is a vehicle designed for transport two wheels and normally pulled.",
-          img: "/home/assets/Benefits/review.png",
+          img: process.env.PUBLIC_URL + "/assets/Benefits/review.png",
         },
         {
           title: "Branch Location",
           desc:
             "A cart or dray is a vehicle designed for transport two wheels and normally pulled.",
-          img: "/home/assets/Benefits/open-24-hours.png",
+          img: process.env.PUBLIC_URL + "/assets/Benefits/open-24-hours.png",
         },
         {
           title: "Payment Online",
           desc:
             "A cart or dray is a vehicle designed for transport two wheels and normally pulled.",
-          img: "/home/assets/Benefits/cycle.png",
+          img: process.env.PUBLIC_URL + "/assets/Benefits/cycle.png",
         },
         {
           title: "All Products",
           desc:
             "A cart or dray is a vehicle designed for transport two wheels and normally pulled.",
-          img: "/home/assets/Benefits/promotion.png",
+          img: process.env.PUBLIC_URL + "/assets/Benefits/promotion.png",
         },
       ],
     },
@@ -166,27 +166,27 @@ class Homepage extends Component {
         {
           title: "A real store.",
           desc: "whole new buying experience that impresses users",
-          img: "/home/assets/DashobardOverview/planning.png",
+          img: process.env.PUBLIC_URL + "/assets/DashobardOverview/planning.png",
         },
         {
           title: "Payment method",
           desc: "whole new buying experience that impresses users",
-          img: "/home/assets/DashobardOverview/layers.png",
+          img: process.env.PUBLIC_URL + "/assets/DashobardOverview/layers.png",
         },
         {
           title: "On google",
           desc: "whole new buying experience that impresses users",
-          img: "/home/assets/DashobardOverview/flow.png",
+          img: process.env.PUBLIC_URL + "/assets/DashobardOverview/flow.png",
         },
         {
           title: "Good UX",
           desc: "whole new buying experience that impresses users",
-          img: "/home/assets/DashobardOverview/problem-solving.png",
+          img: process.env.PUBLIC_URL + "/assets/DashobardOverview/problem-solving.png",
         },
         // {
         //   title: "On google",
         //   desc: "whole new buying experience that impresses users",
-        //   img: "/home/assets/DashobardOverview/flow.png",
+        //   img: process.env.PUBLIC_URL + "/assets/DashobardOverview/flow.png",
         // },
       ],
     },
@@ -196,7 +196,7 @@ class Homepage extends Component {
       subtitle: "Say Hey to Nav360",
       description:
         "A unique buying experience that makes you the strongest among your competitors in the marketThrough a completely real buying experience, the user is now.",
-      img: "/home/assets/01-view-copy.png",
+      img: process.env.PUBLIC_URL + "/assets/01-view-copy.png",
     },
     HowToData: {
       title: ["How to ge your products to the", "website?"],
@@ -215,28 +215,28 @@ class Homepage extends Component {
       description:
         "We can provide you with a complete Business-in-a-Box solution Join our franchising scheme and be a part of the team Build your business with confidence knowing you are backed by expert",
       brands: [
-        "/home/assets/brands/layer-636.png",
-        "/home/assets/brands/layer-637.png",
-        "/home/assets/brands/layer-638.png",
-        "/home/assets/brands/layer-639.png",
-        "/home/assets/brands/layer-640.png",
-        "/home/assets/brands/layer-641.png",
-        "/home/assets/brands/layer-642.png",
-        "/home/assets/brands/layer-643.png",
-        "/home/assets/brands/layer-644.png",
-        "/home/assets/brands/layer-645.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-636.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-637.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-638.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-639.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-640.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-641.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-642.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-643.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-644.png",
+        process.env.PUBLIC_URL + "/assets/brands/layer-645.png",
       ],
     },
     OurPartnersData: {
       title: ["Our", "Partners"],
       subtitle: "Join our family now wherever you are",
       logos: [
-        "/home/assets/Our partners/layer-110.png",
-        "/home/assets/Our partners/layer-165.png",
-        "/home/assets/Our partners/layer-166.png",
-        "/home/assets/Our partners/layer-163.png",
-        "/home/assets/Our partners/layer-164.png",
-        "/home/assets/Our partners/layer-167.png",
+        process.env.PUBLIC_URL + "/assets/Our partners/layer-110.png",
+        process.env.PUBLIC_URL + "/assets/Our partners/layer-165.png",
+        process.env.PUBLIC_URL + "/assets/Our partners/layer-166.png",
+        process.env.PUBLIC_URL + "/assets/Our partners/layer-163.png",
+        process.env.PUBLIC_URL + "/assets/Our partners/layer-164.png",
+        process.env.PUBLIC_URL + "/assets/Our partners/layer-167.png",
       ],
       bannerTitle: ["start selling on", "google for free"],
     },
@@ -287,7 +287,7 @@ class Homepage extends Component {
         <ThreeSixtyView data={ThreeSixtyViewData} shops={ShopsData} />
         <FullScreenWrapper>
           <FullScreenWrapper>
-            <Map mapImg="/home/assets/Map/map.png" data={MapData} />
+            <Map mapImg={process.env.PUBLIC_URL + "/assets/Map/map.png"} data={MapData} />
 
             <OurPartners data={OurPartnersData} />
             <Footer />

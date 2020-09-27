@@ -38,7 +38,7 @@ class MenuSidebar extends Component {
       <React.Fragment>
         <div className={attachdstyles.join(" ")}>
           <div className={styles.title}>
-            <img src="/home/assets/layer-1.png" alt="navlogo" />
+            <img src={process.env.PUBLIC_URL + "/assets/layer-1.png"} alt="navlogo" />
             <div className={styles.close} onClick={closed}>
               <CloseIcon />
             </div>
