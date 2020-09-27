@@ -122,7 +122,7 @@ class Homepage extends Component {
       },
     ],
     ThreeSixtyViewData: {
-      title: "We show our clients to publiic in an",
+      title: "We show our clients to public in an",
       highlighted: "impressive way",
       description:
         "Our clients have had many advantages that have made them appear in public in a more professional and more enjoyable way",

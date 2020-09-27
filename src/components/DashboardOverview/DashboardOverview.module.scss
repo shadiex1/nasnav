@@ -48,7 +48,7 @@
       height: 130px;
       padding: 20px 15px;
       // margin: auto;
-      width: 80% !important;
+      width: 80%  ;
 margin: auto;
       .imgContainer {
         background-image: linear-gradient(to top, $color-primary, $color-txt-4);
@@ -93,26 +93,20 @@ margin: auto;
     .features {
       // flex-direction: column;
       flex-wrap: wrap !important;
-      .feature {
-        width: 30%;
-      }
+      // .feature {
+      //   width: 30%;
+      // }
     }
   }
   @media screen and (max-width: 480px) {
+
     .features {
-      .feature {
-        width: 50%;
+      .featureContainer{
+              .feature {
+        width: 70% ;
       }
+      }
+
     }
   }
 }
-.next{
-   height: 4rem;
-   z-index: 2;
-  //  right: 0 !important;
- }
-.pre{
-   height: 4rem;
-   z-index: 2;
-  //  left: 5 !important;
- }
