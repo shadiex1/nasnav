@@ -6,25 +6,25 @@ const Map = (props) => {
     {
       country: "egypt",
       flag: "egypt Flag",
-      image: "/home/assets/Map/egypt.png",
+      image: process.env.PUBLIC_URL + "/assets/Map/egypt.png",
       className: styles.egypt,
     },
     {
       country: "poland",
       flag: "poland Flag",
-      image: "/home/assets/Map/poland.png",
+      image: process.env.PUBLIC_URL + "/assets/Map/poland.png",
       className: styles.poland,
     },
     {
       country: "nigeria",
       flag: "nigeria Flag",
-      image: "/home/assets/Map/nigeria.png",
+      image: process.env.PUBLIC_URL + "/assets/Map/nigeria.png",
       className: styles.nigeria,
     },
     {
       country: "saudi",
       flag: "Saudi Flag",
-      image: "/home/assets/Map/saudi.png",
+      image: process.env.PUBLIC_URL + "/assets/Map/saudi.png",
       className: styles.saudi,
     },
   ];

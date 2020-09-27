@@ -54,7 +54,7 @@ const Gallery = (props) => {
               className={styles.imgContainer}
             >
               <img
-                src="/home/assets/Gif sections/i-phone.png"
+                src={process.env.PUBLIC_URL + "/assets/Gif sections/i-phone.png"}
                 alt="mobile Cover"
                 className={styles.mobileCover}
               />

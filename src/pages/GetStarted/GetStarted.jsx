@@ -12,22 +12,22 @@ class GetStarted extends Component {
         title: "Get your website with all the products for free ",
         description:
           "You can simply get your website and all your products online and Google in minutes few",
-        BackgroundCover: "/home/assets/layer-106.png",
-        img: "/home/assets/Gif sections/layer-107@3x.png",
+        BackgroundCover: process.env.PUBLIC_URL + "/assets/layer-106.png",
+        img: process.env.PUBLIC_URL + "/assets/Gif sections/layer-107@3x.png",
       },
       {
         title: "Get your website with all the products for free ",
         description:
           "You can simply get your website and all your products online and Google in minutes few",
-        BackgroundCover: "/home/assets/HeyNavTheme/layer-118.png",
-        img: "/home/assets/HeyNavTheme/layer-119.png",
+        BackgroundCover: process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-118.png",
+        img: process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-119.png",
       },
       {
         title: "Get your website with all the products for free ",
         description:
           "You can simply get your website and all your products online and Google in minutes few",
-        BackgroundCover: "/home/assets/layer-106.png",
-        img: "/home/assets/Gif sections/layer-107@3x.png",
+        BackgroundCover: process.env.PUBLIC_URL + "/assets/layer-106.png",
+        img: process.env.PUBLIC_URL + "/assets/Gif sections/layer-107@3x.png",
       },
     ],
   };

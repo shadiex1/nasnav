@@ -8,7 +8,7 @@ class Showcase extends Component {
     return (
         <div className={styles.Showcase}>
           <div className={styles.searchbar}>
-            <img src="/home/assets/Showcase/layer-15@3x.png" alt="logo" />
+            <img src={process.env.PUBLIC_URL + "/assets/Showcase/layer-15@3x.png"} alt="logo" />
             <input type="text" placeholder="Find your products on goolge" />
             <div className={styles.iconConatiner}>
               <SearchIcon />
@@ -22,7 +22,7 @@ class Showcase extends Component {
           </div>
           <div className={styles.btnsContainer}>
             <div className={styles.btn}>
-              <img src="/home/assets/Menu/layer-2@3x.png" /> Watch how to do it
+              <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} /> Watch how to do it
             </div>
             <div className={styles.btnSmall}>
               <PlayArrow />

@@ -14,12 +14,12 @@ class HeyNav360 extends Component {
           </h2>
           <span className={styles.subtitle}>
             {data.subtitle}
-            <img src="/home/assets/Gif sections/layer-104@3x.png" alt="logo" />
+            <img src={process.env.PUBLIC_URL + "/assets/Gif sections/layer-104@3x.png"} alt="logo" />
           </span>
           <p>{data.description}</p>
           <p className={styles.examples}>
             <span className={[styles.btn, styles.gradientBtn].join(" ")}>
-              <img src="/home/assets/Menu/layer-2@3x.png" /> See Examples
+              <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} /> See Examples
             </span>
           </p>
           <div className={styles.magic}>
@@ -33,12 +33,12 @@ class HeyNav360 extends Component {
 
         <div
           style={{
-            backgroundImage: `url("/home/assets/layer-106.png")`,
+            backgroundImage: `url(process.env.PUBLIC_URL + "/assets/layer-106.png")`,
           }}
           className={styles.imgContainer}
         >
           <img
-            src="/home/assets/Gif sections/i-phone.png"
+            src={process.env.PUBLIC_URL + "/assets/Gif sections/i-phone.png"}
             alt="mobile Cover"
             className={styles.mobileCover}
           />

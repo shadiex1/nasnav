@@ -23,12 +23,12 @@ class FormPage extends Component {
       {
         title: "What's the brand of your Point of Sale?",
         options: [
-          "/home/assets/form brands/layer-125.png",
-          "/home/assets/form brands/kindpng-1030408.png",
-          "/home/assets/form brands/layer-128.png",
-          "/home/assets/form brands/layer-129.png",
-          "/home/assets/form brands/layer-127.png",
-          "/home/assets/form brands/layer-126.png",
+          process.env.PUBLIC_URL + "/assets/form brands/layer-125.png",
+          process.env.PUBLIC_URL + "/assets/form brands/kindpng-1030408.png",
+          process.env.PUBLIC_URL + "/assets/form brands/layer-128.png",
+          process.env.PUBLIC_URL + "/assets/form brands/layer-129.png",
+          process.env.PUBLIC_URL + "/assets/form brands/layer-127.png",
+          process.env.PUBLIC_URL + "/assets/form brands/layer-126.png",
         ],
         imgs: true,
         id: 3,
@@ -85,7 +85,7 @@ class FormPage extends Component {
           <p onClick={() => this.props.history.goBack()}>Back</p>
           <div className={styles.menu}>
             <Link to="/">
-              <img src={"/home/assets/logo-white.png"} alt="logo" />
+              <img src={process.env.PUBLIC_URL + "/assets/logo-white.png"} alt="logo" />
             </Link>
           </div>
           <h3>

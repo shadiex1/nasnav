@@ -18,7 +18,7 @@ class HeyNavBox extends Component {
           <span className={styles.subtitle}>
             {data.subtitle}
             <img
-              src={"/home/assets/Gif sections/layer-104@3x.png"}
+              src={process.env.PUBLIC_URL + "/assets/Gif sections/layer-104@3x.png"}
               alt="logo"
             />
           </span>
@@ -53,7 +53,7 @@ class HeyNavBox extends Component {
           className={styles.imgContainer}
         >
           <img
-            src="/home/assets/Gif sections/i-phone.png"
+            src={process.env.PUBLIC_URL + "/assets/Gif sections/i-phone.png"}
             alt="mobile Cover"
             className={styles.mobileCover}
           />
@@ -63,7 +63,7 @@ class HeyNavBox extends Component {
             className={styles.mobileScreen}
           />
           {/* <img
-            src="/home/assets/invalid-name.png"
+            src={process.env.PUBLIC_URL + "/assets/invalid-name.png"}
             alt="priceTag"
             className={styles.PriceTag}
           /> */}

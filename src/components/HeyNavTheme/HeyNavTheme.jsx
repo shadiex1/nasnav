@@ -15,7 +15,7 @@ class HeyNavTheme extends Component {
           <span className={styles.subtitle}>
             {data.subtitle}
             <img
-              src={"/home/assets/Gif sections/layer-104@3x.png"}
+              src={process.env.PUBLIC_URL + "/assets/Gif sections/layer-104@3x.png"}
               alt="logo"
             />
           </span>
@@ -44,12 +44,12 @@ class HeyNavTheme extends Component {
 
         <div
           style={{
-            backgroundImage: `url("/home/assets/HeyNavTheme/layer-118.png")`,
+            backgroundImage: `url(process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-118.png")`,
           }}
           className={styles.imgContainer}
         >
           <img
-            src={"/home/assets/Gif sections/i-phone.png"}
+            src={process.env.PUBLIC_URL + "/assets/Gif sections/i-phone.png"}
             alt="mobile Cover"
             className={styles.mobileCover}
           />

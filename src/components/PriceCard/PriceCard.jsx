@@ -17,7 +17,7 @@ const PriceCard = (props) => {
           ))}
         </ul>
         <button className={styles.getStarted}>
-          <img src="/home/assets/Menu/layer-2@3x.png" /> Get Started
+          <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} /> Get Started
         </button>
       </div>
     </div>

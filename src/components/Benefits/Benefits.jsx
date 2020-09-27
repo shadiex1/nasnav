@@ -23,7 +23,7 @@ const Benefits = (props) => {
       </div>
       <div className={styles.imgSection}>
         <img
-          src={"/home/assets/Showcase/group-33@3x.png"}
+          src={process.env.PUBLIC_URL + "/assets/Showcase/group-33@3x.png"}
           alt="mobile screen"
         />
       </div>
