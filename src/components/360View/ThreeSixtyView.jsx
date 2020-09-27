@@ -4,7 +4,8 @@ import Shop from "./Shop/Shop";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { RightArrowWide, LeftArrowWide } from "../SvgIcons/SvgIcons";
+import Arrow from "../Arrow/Arrow";
+
 const ThreeSixtyView = (props) => {
   const sliderSettingsBuilder = (shopsLength) => ({
     dragging: true,
@@ -12,23 +13,15 @@ const ThreeSixtyView = (props) => {
     autoplay: shopsLength > 3 ? true : false,
     speed: 500,
     centerPadding: "60px",
-    arrows: false,
+    arrows: true,
     className: styles.slider,
     accessibility: true,
     focusOnSelect: true,
     lazyLoad: "ondemand",
     slidesToShow: 6,
     // slidesToScroll: 1,
-    nextArrow: (
-      //  <NextArrow>
-      <RightArrowWide className={styles.arrows} />
-      //  </NextArrow>
-    ),
-    prevArrow: (
-      //  <PrevArrow>
-      <LeftArrowWide className={styles.arrows} />
-      //  </PrevArrow>
-    ),
+    prevArrow: <Arrow />,
+    nextArrow: <Arrow rotate />,
     responsive: [
       {
         breakpoint: 1000,

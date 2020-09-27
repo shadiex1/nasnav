@@ -7,10 +7,11 @@ class FormBtn extends Component {
     clickedBtn: false,
   };
   render() {
-    const { data, img, active } = this.props;
+    const { data, img, active,scroll } = this.props;
     const { clickedBtn } = this.state;
     const clicked = () => {
       active();
+      scroll()
       this.setState({
         clickedBtn: !clickedBtn,
       });

@@ -30,7 +30,8 @@
   .features {
 .slider{
   padding: 20px;
- 
+ display: flex;
+ align-items: center;
   div{
     // display: flex;
     justify-content: center;
@@ -103,7 +104,7 @@ margin: auto;
     .features {
       .featureContainer{
               .feature {
-        width: 70% ;
+        width: 80% ;
       }
       }
 

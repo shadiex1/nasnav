@@ -6,7 +6,7 @@ import { InView } from "react-intersection-observer";
 const Shop = (props) => {
   const { branchImg, branchName, id } = props;
   return (
-    <InView threshold={0} key={id}>
+    <InView threshold={0.99} key={id}>
       {({ inView, ref }) => (
         <button
           className={[styles.Shop, !inView && styles.hidden].join(" ")}

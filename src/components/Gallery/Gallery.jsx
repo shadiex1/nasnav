@@ -19,7 +19,8 @@ const Gallery = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
-    dotsClass: styles.dots,
+    dotsClass: ["slick-dots", styles.dots].join(" "),
+
     appendDots: (dots) => <ul>{dots}</ul>,
     customPaging: (i) => <div className={styles.dot}></div>,
 

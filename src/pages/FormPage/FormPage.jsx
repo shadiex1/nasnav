@@ -2,8 +2,13 @@ import React, { Component } from "react";
 import styles from "./FormPage.module.scss";
 import FormBtn from "../../components/FormBtn/FormBtn";
 import { Link } from "react-router-dom";
+import { scroll } from "react-scroll"
+   
+
 class FormPage extends Component {
+
   state = {
+    scroll:100,
     FormData: [
       {
         title: "Do you have a physical retail store?",
@@ -59,9 +64,15 @@ class FormPage extends Component {
     ],
     nextBtn: false,
   };
+ NextBtnRef = React.createRef();
 
+  // componentDidUpdate() {
+  //   const { nextBtn } = this.state
+  //           nextBtn && this.scrollToBottom();
+
+  // }
   Clicked = (id, index) => {
-    const { FormData } = this.state;
+    const { FormData,scroll,nextBtn } = this.state;
     const prevQuestion = FormData.find((item) => item.id === (id - 1 || 1));
     const current = FormData.find((item) => item.id === id);
     const nextQuestion = FormData.find((item) => item.id === id + 1);
@@ -70,12 +81,35 @@ class FormPage extends Component {
         this.setState({
           nextBtn: true,
         });
+           setTimeout(() => {
+            this.scrollToBottom();
+           }, 100);
+
+       
       } else nextQuestion.checked = true;
       this.setState({
         FormData,
+        scroll: scroll + 150
+
       });
     }
   };
+
+   scrollToBottom = () => {
+          this.NextBtnRef.current.scrollIntoView({ behavior: "smooth" });
+        };
+
+  scrollToTop = () => {
+    const { scroll, nextBtn } = this.state
+      window.scrollTo({
+      top: scroll ,
+      left: 0,
+      behavior: "smooth",
+      });
+    
+  }
+    
+  
 
   render() {
     const { FormData, nextBtn } = this.state;
@@ -102,25 +136,33 @@ class FormPage extends Component {
               }}
               className={styles.section}
             >
-              <p className={styles.title}>{section.title}</p>
+              <p  className={styles.title}>
+                {section.title}
+              </p>
               {section.options.map((option) => {
                 return section.imgs ? (
                   <FormBtn
                     active={() => this.Clicked(section.id, i)}
                     img={option}
+                    scroll={this.scrollToTop}
                   />
                 ) : (
                   <FormBtn
                     active={() => this.Clicked(section.id, i)}
                     data={option}
+                    scroll={this.scrollToTop}
                   />
                 );
               })}
             </div>
           ))}
         </div>
-        <div className={styles.next}>
-          {nextBtn && <button className={styles.btn}>finish</button>}
+        <div className={styles.next} ref={this.NextBtnRef}>
+          {nextBtn && (
+            <button   className={styles.btn}>
+              finish
+            </button>
+          )}
         </div>
       </div>
     );

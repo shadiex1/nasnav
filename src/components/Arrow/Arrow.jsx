@@ -1,24 +1,18 @@
-import React from "react"
-import styles from "./Arrow.module.scss"
-
-export function NextArrow(props) {
+import React from "react";
+import styles from "./Arrow.module.scss";
+import {RightArrowWide} from "../SvgIcons/SvgIcons"
+const Arrow = (props) => {
   const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block" , right:"3px"}}
-      onClick={onClick}
-    />
-  );
-}
 
-export function PrevArrow(props) {
-         const { className, style, onClick } = props;
-         return (
-           <div
-             className={className}
-             style={{ ...style, display: "block", background: "",left:"3px" }}
-             onClick={onClick}
-           />
-         );
-       }
+  return props.rotate ? (
+    <div onClick={onClick} className={styles.next}>
+      <RightArrowWide />
+    </div>
+  ) : (
+    <div onClick={onClick} className={styles.prev}>
+      <RightArrowWide />
+    </div>
+  );
+};
+
+export default Arrow;

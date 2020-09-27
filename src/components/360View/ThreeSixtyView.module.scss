@@ -1,7 +1,7 @@
 @import "../../VariablesScss/variables";
 .ThreeSixtyView {
-  background: url("/assets/Banner/layer-14-copy@3x.png"),
-    linear-gradient(90deg, rgba(75, 68, 255, 1) 50%, rgba(52, 191, 243, 1) 100%);
+ background: url("/home/assets/Banner/layer-14-copy@3x.png"),
+     rgba(75, 68, 255, 1) ;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -30,7 +30,8 @@
   }
  .slider{
   padding: 20px;
- 
+//  display: flex;
+//  align-items: center;
   div{
     // display: flex;
     justify-content: center;

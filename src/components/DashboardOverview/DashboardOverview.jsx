@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./DashboardOverview.module.scss";
 import { RightArrowWide, LeftArrowWide } from "../SvgIcons/SvgIcons";
-import {NextArrow , PrevArrow} from "../Arrow/Arrow"
+// import {NextArrow , PrevArrow} from "../Arrow/Arrow"
+import Arrow from "../Arrow/Arrow"
 import Slider from "react-slick";
 
 const DashboardOverview = (props) => {
@@ -14,11 +15,11 @@ const DashboardOverview = (props) => {
    arrows: true,
    className: styles.slider,
    accessibility: true,
-
+   prevArrow: <Arrow />,
+   nextArrow: <Arrow rotate />,
    slidesToShow: 4,
    slidesToScroll: 1,
-   nextArrow: <NextArrow style={{ right: 0 }} className={styles.next} />,
-   prevArrow: <PrevArrow style={{ left: 0 }} className={styles.prev} />,
+  
    responsive: [
      {
        breakpoint: 1000,
