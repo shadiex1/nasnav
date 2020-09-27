@@ -82,11 +82,11 @@
     }
   }
   .imgContainer {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 280px;
     // object-fit: fill;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -97,7 +97,7 @@
       position: relative;
       transform: translateY(1.5rem);
       border-radius: 10px;
-      width: 250px;
+      width: 300px;
       height: 100%;
       object-fit: contain;
       display: block;
@@ -106,11 +106,12 @@
     .mobileScreen {
       overflow: hidden;
       position: absolute;
-      transform: translateY(1rem);
+      transform: translateY(1.5rem);
       border-radius: 10px;
-      height: 260px;
+      height: 250px;
       object-fit: cover;
       display: block;
+      width: 180px;
     }
   }
   @media screen and (max-width: 800px) {
@@ -141,8 +142,9 @@
       }
     }
     .imgContainer {
+      width:270px;
       .mobileScreen {
-        height: 280px;
+        height: 250px;
       }
     }
   }

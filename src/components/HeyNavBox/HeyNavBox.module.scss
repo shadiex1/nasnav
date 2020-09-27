@@ -68,16 +68,17 @@
     }
   }
   .imgContainer {
-    width: 320px;
-    height: 20rem;
+    width: 350px;
+    height: 280px;
     margin: auto;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
     .mobileCover {
       position: relative;
       transform: translateY(1rem);
@@ -85,21 +86,23 @@
       height: 100%;
       object-fit: contain;
       display: block;
+      width: 100%;
     }
     .mobileScreen {
       position: absolute;
       transform: translateY(3rem);
       border-radius: 10px;
       height: 290px;
-      width: 220px;
+      // width: 220px;
+      width: 70%;
       object-fit: cover;
       display: block;
     }
   }
   .PriceTag {
     position: absolute;
-    top: 50%;
-    left: 85%;
+    top: 90%;
+    left: 70%;
     width: 90px;
     height: 90px;
   }
@@ -128,10 +131,10 @@
       }
     }
     .imgContainer {
+      width: 270px;
       .mobileScreen {
         height: 290px;
-        width: 240px;
-        transform: translateY(2rem);
+        width: 200px;
       }
     }
   }

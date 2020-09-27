@@ -8,6 +8,9 @@ class MenuSidebar extends Component {
   state = {
     showMenuSidebar: false,
   };
+  componentDidMount() {
+    document.body.style.overflow = "unset";
+  }
   componentDidUpdate() {
     const { open } = this.props;
     if (open) {

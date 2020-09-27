@@ -27,7 +27,7 @@ const Gallery = (props) => {
       {
         breakpoint: 860,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           infinite: data > 2 ? true : false,
           autoplay: data > 2 ? true : false,
         },
