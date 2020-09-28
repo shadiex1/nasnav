@@ -87,13 +87,14 @@
     height: 280px;
     // object-fit: fill;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin: auto;
+    // margin: auto;
+    margin-right: 10px;
     .mobileCover {
       position: relative;
       transform: translateY(1.5rem);
@@ -144,6 +145,8 @@
     }
     .imgContainer {
       width:270px;
+      margin-right: 0;
+      margin: auto;
       .mobileScreen {
         height: 250px;
       }

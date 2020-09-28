@@ -68,11 +68,12 @@
     }
   }
   .imgContainer {
-    width: 350px;
+    width: 400px;
     height: 280px;
-    margin: auto;
+    // margin: auto;
+    margin-right: 10px;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -132,6 +133,8 @@
     }
     .imgContainer {
       width: 270px;
+      margin: auto;
+      // margin-right: 0;
       .mobileScreen {
         height: 290px;
         width: 200px;

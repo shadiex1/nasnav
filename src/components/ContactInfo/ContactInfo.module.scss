@@ -69,13 +69,18 @@
       }
     }
     .branches {
-      flex-direction: column;
+      // flex-direction: column;
       .branch {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
       }
+    }
+  }
+  @media screen and (max-width:480px){
+    .branches{
+      flex-direction: column;
     }
   }
 }
