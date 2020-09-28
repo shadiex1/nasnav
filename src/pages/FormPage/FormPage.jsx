@@ -137,6 +137,7 @@ class FormPage extends Component {
           this.scrollToBottom();
         }, 100);
       } else nextQuestion.checked = true;
+      this.scrollToNextQuestion();
       this.setState({
         FormData,
         scroll: scroll + 250,
@@ -147,7 +148,7 @@ class FormPage extends Component {
     this.NextBtnRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  scrollToTop = () => {
+  scrollToNextQuestion = () => {
     const { scroll } = this.state;
     window.scrollTo({
       top: scroll,
@@ -177,7 +178,7 @@ class FormPage extends Component {
         </div>
 
         <div className={styles.sectionsContainer}>
-          {FormData.map((section, i) => (
+          {FormData.map((section) => (
             <div
               style={{
                 opacity: `${section.checked && "1"}`,
@@ -192,7 +193,6 @@ class FormPage extends Component {
                     img={section.imgs && option.choice}
                     data={option.choice}
                     selected={option.selected}
-                    scroll={this.scrollToTop}
                   />
                 );
               })}

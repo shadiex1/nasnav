@@ -3,22 +3,13 @@ import { Component } from "react";
 import styles from "./FormBtn.module.scss";
 
 class FormBtn extends Component {
-  state = {
-    clickedBtn: false,
-  };
+
   render() {
-    const { data, img, active,scroll ,selected} = this.props;
-    const { clickedBtn } = this.state;
-    const clicked = () => {
-      active();
-      scroll()
-      this.setState({
-        clickedBtn: !clickedBtn,
-      });
-    };
+    const { data, img, active ,selected} = this.props;
+ 
     return (
       <button
-        onClick={clicked}
+        onClick={active}
         style={{
           backgroundColor: selected && " #13d79d",
           color: "white",
