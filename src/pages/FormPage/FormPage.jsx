@@ -2,114 +2,159 @@ import React, { Component } from "react";
 import styles from "./FormPage.module.scss";
 import FormBtn from "../../components/FormBtn/FormBtn";
 import { Link } from "react-router-dom";
-import { scroll } from "react-scroll"
-   
 
 class FormPage extends Component {
-
   state = {
-    scroll:100,
+    scroll: 100,
     FormData: [
       {
         title: "Do you have a physical retail store?",
-        options: ["yes", "no"],
+        options: [
+          { choice: "yes", selected: false },
+          { choice: "no", selected: false },
+        ],
         id: 1,
         checked: true,
+        answer: "",
       },
       {
         title: "What type of products do you sell?",
         options: [
-          "do you use manufacturers' (UPC or EAN) barcodes?",
-          "Other products",
+          {
+            choice: "do you use manufacturers' (UPC or EAN) barcodes?",
+            selected: false,
+          },
+          { choice: "Other products", selected: false },
         ],
         id: 2,
         checked: false,
+        answer: "",
       },
       {
         title: "What's the brand of your Point of Sale?",
         options: [
-          process.env.PUBLIC_URL + "/assets/form brands/layer-125.png",
-          process.env.PUBLIC_URL + "/assets/form brands/kindpng-1030408.png",
-          process.env.PUBLIC_URL + "/assets/form brands/layer-128.png",
-          process.env.PUBLIC_URL + "/assets/form brands/layer-129.png",
-          process.env.PUBLIC_URL + "/assets/form brands/layer-127.png",
-          process.env.PUBLIC_URL + "/assets/form brands/layer-126.png",
+          {
+            choice:
+              process.env.PUBLIC_URL + "/assets/form brands/layer-125.png",
+            selected: false,
+          },
+          {
+            choice:
+              process.env.PUBLIC_URL +
+              "/assets/form brands/kindpng-1030408.png",
+            selected: false,
+          },
+          {
+            choice:
+              process.env.PUBLIC_URL + "/assets/form brands/layer-128.png",
+            selected: false,
+          },
+          {
+            choice:
+              process.env.PUBLIC_URL + "/assets/form brands/layer-129.png",
+            selected: false,
+          },
+          {
+            choice:
+              process.env.PUBLIC_URL + "/assets/form brands/layer-127.png",
+            selected: false,
+          },
+          {
+            choice:
+              process.env.PUBLIC_URL + "/assets/form brands/layer-126.png",
+            selected: false,
+          },
         ],
         imgs: true,
         id: 3,
         checked: false,
+        answer: "",
       },
 
       {
         title: "Great! Do you use it at your POS?",
-        options: ["yes", "no"],
+        options: [
+          { choice: "yes", selected: false },
+          { choice: "no", selected: false },
+        ],
         id: 4,
         checked: false,
       },
       {
         title: "Great! Do you use it at your POS?",
         options: [
-          "My scanner is connected to my POS",
-          "My scanner is wireless",
+          { choice: "My scanner is connected to my POS", selected: false },
+          { choice: "My scanner is wireless", selected: false },
         ],
         id: 5,
         checked: false,
+        answer: "",
       },
       {
         title: "do you use manufacturers' (UPC or EAN) barcodes?",
-        options: ["yes", "no", "Not sure"],
+        options: [
+          { choice: "yes", selected: false },
+          { choice: "no", selected: false },
+          { choice: "Not sure", selected: false },
+        ],
         id: 6,
         checked: false,
+        answer: "",
       },
     ],
     nextBtn: false,
   };
- NextBtnRef = React.createRef();
+  NextBtnRef = React.createRef();
 
-  // componentDidUpdate() {
-  //   const { nextBtn } = this.state
-  //           nextBtn && this.scrollToBottom();
-
-  // }
   Clicked = (id, index) => {
-    const { FormData,scroll,nextBtn } = this.state;
+    const { FormData, scroll } = this.state;
     const prevQuestion = FormData.find((item) => item.id === (id - 1 || 1));
     const current = FormData.find((item) => item.id === id);
+    console.log(current.options, index);
     const nextQuestion = FormData.find((item) => item.id === id + 1);
+    current.answer
+      ?
+         (current.options[index].selected = false)
+      :
+      // (current.options[index].selected = !current.options[index].selected); // add green selection
+
+    current.answer = current.options[index].choice; /// save answer
+    current.options.find(option=>option.choice===current.answer).selected=true
     if (prevQuestion.checked && current.checked) {
       if (!nextQuestion) {
         this.setState({
           nextBtn: true,
         });
-           setTimeout(() => {
-            this.scrollToBottom();
-           }, 100);
-
-       
+        setTimeout(() => {
+          this.scrollToBottom();
+        }, 100);
       } else nextQuestion.checked = true;
       this.setState({
         FormData,
-        scroll: scroll + 250
-
+        scroll: scroll + 250,
       });
     }
+
+    console.log(this.state, "state");
+  };
+  addSelected = (id, selectedOption) => {
+    const { FormData } = this.state;
+    const current = FormData.find((item) => item.id === id).options[
+      selectedOption
+    ];
+  };
+  scrollToBottom = () => {
+    this.NextBtnRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-   scrollToBottom = () => {
-          this.NextBtnRef.current.scrollIntoView({ behavior: "smooth" });
-        };
-
   scrollToTop = () => {
-    const { scroll, nextBtn } = this.state
-      window.scrollTo({
-      top: scroll ,
+    const { scroll } = this.state;
+    window.scrollTo({
+      top: scroll,
       left: 0,
       behavior: "smooth",
-      });
-    
-  }
-    
-  
+    });
+  };
 
   render() {
     const { FormData, nextBtn } = this.state;
@@ -119,7 +164,10 @@ class FormPage extends Component {
           <p onClick={() => this.props.history.goBack()}>Back</p>
           <div className={styles.menu}>
             <Link to="/">
-              <img src={process.env.PUBLIC_URL + "/assets/logo-white.png"} alt="logo" />
+              <img
+                src={process.env.PUBLIC_URL + "/assets/logo-white.png"}
+                alt="logo"
+              />
             </Link>
           </div>
           <h3>
@@ -136,21 +184,22 @@ class FormPage extends Component {
               }}
               className={styles.section}
             >
-              <p  className={styles.title}>
-                {section.title}
-              </p>
-              {section.options.map((option) => {
+              <p className={styles.title}>{section.title}</p>
+              {section.options.map((option, index) => {
                 return section.imgs ? (
                   <FormBtn
-                    active={() => this.Clicked(section.id, i)}
-                    img={option}
+                    active={() => this.Clicked(section.id, index)}
+                    
+                    img={option.choice}
+                    selected={option.selected}
                     scroll={this.scrollToTop}
                   />
                 ) : (
                   <FormBtn
-                    active={() => this.Clicked(section.id, i)}
-                    data={option}
+                    active={() => this.Clicked(section.id, index)}
+                    data={option.choice}
                     scroll={this.scrollToTop}
+                    selected={option.selected}
                   />
                 );
               })}
@@ -158,11 +207,7 @@ class FormPage extends Component {
           ))}
         </div>
         <div className={styles.next} ref={this.NextBtnRef}>
-          {nextBtn && (
-            <button   className={styles.btn}>
-              finish
-            </button>
-          )}
+          {nextBtn && <button className={styles.btn}>finish</button>}
         </div>
       </div>
     );

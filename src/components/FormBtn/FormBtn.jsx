@@ -7,7 +7,7 @@ class FormBtn extends Component {
     clickedBtn: false,
   };
   render() {
-    const { data, img, active,scroll } = this.props;
+    const { data, img, active,scroll ,selected} = this.props;
     const { clickedBtn } = this.state;
     const clicked = () => {
       active();
@@ -20,7 +20,7 @@ class FormBtn extends Component {
       <button
         onClick={clicked}
         style={{
-          backgroundColor: clickedBtn && " #13d79d",
+          backgroundColor: selected && " #13d79d",
           color: "white",
         }}
         className={styles.FormBtn}
@@ -30,7 +30,7 @@ class FormBtn extends Component {
         ) : (
           <p
             style={{
-              color: clickedBtn && "white",
+              color: selected && "white",
             }}
           >
             {data}
