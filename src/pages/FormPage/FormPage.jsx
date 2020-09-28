@@ -110,16 +110,24 @@ class FormPage extends Component {
     const { FormData, scroll } = this.state;
     const prevQuestion = FormData.find((item) => item.id === (id - 1 || 1));
     const current = FormData.find((item) => item.id === id);
-    console.log(current.options, index);
     const nextQuestion = FormData.find((item) => item.id === id + 1);
-    current.answer
-      ?
-         (current.options[index].selected = false)
-      :
-      // (current.options[index].selected = !current.options[index].selected); // add green selection
-//////////////////////// needs adjusments doesnt save answer and there is no way of reveting selection
-    current.answer = current.options[index].choice; /// save answer
-    current.options.find(option=>option.choice===current.answer).selected=true
+
+    if (current.answer) {
+      current.options.find(
+        (option) => option.choice === current.answer
+      ).selected = false; //remove green selection
+      current.answer = current.options[index].choice; /// save answer
+      current.options.find(
+        (option) => option.choice === current.answer
+      ).selected = true; //add new green selection
+    } else {
+      current.answer = current.options[index].choice; /// save answer
+      current.options.find(
+        (option) => option.choice === current.answer
+      ).selected = true; //add green selection
+    }
+
+    console.log(current.answer, "answer");
     if (prevQuestion.checked && current.checked) {
       if (!nextQuestion) {
         this.setState({
@@ -134,14 +142,6 @@ class FormPage extends Component {
         scroll: scroll + 250,
       });
     }
-
-    console.log(this.state, "state");
-  };
-  addSelected = (id, selectedOption) => {
-    const { FormData } = this.state;
-    const current = FormData.find((item) => item.id === id).options[
-      selectedOption
-    ];
   };
   scrollToBottom = () => {
     this.NextBtnRef.current.scrollIntoView({ behavior: "smooth" });
@@ -186,20 +186,13 @@ class FormPage extends Component {
             >
               <p className={styles.title}>{section.title}</p>
               {section.options.map((option, index) => {
-                return section.imgs ? (
+                return (
                   <FormBtn
                     active={() => this.Clicked(section.id, index)}
-                    
-                    img={option.choice}
-                    selected={option.selected}
-                    scroll={this.scrollToTop}
-                  />
-                ) : (
-                  <FormBtn
-                    active={() => this.Clicked(section.id, index)}
+                    img={section.imgs && option.choice}
                     data={option.choice}
-                    scroll={this.scrollToTop}
                     selected={option.selected}
+                    scroll={this.scrollToTop}
                   />
                 );
               })}
