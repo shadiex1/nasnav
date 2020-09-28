@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./OurPartners.module.scss";
+import { Link } from "react-router-dom";
 
 const OurPartners = (props) => {
   const { data } = props;
@@ -19,9 +20,14 @@ const OurPartners = (props) => {
         <h3>
           {data.bannerTitle[0]} <span>{data.bannerTitle[1]}</span>
         </h3>
-        <div className={styles.btn}>
-          <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} /> Get Started
-        </div>
+        <Link
+          to="/getstarted"
+          className={styles.btn}
+        >
+          <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} />{" "}
+          Get Started
+        </Link>
+       
       </div>
     </div>
   );
