@@ -2,7 +2,6 @@
 .Form {
   display: flex;
   flex-direction: column;
-  width: 50%;
   padding: 100px;
   width: calc(50% - 100px);
 
@@ -28,7 +27,7 @@
   }
   @media screen and (max-width: 1000px) {
     margin: auto;
-    width: 90%;
-    padding: 0 20px;
+    width: auto;
+    padding:  20px;
   }
 }

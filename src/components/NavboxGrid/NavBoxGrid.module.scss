@@ -131,4 +131,16 @@
       }
     }
   }
+  @media screen and (max-width:380px){
+    padding: 20px 10px;
+    width: auto;
+    .gridConainer{
+      justify-content: center;
+      .grid{
+            grid-template-columns: repeat(2, 120px);
+
+    }
+    }
+    
+  }
 }

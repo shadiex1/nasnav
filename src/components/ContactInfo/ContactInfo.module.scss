@@ -69,6 +69,7 @@
       }
     }
     .branches {
+      flex-direction: column;
       .branch {
         display: flex;
         flex-direction: column;

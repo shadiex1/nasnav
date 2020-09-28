@@ -3,10 +3,13 @@
   outline: none;
   border: none;
   cursor: pointer;
-  padding: .8rem;
+  // padding: .8rem;
   position: absolute;
   top: 40%;
-  right: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0px;
   svg {
     width: 1.5rem;
     path {
@@ -16,15 +19,18 @@
 }
 
 .prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   outline: none;
   border: none;
   transform:  rotate(180deg);
   cursor: pointer;
-  padding: .8rem;
+  // padding: .8rem;
   position: absolute;
   top: 40%;
-  left: -10px;
+  left: 0px;
   svg {
     width: 1.5rem;
     path {

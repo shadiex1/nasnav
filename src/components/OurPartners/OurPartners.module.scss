@@ -48,6 +48,8 @@
       font-size: 30px;
       @media screen and (max-width: 800px) {
         font-size: 20px;
+        width: 70%;
+        text-align: center;
       }
       span {
         font-weight: bold;
@@ -77,7 +79,6 @@
   }
   @media screen and (max-width: 800px) {
     padding: 20px;
-    width: 90%;
     .PartnersLogos {
       flex-wrap: wrap;
       justify-content: center;

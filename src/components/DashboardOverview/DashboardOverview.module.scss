@@ -30,8 +30,8 @@
   .features {
 .slider{
   padding: 20px;
- display: flex;
- align-items: center;
+//  display: flex;
+//  align-items: center;
   div{
     // display: flex;
     justify-content: center;
@@ -100,7 +100,12 @@ margin: auto;
     }
   }
   @media screen and (max-width: 480px) {
-
+h3{
+font-size: 25px;
+}
+p{
+  width: 90%;
+}
     .features {
       .featureContainer{
               .feature {
