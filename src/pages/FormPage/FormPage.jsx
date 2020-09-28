@@ -117,7 +117,7 @@ class FormPage extends Component {
          (current.options[index].selected = false)
       :
       // (current.options[index].selected = !current.options[index].selected); // add green selection
-
+//////////////////////// needs adjusments doesnt save answer and there is no way of reveting selection
     current.answer = current.options[index].choice; /// save answer
     current.options.find(option=>option.choice===current.answer).selected=true
     if (prevQuestion.checked && current.checked) {
