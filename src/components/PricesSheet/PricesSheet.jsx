@@ -30,13 +30,6 @@ const PricesSheet = (props) => {
                   />{" "}
                   Get Started
                 </Link>
-
-                {/* <button className={styles.getStarted}>
-                  <img
-                    src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"}
-                  />{" "}
-                  Get Started
-                </button> */}
               </div>
             ))}
           </div>
