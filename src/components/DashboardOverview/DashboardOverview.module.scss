@@ -3,14 +3,10 @@
 .DashboardOverview {
   width: 100%;
   margin: auto auto;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    // padding: 20px;
-  // @media screen and (max-width: 1100px) {
-  //   height: 500px;
-  // }
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   h3 {
     text-align: center;
     color: $color-white;
@@ -28,61 +24,58 @@
     margin: 30px auto;
   }
   .features {
-.slider{
-  padding: 20px;
-//  display: flex;
-//  align-items: center;
-  div{
-    // display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-  }
-  .featureContainer{
-    // background-color: red;
-    display: flex;
-    justify-content: center;
-  }
-  .feature {
-      background-color: $color-white;
-      border-radius: 20px 20px 5px 20px;
-      height: 130px;
-      padding: 20px 15px;
-      // margin: auto;
-      width: 80%  ;
-margin: auto;
-      .imgContainer {
-        background-image: linear-gradient(to top, $color-primary, $color-txt-4);
-        width: 30%;
-        height: 50px;
-        border-radius: 10px 10px 0 10px;
+    padding: 20px;
+
+    .slider {
+      div {
+        outline: none;
+      }
+      .featureContainer {
         display: flex;
-        align-items: center;
         justify-content: center;
-        margin-bottom: 10px;
-        img {
-          width: 40px;
-          height: 30px;
-          object-fit: contain;
+      }
+      .feature {
+        background-color: $color-white;
+        border-radius: 20px 20px 5px 20px;
+        height: 130px;
+        padding: 20px 15px;
+        width: 80%;
+        margin: auto;
+        .imgContainer {
+          background-image: linear-gradient(
+            to top,
+            $color-primary,
+            $color-txt-4
+          );
+          width: 30%;
+          height: 50px;
+          border-radius: 10px 10px 0 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 10px;
+          img {
+            width: 40px;
+            height: 30px;
+            object-fit: contain;
+          }
+        }
+        h3 {
+          font-size: 16px;
+          color: $color-black;
+          text-align: left;
+          margin-bottom: 5px;
+          font-weight: bolder;
+        }
+        p {
+          color: $color-txt-3;
+          text-align: left;
+          font-size: 14px;
+          margin-top: 5px;
+          width: 100%;
         }
       }
-      h3 {
-        font-size: 16px;
-        color: $color-black;
-        text-align: left;
-        margin-bottom: 5px;
-        font-weight: bolder;
-      }
-      p {
-        color: $color-txt-3;
-        text-align: left;
-        font-size: 14px;
-        margin-top: 5px;
-        width: 100%;
-      }
     }
-}
-    
   }
   @media screen and (max-width: 1100px) {
     width: 100%;
@@ -90,29 +83,20 @@ margin: auto;
       width: 80%;
     }
   }
-  @media screen and (max-width: 750px) {
-    .features {
-      // flex-direction: column;
-      flex-wrap: wrap !important;
-      // .feature {
-      //   width: 30%;
-      // }
-    }
-  }
-  @media screen and (max-width: 480px) {
-h3{
-font-size: 25px;
-}
-p{
-  width: 90%;
-}
-    .features {
-      .featureContainer{
-              .feature {
-        width: 70% ;
-      }
-      }
 
+  @media screen and (max-width: 480px) {
+    h3 {
+      font-size: 25px;
+    }
+    p {
+      width: 90%;
+    }
+    .features {
+      .featureContainer {
+        .feature {
+          width: 70%;
+        }
+      }
     }
   }
 }
