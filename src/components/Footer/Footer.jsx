@@ -11,16 +11,28 @@ const Footer = (props) => {
   return (
     <React.Fragment>
       <div className={styles.Footer}>
-        <img src={process.env.PUBLIC_URL + "/assets/layer-1.png"} alt="nasnav logo" />
+        <img
+          src={process.env.PUBLIC_URL + "/assets/layer-1.png"}
+          alt="nasnav logo"
+        />
         <div className={styles.newsletter}>
           <input placeholder="Subscribe to nasnav newsletter" type="text" />
           <SendIcon />
         </div>
         <div className={styles.icons}>
-          <FaceBookIcon />
-          <TwitterIcon />
-          <LinkdInIcon />
-          <YoutubeIcon />
+          <a href="https://www.facebook.com/NasNavUK/" target="_blank">
+            <FaceBookIcon />
+          </a>
+          {/* <TwitterIcon /> */}
+          <a href="https://www.linkedin.com/company/nasnavuk/" target="_blank">
+            <LinkdInIcon />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCKCRRH8cIROaS_0K9ymw36A/featured"
+            target="_blank"
+          >
+            <YoutubeIcon />
+          </a>
         </div>
       </div>
       <div className={styles.copyrights}>

@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./PricesSheet.module.scss";
 import { Check } from "../SvgIcons/SvgIcons";
+import { Link } from "react-router-dom";
+
 const PricesSheet = (props) => {
   const { data } = props;
 
@@ -21,9 +23,20 @@ const PricesSheet = (props) => {
                 <p className={styles.title}>{plan.type}</p>
                 <span className={styles.price}>{plan.price}</span>
                 <p className={styles.per}>Per month</p>
-                <button className={styles.getStarted}>
-                  <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} /> Get Started
-                </button>
+
+                <Link to="/getstarted" className={styles.getStarted}>
+                  <img
+                    src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"}
+                  />{" "}
+                  Get Started
+                </Link>
+
+                {/* <button className={styles.getStarted}>
+                  <img
+                    src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"}
+                  />{" "}
+                  Get Started
+                </button> */}
               </div>
             ))}
           </div>
@@ -78,7 +91,6 @@ const PricesSheet = (props) => {
           );
         })}
       </div>
-
     </div>
   );
 };
