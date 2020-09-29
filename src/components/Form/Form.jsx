@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import styles from "./Form.module.scss";
 import FormInput from "./FormInput/FormInput";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import {withRouter} from "react-router-dom"
 class Form extends Component {
   state = {
     StoreName: "",
@@ -12,23 +13,27 @@ class Form extends Component {
   };
 
   handleSubmit = async (e) => {
-    e.preventDefault();
-    const {password, confirmPassword } = this.state;
-    if (password !== confirmPassword) {
-      alert("passwords don't match");
-      return;
-    }
+    // e.preventDefault();
+    // this.checkData()
+
+    // console.log(this.state)
+    const { complete } = this.state;
+    complete && this.props.history.push("/form")
   };
 
   checkData = () => {
-    const { StoreName, Email, Phone, Name } = this.props;
-    if (StoreName && Email && Phone && Name !== " ") {
+    const { StoreName, Email, Phone, Name } = this.state;
+    if (StoreName && Email && Phone && Name) {
       this.setState({ complete: true });
     }
   };
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
+        this.checkData();
+    console.log(this.state);
+
+
   };
   render() {
     const { StoreName, Email, Phone, Name } = this.state;
@@ -71,11 +76,14 @@ class Form extends Component {
             required
           />
 
-          <Link to="/form">Next</Link>
+          <button onClick={this.handleSubmit} className={styles.next}>
+                      {/* <Link to="/form">Next</Link> */}
+            next
+          </button>
         </form>
       </div>
     );
   }
 }
 
-export default Form;
+export default withRouter(Form) ;

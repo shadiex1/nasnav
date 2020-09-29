@@ -46,8 +46,8 @@ const Gallery = (props) => {
   return (
     <div className={styles.gallery}>
       <Slider {...sliderSettingsBuilder(data.length)}>
-        {data.map((item) => (
-          <div className={styles.card}>
+        {data.map((item,i) => (
+          <div key={i} className={styles.card}>
             <div
               style={{
                 backgroundImage: `url(${item.BackgroundCover})`,

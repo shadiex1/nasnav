@@ -16,9 +16,9 @@ class YoutubeVideoSlide extends Component {
             title={videoUrl}
             ref={this.youtubeVideo}
             src={`https://www.youtube.com/embed/${videoUrl}?rel=0`}
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen="allowfullscreen"
+            allowFullScreen="allowfullscreen"
           />
         </div>
       </div>

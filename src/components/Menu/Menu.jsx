@@ -55,7 +55,7 @@ class Menu extends Component {
                 to="/getstarted"
                 className={[styles.btn, styles.gradientBtn].join(" ")}
               >
-                <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} /> Get Started
+                <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} alt="get started"/> Get Started
               </Link>
             </ul>
           </div>

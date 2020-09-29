@@ -10,8 +10,8 @@ const Benefits = (props) => {
           {data.title} <span>{data.highlighted}</span>
         </h3>
         <div className={styles.sectionsContainer}>
-          {data.list.map((section) => (
-            <div className={styles.section}>
+          {data.list.map((section,i) => (
+            <div key={i} className={styles.section}>
               <img src={section.img} alt="icon" />
               <div className={styles.container}>
                 <h3>{section.title}</h3>

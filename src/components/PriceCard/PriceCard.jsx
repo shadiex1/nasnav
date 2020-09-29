@@ -12,12 +12,12 @@ const PriceCard = (props) => {
           <span className={styles.per}>per month</span>
         </div>
         <ul>
-          {info.map((feature) => (
-            <li>{feature.title}</li>
+          {info.map((feature,i) => (
+            <li key={i}>{feature.title}</li>
           ))}
         </ul>
         <button className={styles.getStarted}>
-          <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} /> Get Started
+          <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} alt="get started" /> Get Started
         </button>
       </div>
     </div>

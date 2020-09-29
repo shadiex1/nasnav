@@ -10,7 +10,7 @@ class ContactForm extends Component {
   };
 
   handleSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
   };
 
   handleChange = (e) => {
@@ -24,7 +24,7 @@ class ContactForm extends Component {
         <h2 className={styles.title}>
           <span>Get</span> in touch with us now
         </h2>
-        <form className="sign-up-form" onSubmit={this.handleSubmit}>
+        <form  onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
             name="Name"

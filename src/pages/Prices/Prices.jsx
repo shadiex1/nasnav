@@ -113,8 +113,8 @@ class Prices extends Component {
           <EllipseContainer />
           {width <= 1200 ? (
             <div className={styles.priceCardsContainer}>
-              {PriceSheetData.PricesPlan.map((plan) => (
-                <PriceCard header={plan} info={PriceSheetData.Features} />
+              {PriceSheetData.PricesPlan.map((plan,i) => (
+                <PriceCard key={i}  header={plan} info={PriceSheetData.Features} />
               ))}
             </div>
           ) : (

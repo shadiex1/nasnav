@@ -22,7 +22,7 @@ class Showcase extends Component {
           </div>
           <div className={styles.btnsContainer}>
             <div className={styles.btn}>
-              <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} /> Watch how to do it
+              <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} alt="watch" /> Watch how to do it
             </div>
             <div className={styles.btnSmall}>
               <PlayArrow />

@@ -26,7 +26,7 @@ const PricesSheet = (props) => {
 
                 <Link to="/getstarted" className={styles.getStarted}>
                   <img
-                    src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"}
+                    src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} alt="get started"
                   />{" "}
                   Get Started
                 </Link>

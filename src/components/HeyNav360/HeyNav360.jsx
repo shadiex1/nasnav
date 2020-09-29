@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styles from "./HeyNav360.module.scss";
-import { MagicIcon, RightArrowWide } from "../SvgIcons/SvgIcons";
+import { MagicIcon } from "../SvgIcons/SvgIcons";
 
 class HeyNav360 extends Component {
   render() {
@@ -19,7 +19,7 @@ class HeyNav360 extends Component {
           <p>{data.description}</p>
           <p className={styles.examples}>
             <span className={[styles.btn, styles.gradientBtn].join(" ")}>
-              <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} /> See Examples
+              <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} alt="examples" /> See Examples
             </span>
           </p>
           <div className={styles.magic}>

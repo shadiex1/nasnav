@@ -12,8 +12,8 @@ const OurPartners = (props) => {
       <p> {data.subtitle}</p>
 
       <div className={styles.PartnersLogos}>
-        {data.logos.map((logo) => (
-          <img src={logo} alt="logo" />
+        {data.logos.map((logo,i) => (
+          <img key={i} src={logo} alt="logo" />
         ))}
       </div>
       <div className={styles.banner}>
@@ -24,7 +24,7 @@ const OurPartners = (props) => {
           to="/getstarted"
           className={styles.btn}
         >
-          <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} />{" "}
+          <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} alt="get started" />{" "}
           Get Started
         </Link>
        

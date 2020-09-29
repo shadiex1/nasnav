@@ -40,8 +40,8 @@ const Map = (props) => {
             </h3>
             <p>{data.description}</p>
             <div className={styles.brands}>
-              {data.brands.map((brand) => (
-                <img src={brand} alt="brand" />
+              {data.brands.map((brand,i) => (
+                <img key={i} src={brand} alt="brand" />
               ))}
             </div>
           </div>

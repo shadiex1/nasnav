@@ -21,14 +21,14 @@ class HeyNavTheme extends Component {
           </span>
           <p>{data.description}</p>
           <ul className={styles.list}>
-            {data.lists.map((item) => (
-              <li>
+            {data.lists.map((item,i) => (
+              <li key={i}>
                 <img src={item.leftImg} alt="icon" />
                 <span>{item.title}</span>
 
                 {item.rightImgs &&
-                  item.rightImgs.map((img) => (
-                    <img className={styles.left} src={img} alt="logo" />
+                  item.rightImgs.map((img,i) => (
+                    <img key={i} className={styles.left} src={img} alt="logo" />
                   ))}
               </li>
             ))}

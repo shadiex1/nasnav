@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./DashboardOverview.module.scss";
-import { RightArrowWide, LeftArrowWide } from "../SvgIcons/SvgIcons";
-// import {NextArrow , PrevArrow} from "../Arrow/Arrow"
 import Arrow from "../Arrow/Arrow"
 import Slider from "react-slick";
 
@@ -65,12 +63,12 @@ const DashboardOverview = (props) => {
       <div className={styles.features}>
          <Slider {...sliderSettingsBuilder(4)}>
 
-          {data.list.map((feature) => (
-            <div className={styles.featureContainer}>
+          {data.list.map((feature,i) => (
+            <div key={i} className={styles.featureContainer}>
 
             <div className={styles.feature}>
               <div className={styles.imgContainer}>
-                <img src={feature.img} />
+                <img src={feature.img} alt="feature.title" />
               </div>
               <h3>{feature.title}</h3>
               <p>{feature.desc}</p>

@@ -3,7 +3,6 @@ import styles from "./Footer.module.scss";
 import {
   SendIcon,
   FaceBookIcon,
-  TwitterIcon,
   LinkdInIcon,
   YoutubeIcon,
 } from "../SvgIcons/SvgIcons";
@@ -20,16 +19,25 @@ const Footer = (props) => {
           <SendIcon />
         </div>
         <div className={styles.icons}>
-          <a href="https://www.facebook.com/NasNavUK/" target="_blank">
+          <a
+            href="https://www.facebook.com/NasNavUK/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaceBookIcon />
           </a>
           {/* <TwitterIcon /> */}
-          <a href="https://www.linkedin.com/company/nasnavuk/" target="_blank">
+          <a
+            href="https://www.linkedin.com/company/nasnavuk/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <LinkdInIcon />
           </a>
           <a
             href="https://www.youtube.com/channel/UCKCRRH8cIROaS_0K9ymw36A/featured"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <YoutubeIcon />
           </a>

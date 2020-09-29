@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Arrow.module.scss";
 import {RightArrowWide} from "../SvgIcons/SvgIcons"
 const Arrow = (props) => {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
 
   return props.rotate ? (
     <div onClick={onClick} className={styles.next}>

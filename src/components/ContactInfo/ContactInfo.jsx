@@ -11,12 +11,12 @@ const ContactInfo = (props) => {
       <div className={styles.information}>
         <h2>Contact information</h2>
         <div className={styles.branches}>
-          {data.map((branch) => (
-            <div className={styles.branch}>
+          {data.map((branch,i) => (
+            <div key={i} className={styles.branch}>
               <h3>{branch.title}</h3>
               <ul>
-                {branch.list.map((item) => (
-                  <li>{item}</li>
+                {branch.list.map((item,i) => (
+                  <li key={i}>{item}</li>
                 ))}
               </ul>
             </div>
