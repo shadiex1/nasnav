@@ -1,0 +1,22 @@
+.PopupContainer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 21;
+  .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 21;
+
+  }
+  .videoContainer{
+   height: 100%;
+   margin-top: 5rem;
+  }
+}

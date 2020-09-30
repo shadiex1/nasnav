@@ -30,15 +30,39 @@
   }
  .slider{
   padding: 20px;
-//  display: flex;
-//  align-items: center;
-  div{
-    // display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-  }
+:global {
+     
+   
+        .slick-slide {
+          div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+          }
+        }
+      
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   @media screen and (max-width: 800px) {
     padding: 20px;
     .header {

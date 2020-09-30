@@ -10,6 +10,7 @@ import NavBoxGrid from "../../components/NavboxGrid/NavBoxGrid";
 import ThreeSixtyView from "../../components/360View/ThreeSixtyView";
 import DashboardOverview from "../../components/DashboardOverview/DashboardOverview";
 import YoutubeVideoSlide from "../../components/YoutubeVideoSlide/YoutubeVideoSlide";
+import PopupContainer from "../../components/PopupContainer/PopupContainer"
 import OurPartners from "../../components/OurPartners/OurPartners";
 import Map from "../../components/Map/Map";
 import Footer from "../../components/Footer/Footer";
@@ -240,8 +241,14 @@ class Homepage extends Component {
       ],
       bannerTitle: ["start selling on", "google for free"],
     },
+    showPopup:false
   };
 
+  togglePopup = props => {
+       this.setState((prevState) => {
+         return { showPopup: !prevState.showPopup };
+       });
+  }
   render() {
     const {
       ShowcaseData,
@@ -256,11 +263,14 @@ class Homepage extends Component {
       ShopsData,
       MapData,
       OurPartnersData,
+      showPopup
     } = this.state;
     return (
       <div>
+        <PopupContainer open={showPopup} toggle={this.togglePopup} />
+
         <FullScreenWrapper className={styles.HeaderFullSreen}>
-          <Header ShowcaseData={ShowcaseData} />
+          <Header ShowcaseData={ShowcaseData} togglePopup={this.togglePopup} showPopup={showPopup}/>
         </FullScreenWrapper>
         <FullScreenWrapper>
           <HeyNavBox data={HeynavBoxData} />
@@ -287,7 +297,10 @@ class Homepage extends Component {
         <ThreeSixtyView data={ThreeSixtyViewData} shops={ShopsData} />
         <FullScreenWrapper>
           <FullScreenWrapper>
-            <Map mapImg={process.env.PUBLIC_URL + "/assets/Map/map.png"} data={MapData} />
+            <Map
+              mapImg={process.env.PUBLIC_URL + "/assets/Map/map.png"}
+              data={MapData}
+            />
 
             <OurPartners data={OurPartnersData} />
             <Footer />

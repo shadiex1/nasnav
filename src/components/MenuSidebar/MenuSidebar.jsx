@@ -8,14 +8,17 @@ class MenuSidebar extends Component {
   state = {
     showMenuSidebar: false,
   };
-  componentDidMount() {
-    document.body.style.overflow = "unset";
-  }
+  // componentDidMount() {
+  //   document.body.style.overflow = "auto";
+  // }
   componentDidUpdate() {
-    const { open } = this.props;
-    if (open) {
+    const { open, showPopup } = this.props;
+    if (open || showPopup) {
       document.body.style.overflow = "hidden";
-    } else document.body.style.overflow = "unset";
+    }  else document.body.style.overflow = "unset";
+  }
+  componentWillUnmount() {
+document.body.style.overflow = "auto";
   }
   showMenuSidebarToggleHandler = () => {
     this.setState((prevState) => {
@@ -25,7 +28,7 @@ class MenuSidebar extends Component {
   showMenuSidebarClosedHandler = () => {
     this.setState({ showMenuSidebar: false });
   };
-  componentWillUnmount() {}
+  
   render() {
     const { closed, open } = this.props;
 

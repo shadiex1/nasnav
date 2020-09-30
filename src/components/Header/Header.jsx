@@ -6,11 +6,11 @@ import Showcase from "../Showcase/Showcase";
 import EllipseContainer from "../Ellipse/EllipseContainer/EllipseContainer";
 class Header extends Component {
   render() {
-    const { ShowcaseData } = this.props;
+    const { ShowcaseData, togglePopup, showPopup } = this.props;
     return (
       <div className={styles.Header}>
-        <Menu />
-        <Showcase data={ShowcaseData} />
+        <Menu showPopup={showPopup} />
+        <Showcase data={ShowcaseData} togglePopup={togglePopup} />
         <EllipseContainer />
       </div>
     );

@@ -16,12 +16,13 @@ class Menu extends Component {
     this.setState({ showMenuSidebar: false });
   };
   render() {
-    const { white } = this.props;
+    const { white, showPopup } = this.props;
     const { showMenuSidebar } = this.state;
     return (
       <React.Fragment>
         <MenuSidebar
           open={showMenuSidebar}
+          showPopup={showPopup}
           closed={this.showMenuSidebarClosedHandler}
         />
         <div className={styles.Menu}>
@@ -35,9 +36,15 @@ class Menu extends Component {
           </div>
           <Link to="/" className={styles.logoContainer}>
             {white ? (
-              <img src={process.env.PUBLIC_URL + "/assets/logo-white.png"} alt="logo" />
+              <img
+                src={process.env.PUBLIC_URL + "/assets/logo-white.png"}
+                alt="logo"
+              />
             ) : (
-              <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-1@3x.png"} alt="logo" />
+              <img
+                src={process.env.PUBLIC_URL + "/assets/Menu/layer-1@3x.png"}
+                alt="logo"
+              />
             )}
           </Link>
           <div className={styles.navigation}>
@@ -55,7 +62,11 @@ class Menu extends Component {
                 to="/getstarted"
                 className={[styles.btn, styles.gradientBtn].join(" ")}
               >
-                <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} alt="get started"/> Get Started
+                <img
+                  src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"}
+                  alt="get started"
+                />{" "}
+                Get Started
               </Link>
             </ul>
           </div>
