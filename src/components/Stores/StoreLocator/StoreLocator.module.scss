@@ -1,0 +1,40 @@
+
+.Storelocator {
+  display: flex;
+  flex-direction: column;
+  .title {
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #6b6b6b;
+    margin-bottom: 20px;
+  }
+  .searchContainer {
+    margin: 0 10px;
+    display: flex;
+    background-color: #FFFFFF;
+    width: calc(100% - 20px);
+    border: solid 1px #d5d5d5;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    input {
+      flex-grow: 1;
+      border: 0;
+      background-color: transparent;
+      padding: 0 0 0 20px;
+      &::placeholder {
+        color: #d0d0d0;
+      }
+    }
+    button {
+      background-color: transparent;
+      padding: 5px 20px 10px 10px;
+      border: 0;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

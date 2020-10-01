@@ -3,6 +3,19 @@ import styles from "./Showcase.module.scss";
 import { SearchIcon, PlayArrow } from "../SvgIcons/SvgIcons";
 
 class Showcase extends Component {
+  state = {
+    searchInput: "",
+  };
+  searchSubmitted = () => {
+    const { searchInput } = this.state;
+    if (searchInput.trim()) {
+      
+    }
+  };
+  searchInputChangeHandler = (event) => {
+    this.setState({ searchInput: event.target.value });
+  };
+
   render() {
     const { data, togglePopup } = this.props;
     return (
@@ -12,8 +25,12 @@ class Showcase extends Component {
             src={process.env.PUBLIC_URL + "/assets/Showcase/layer-15@3x.png"}
             alt="logo"
           />
-          <input type="text" placeholder="Find your products on goolge" />
-          <div className={styles.iconConatiner}>
+          <input
+            onChange={this.searchInputChangeHandler}
+            type="text"
+            placeholder="Find your products on goolge"
+          />
+          <div onClick={this.searchSubmitted} className={styles.iconConatiner}>
             <SearchIcon />
           </div>
         </div>
@@ -25,6 +42,8 @@ class Showcase extends Component {
         </div>
         <div className={styles.btnsContainer}>
           <div className={styles.btn}>
+            {console.log(this.state)}
+
             <img
               src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"}
               alt="watch"
