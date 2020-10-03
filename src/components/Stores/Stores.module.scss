@@ -1,0 +1,29 @@
+
+.Stores {
+  display: flex;
+  flex-direction: column;
+position: absolute;
+top: 0;
+right: 0;
+width: 100vw;
+height: 100vh;
+  z-index: 23;
+
+  .storelocatorWrpr {
+    padding: 0 20px;
+  }
+.overlay{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 21;
+  background-color: rgba(0,0,0,0.75);
+}
+  @media screen and (max-width: 640px) {
+    .storesHeaderWrpr, .storelocatorWrpr {
+      padding: 0 10px;
+    }
+  }
+}

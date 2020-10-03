@@ -1,7 +1,6 @@
 @import "../../VariablesScss/variables";
 .ThreeSixtyView {
- background: url("/assets/Banner/layer-14-copy@3x.png"),
-     rgba(75, 68, 255, 1) ;
+  background: url("/assets/Banner/layer-14-copy@3x.png"), rgba(75, 68, 255, 1);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -28,40 +27,19 @@
       margin: auto;
     }
   }
- .slider{
-  padding: 20px;
-:global {
-     
-   
-        .slick-slide {
-          div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-          }
+  .slider {
+    padding: 20px;
+    :global {
+      .slick-slide {
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
         }
-      
+      }
     }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
 
   @media screen and (max-width: 800px) {
     padding: 20px;

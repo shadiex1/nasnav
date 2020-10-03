@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { MapMarker, Phone, Close_2px } from "../../SvgIcons";
+import { MapMarker, Phone, Close_2px } from "../../../SvgIcons/SvgIcons";
 
 import * as styles from "./StoreBox.module.scss";
 

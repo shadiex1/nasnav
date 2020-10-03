@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import { SearchIcon } from "../SvgIcons";
+import { SearchIcon2 } from "../../SvgIcons/SvgIcons";
 import StoreBox from "./StoreBox/StoreBox";
-import * as styles from "./Storelocator.module.scss";
+import * as styles from "./StoreLocator.module.scss";
 
 const Storelocator = ({
   shopsFilterChangeHandler,
@@ -23,7 +23,7 @@ const Storelocator = ({
           value={shopsFilter}
         />
         <button>
-          <SearchIcon />
+          <SearchIcon2 />
         </button>
       </div>
       <div className={styles.shopsContainer}>

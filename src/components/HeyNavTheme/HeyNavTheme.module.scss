@@ -5,6 +5,7 @@
   // width: 100%;
   margin: 4rem auto;
   padding: 0 10px;
+  width: 80%;
   .description {
     h2 {
       font-size: 1.9rem;
@@ -79,7 +80,8 @@
   .imgContainer {
     // margin: auto;
     margin-right: 10px;
-     width: 400px;
+    margin-top: 2rem;
+     width: 600px;
     height: 280px;
     background-position: center;
     background-size: contain;
@@ -90,26 +92,26 @@
     overflow: hidden;
     .mobileCover {
       position: relative;
-      transform: translateY(1rem);
+      transform: translateY(2rem);
       border-radius: 10px;
-      width: 90%;
+      width: 60%;
       height: 100%;
-      object-fit: contain;
+      // object-fit: contain;
       display: block;
     }
     .mobileScreen {
       position: absolute;
-      transform: translateY(3.5rem);
+      transform: translateY(4.5rem);
       border-radius: 10px;
-      // width: 100%;
-      height: 350px;
-      object-fit: cover;
+      width: 150px;
+      // height:350px;
+      object-fit: contain;
       display: block;
     }
   }
   @media screen and (max-width: 800px) {
     flex-direction: column;
-    // width: 90%;
+    width: 90%;
     .description {
       display: flex;
       flex-direction: column;
@@ -125,10 +127,10 @@
       margin-bottom: 2rem;
       width: 100%;
       .mobileCover {
-        width: 250px;
+        width: auto;
       }
       .mobileScreen {
-        height: 300px;
+        height: 280px;
         transform: translateY(2.5rem);
       }
     }

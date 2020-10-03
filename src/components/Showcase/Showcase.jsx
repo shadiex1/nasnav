@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styles from "./Showcase.module.scss";
 import { SearchIcon, PlayArrow } from "../SvgIcons/SvgIcons";
+import Stores from "../Stores/Stores"
 
 class Showcase extends Component {
   state = {
@@ -8,8 +9,15 @@ class Showcase extends Component {
   };
   searchSubmitted = () => {
     const { searchInput } = this.state;
+    const { showMap } = this.props;
     if (searchInput.trim()) {
-      
+      showMap(searchInput);
+    }
+  };
+  handleEnterKeyDown = (e) => {
+    const enter = 13;
+    if (e.keyCode === enter) {
+      this.searchSubmitted();
     }
   };
   searchInputChangeHandler = (event) => {
@@ -17,7 +25,7 @@ class Showcase extends Component {
   };
 
   render() {
-    const { data, togglePopup } = this.props;
+    const { data, togglePopup, showMap } = this.props;
     return (
       <div className={styles.Showcase}>
         <div className={styles.searchbar}>
@@ -28,7 +36,8 @@ class Showcase extends Component {
           <input
             onChange={this.searchInputChangeHandler}
             type="text"
-            placeholder="Find your products on goolge"
+            placeholder="Find your products on google"
+            onKeyDown={this.handleEnterKeyDown}
           />
           <div onClick={this.searchSubmitted} className={styles.iconConatiner}>
             <SearchIcon />
@@ -41,9 +50,7 @@ class Showcase extends Component {
           </h2>
         </div>
         <div className={styles.btnsContainer}>
-          <div className={styles.btn}>
-            {console.log(this.state)}
-
+          <div onClick={togglePopup} className={styles.btn}>
             <img
               src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"}
               alt="watch"

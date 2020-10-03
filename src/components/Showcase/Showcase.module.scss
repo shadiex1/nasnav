@@ -10,7 +10,7 @@
   z-index: 2;
   .searchbar {
     margin: 2rem auto;
-    width: 60%;
+    width: 50%;
     background-color: $color-white;
     display: flex;
     align-items: center;
@@ -54,7 +54,6 @@
     margin-bottom: 1rem;
     h2 {
       text-transform: uppercase;
-      // width: 70%;
       margin: auto;
       text-align: center;
       span {
@@ -79,6 +78,7 @@
     justify-content: center;
     box-shadow: 0px 1px 4px 0 $color-black-overlay;
     font-size: 0.7rem;
+    cursor: pointer;
     img {
       display: block;
       width: 1.1rem;

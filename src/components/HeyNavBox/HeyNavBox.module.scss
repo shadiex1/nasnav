@@ -5,6 +5,7 @@
   margin: 2rem auto;
   position: relative;
   padding: 0 10px;
+  width: 80%;
   .description {
     h2 {
       font-size: 1.9rem;
@@ -68,10 +69,11 @@
     }
   }
   .imgContainer {
-    width: 400px;
+    width: 600px;
     height: 280px;
     // margin: auto;
     margin-right: 10px;
+    margin-top: 2rem;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -87,15 +89,15 @@
       height: 100%;
       object-fit: contain;
       display: block;
-      width: 100%;
+      width: 190px;
     }
     .mobileScreen {
       position: absolute;
-      transform: translateY(3rem);
+      transform: translateY(4.5rem);
       border-radius: 10px;
-      height: 290px;
+      height: 350px;
       // width: 220px;
-      width: 70%;
+      width: 55%;
       object-fit: cover;
       display: block;
     }
@@ -112,7 +114,7 @@
 @media screen and (max-width: 800px) {
   .HeyNavBox {
     flex-direction: column;
-    // width: 100%;
+width: 90%;
     .description {
       padding: 15px;
       order: 2;
@@ -134,11 +136,6 @@
     .imgContainer {
       width: 270px;
       margin: auto;
-      // margin-right: 0;
-      .mobileScreen {
-        height: 290px;
-        width: 200px;
-      }
     }
   }
 }

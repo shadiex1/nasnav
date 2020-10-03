@@ -24,7 +24,8 @@
     margin: 30px auto;
   }
   .features {
-    padding: 20px;
+    // padding: 20px;
+      padding: 20px;
 
     .slider {
       div {
@@ -37,8 +38,8 @@
       .feature {
         background-color: $color-white;
         border-radius: 20px 20px 5px 20px;
-        height: 130px;
-        padding: 20px 15px;
+        height: 120px;
+        padding: 20px 10px;
         width: 80%;
         margin: auto;
         .imgContainer {

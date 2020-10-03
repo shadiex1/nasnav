@@ -1,7 +1,7 @@
 @import "../../VariablesScss/variables";
 
 .NavBoxGrid {
-  // width: 100%;
+  width: 80%;
   margin: auto;
   display: flex;
   align-items: center;
@@ -60,7 +60,7 @@
   }
 
   .description {
-    // margin-left: 150px;
+    margin-left: 80px;
     width: 100%;
     h2 {
       font-size: 1.9rem;
@@ -84,7 +84,7 @@
     }
     p {
       color: $color-txt-3;
-      width: 80%;
+      width: 100%;
       margin: 10px 0;
     }
 
@@ -93,7 +93,7 @@
       align-items: center;
       p {
         color: $color-txt-6;
-        width: 80%;
+        width: 100%;
         margin-right: 1rem;
 
         span {

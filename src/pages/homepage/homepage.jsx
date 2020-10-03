@@ -13,6 +13,8 @@ import YoutubeVideoSlide from "../../components/YoutubeVideoSlide/YoutubeVideoSl
 import PopupContainer from "../../components/PopupContainer/PopupContainer"
 import OurPartners from "../../components/OurPartners/OurPartners";
 import Map from "../../components/Map/Map";
+import Stores from "../../components/Stores/Stores"
+import Panorama from "../../components/Panorama/Panorama"
 import Footer from "../../components/Footer/Footer";
 import FullScreenWrapper from "../../components/FullScreenContainer/FullScreenWrapper";
 class Homepage extends Component {
@@ -20,9 +22,13 @@ class Homepage extends Component {
     ShowcaseData: {
       title: ["sell more products with", "google"],
       screens: {
-        screenLeft: process.env.PUBLIC_URL + "/assets/Showcase/rounded-rectangle-41-copy@3x.png",
-        screenCenter: process.env.PUBLIC_URL + "/assets/Showcase/group-33@3x.png",
-        screenRight: process.env.PUBLIC_URL + "/assets/Showcase/layer-81@3x.png",
+        screenLeft:
+          process.env.PUBLIC_URL +
+          "/assets/Showcase/rounded-rectangle-41-copy@3x.png",
+        screenCenter:
+          process.env.PUBLIC_URL + "/assets/Showcase/group-33@3x.png",
+        screenRight:
+          process.env.PUBLIC_URL + "/assets/Showcase/layer-81@3x.png",
       },
     },
     HeynavBoxData: {
@@ -35,8 +41,10 @@ class Homepage extends Component {
         "Your products in google",
         "Your products appear to those close to you",
       ],
-      MobileScreen: process.env.PUBLIC_URL + "/assets/Gif sections/layer-107@3x.png",
-      BackgroundCover: process.env.PUBLIC_URL + "/assets/Gif sections/layer-106@3x.png",
+      MobileScreen:
+        process.env.PUBLIC_URL + "/assets/Gif sections/layer-107@3x.png",
+      BackgroundCover:
+        process.env.PUBLIC_URL + "/assets/Gif sections/layer-106@3x.png",
     },
     HeyNavThemeData: {
       title: ["Design Your site ", "easily"],
@@ -54,7 +62,8 @@ class Homepage extends Component {
           ],
         },
         {
-          leftImg: process.env.PUBLIC_URL + "/assets/HeyNavTheme/ast-trolley.png",
+          leftImg:
+            process.env.PUBLIC_URL + "/assets/HeyNavTheme/ast-trolley.png",
           title: "Shipping methods",
           rightImgs: [
             process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-108.png",
@@ -67,8 +76,10 @@ class Homepage extends Component {
           title: "All your branches are online",
         },
       ],
-      MobileScreen: process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-119.png",
-      BackgroundCover: process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-118.png",
+      MobileScreen:
+        process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-119.png",
+      BackgroundCover:
+        process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-118.png",
     },
 
     NavBoxGridData: {
@@ -90,36 +101,50 @@ class Homepage extends Component {
         img: process.env.PUBLIC_URL + "/assets/shops/1.png",
         title: "nike shop",
         id: 1,
+        url:
+          "https://develop.nasnav.org/files/shop360/pannellum/v3/index.html?autoLoad=true&shop_id=28",
       },
       {
         img: process.env.PUBLIC_URL + "/assets/shops/2.png",
         title: "nike shop",
         id: 2,
+        url:
+          "https://develop.nasnav.org/files/shop360/pannellum/v3/index.html?autoLoad=true&shop_id=39",
       },
       {
         img: process.env.PUBLIC_URL + "/assets/shops/3.png",
         title: "reebok shop",
         id: 3,
+        url:
+          "https://develop.nasnav.org/files/shop360/pannellum/v3/index.html?autoLoad=true&shop_id=49",
       },
       {
         img: process.env.PUBLIC_URL + "/assets/shops/4.png",
         title: "levi's shop",
         id: 4,
+        url:
+          "https://develop.nasnav.org/files/shop360/pannellum/v3/index.html?autoLoad=true&shop_id=50",
       },
       {
         img: process.env.PUBLIC_URL + "/assets/shops/5.png",
         title: "H&M shop",
         id: 5,
+        url:
+          "https://develop.nasnav.org/files/shop360/pannellum/v3/index.html?autoLoad=true&shop_id=53",
       },
       {
         img: process.env.PUBLIC_URL + "/assets/shops/6.png",
         title: "nike shop",
         id: 6,
+        url:
+          "https://develop.nasnav.org/files/shop360/pannellum/v3/index.html?autoLoad=true&shop_id=61",
       },
       {
         img: process.env.PUBLIC_URL + "/assets/shops/1.png",
         title: "nike shop",
         id: 7,
+        url:
+          "https://develop.nasnav.org/files/shop360/pannellum/v3/index.html?autoLoad=true&shop_id=93",
       },
     ],
     ThreeSixtyViewData: {
@@ -167,7 +192,8 @@ class Homepage extends Component {
         {
           title: "A real store.",
           desc: "whole new buying experience that impresses users",
-          img: process.env.PUBLIC_URL + "/assets/DashobardOverview/planning.png",
+          img:
+            process.env.PUBLIC_URL + "/assets/DashobardOverview/planning.png",
         },
         {
           title: "Payment method",
@@ -182,7 +208,9 @@ class Homepage extends Component {
         {
           title: "Good UX",
           desc: "whole new buying experience that impresses users",
-          img: process.env.PUBLIC_URL + "/assets/DashobardOverview/problem-solving.png",
+          img:
+            process.env.PUBLIC_URL +
+            "/assets/DashobardOverview/problem-solving.png",
         },
         // {
         //   title: "On google",
@@ -241,14 +269,28 @@ class Homepage extends Component {
       ],
       bannerTitle: ["start selling on", "google for free"],
     },
-    showPopup:false
+    showPopup: false,
+    showMap: false,
+    MapShops: "",
   };
 
-  togglePopup = props => {
-       this.setState((prevState) => {
-         return { showPopup: !prevState.showPopup };
-       });
-  }
+  togglePopup = (props) => {
+    this.setState((prevState) => {
+      return { showPopup: !prevState.showPopup };
+    });
+  };
+  ShowMap = (searchQuery) => {
+    this.setState({
+      showMap: true,
+      MapShops: searchQuery,
+    });
+  };
+  CloseMap = (searchQuery) => {
+    this.setState({
+      showMap: false,
+      MapShops: searchQuery,
+    });
+  };
   render() {
     const {
       ShowcaseData,
@@ -263,14 +305,22 @@ class Homepage extends Component {
       ShopsData,
       MapData,
       OurPartnersData,
-      showPopup
+      showPopup,
+      showMap,
+      MapShops,
     } = this.state;
     return (
       <div>
         <PopupContainer open={showPopup} toggle={this.togglePopup} />
-
+        {showMap && <Stores close={this.CloseMap} name={MapShops} />}
         <FullScreenWrapper className={styles.HeaderFullSreen}>
-          <Header ShowcaseData={ShowcaseData} togglePopup={this.togglePopup} showPopup={showPopup}/>
+          <Header
+            Map={showMap}
+            ShowcaseData={ShowcaseData}
+            togglePopup={this.togglePopup}
+            showPopup={showPopup}
+            ShowMap={(searchQuery) => this.ShowMap(searchQuery)}
+          />
         </FullScreenWrapper>
         <FullScreenWrapper>
           <HeyNavBox data={HeynavBoxData} />
@@ -295,6 +345,7 @@ class Homepage extends Component {
         <YoutubeVideoSlide videoUrl="8V1LI_EwGUM" />
 
         <ThreeSixtyView data={ThreeSixtyViewData} shops={ShopsData} />
+        {/* <Panorama/> */}
         <FullScreenWrapper>
           <FullScreenWrapper>
             <Map

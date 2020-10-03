@@ -16,13 +16,14 @@ class Menu extends Component {
     this.setState({ showMenuSidebar: false });
   };
   render() {
-    const { white, showPopup } = this.props;
+    const { white, showPopup, showMap } = this.props;
     const { showMenuSidebar } = this.state;
     return (
       <React.Fragment>
         <MenuSidebar
           open={showMenuSidebar}
           showPopup={showPopup}
+          ShowMap={showMap}
           closed={this.showMenuSidebarClosedHandler}
         />
         <div className={styles.Menu}>

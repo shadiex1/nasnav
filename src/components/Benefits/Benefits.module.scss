@@ -7,19 +7,20 @@
   margin: auto;
   overflow: hidden;
   padding: 0 10px;
+  width: 80%;
   .description {
     h3 {
       color: $color-white;
       font-weight: 400;
       font-size: 30px;
-      width: 50%;
+      width: 70%;
       span {
         font-weight: bold;
         text-transform: capitalize;
       }
     }
     .sectionsContainer {
-      width: 80%;
+      width: 90%;
       .section {
         display: flex;
         align-items: center;

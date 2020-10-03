@@ -1,22 +1,29 @@
-import React from "react";
+import React, { Component } from "react";
 import styles from "./ThreeSixtyView.module.scss";
 import Shop from "./Shop/Shop";
 import Slider from "react-slick";
+import Panorama from "../Panorama/Panorama";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Arrow from "../Arrow/Arrow";
 
-const ThreeSixtyView = (props) => {
-  const sliderSettingsBuilder = (shopsLength) => ({
-    dragging: true,
+class ThreeSixtyView extends Component {
+   
+  state = {
+    videoUrl:"",
+  showPanorama:false
+}
+  render() {
+    const sliderSettingsBuilder = (shopsLength) => ({
+    // dragging: true,
     infinite: shopsLength > 3 ? true : false,
     autoplay: shopsLength > 3 ? true : false,
     speed: 500,
-    centerPadding: "60px",
+    // centerPadding: "60px",
     arrows: true,
     className: styles.slider,
     accessibility: true,
-    focusOnSelect: true,
+    // focusOnSelect: true,
     lazyLoad: "ondemand",
     slidesToShow: 6,
     // slidesToScroll: 1,
@@ -56,10 +63,21 @@ const ThreeSixtyView = (props) => {
         },
       },
     ],
-  });
-
-  const { shops, data } = props;
-
+    });
+    const TogglePanorama = (url) => {
+      this.setState({
+        videoUrl: url,
+        showPanorama:true
+      })
+    }
+    const closePanorama = () => {
+      this.setState({
+        videoUrl: "",
+        showPanorama:false
+      })
+    }
+  const { shops, data } = this.props;
+const { showPanorama, videoUrl } = this.state;
   return (
     <div className={styles.ThreeSixtyView}>
       <div className={styles.header}>
@@ -77,12 +95,16 @@ const ThreeSixtyView = (props) => {
               branchImg={shop.img}
               branchName={shop.title}
               id={shop.id}
+              clicked={()=>TogglePanorama(shop.url)}
             />
           ))}
         </Slider>
       </div>
+      {showPanorama && <Panorama close={()=>closePanorama()} url={videoUrl}/>}
     </div>
   );
+}
+  
 };
 
 export default ThreeSixtyView;

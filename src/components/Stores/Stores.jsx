@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 
-import FulscrnWrpr from "../../../Components/0//FulscrnWrpr/FulscrnWrpr";
-import StoresHeader from "../../../Components/0//StoresHeader/StoresHeader";
-import StoresSkeleton from "../../../Components/0//StoresSkeleton/StoresSkeleton";
-import Storelocator from "../../../Components/0//Storelocator/Storelocator";
-import StoresMap from "../../../Components/0//StoresMap/StoresMap";
+import FulscrnWrpr from "../FullScreenContainer/FullScreenWrapper";
+import StoresSkeleton from "./StoresSkeleton/StoresSkeleton";
+import Storelocator from "./StoreLocator/StoreLocator";
+import StoresMap from "./StoresMap/StoresMap";
 
-import Data from "../../../Services/Data";
 
 import * as styles from "./Stores.module.scss";
 
@@ -97,12 +95,10 @@ class Stores extends Component {
   };
 
   createMarkerPosition = ({ id, address, zoom = 15 }, mapPositions) => {
-    // console.log("@shop", id);
     const { latitude, longitude } = address;
     if (latitude && longitude) {
-      // console.log("@shop with lat and long", id);
       return {
-        logoUrl: "/img/themes/levis/mapsAndLocation.png",
+        logoUrl: `${process.env.PUBLIC_URL + "/assets/mapsAndLocation.png"}`,
         position: {
           lat: latitude,
           lng: longitude,
@@ -110,59 +106,50 @@ class Stores extends Component {
         },
       };
     }
-    const { shops } = this.props;
-    const shopNdx = shops.findIndex((shop) => shop.id === id);
-    return {
-      logoUrl: "/img/themes/levis/mapsAndLocation.png",
-      position: {
-        ...mapPositions[shopNdx % mapPositions.length],
-      },
-    };
+   
   };
 
-  //-----------------------------------------------------
 
   constructor(props) {
     super(props);
-    const { shops } = props;
-    const filteredShops = shops.filter((shop) => shop.name && shop.address);
+    const filteredShops = [];
     this.state = {
-      bcTagPath: [
-        { alias: "Home", type: "static", url: Data.getProperUrl() },
-        { alias: "Branches" },
-      ],
       shopsWithAddress: filteredShops,
       filteredShops: filteredShops,
       shopsFilter: "",
       selectedShop: undefined,
+      shops: [],
     };
   }
 
   componentDidMount() {
-    const { shops } = this.props;
+    const { name } = this.props;
+    const { shops } = this.state;
+    fetch(`https://backend.nasnav.org/navbox/location_shops?name=${name}`)
+      .then((res) => res.json())
+      .then((shops) => this.setState({ shops: shops }));
     this.checkForNewShops(shops);
   }
 
   componentDidUpdate() {
-    const { shops } = this.props;
+    const { name } = this.props;
+    const { shops } = this.state;
+    fetch(`https://backend.nasnav.org/navbox/location_shops?name=${name}`)
+      .then((res) => res.json())
+      .then((shops) => this.setState({ shops: shops }));
     this.checkForNewShops(shops);
+    console.log(shops);
   }
 
   render() {
-    const { bcTagPath, filteredShops, shopsFilter, selectedShop } = this.state;
-    const { organizationName } = this.props;
+    const { filteredShops, shopsFilter, selectedShop } = this.state;
+    const {close}=this.props
     const selectedShopMarker = selectedShop
       ? this.createMarkerPosition(selectedShop, mapPositions)
       : undefined;
 
     return (
       <div className={styles.Stores}>
-        {/* <FulscrnWrpr className={styles.storesHeaderWrpr}>
-          <StoresHeader
-            bcTagPath={bcTagPath}
-            organizationName={organizationName}
-          />
-        </FulscrnWrpr> */}
         <FulscrnWrpr className={styles.storelocatorWrpr}>
           <StoresSkeleton leftColumn={[0]}>
             <Storelocator
@@ -180,6 +167,9 @@ class Stores extends Component {
               mapElement={<div style={{ height: `100%` }} />}
             />
           </StoresSkeleton>
+          <div onClick={close} className={styles.overlay}>
+
+          </div>
         </FulscrnWrpr>
       </div>
     );

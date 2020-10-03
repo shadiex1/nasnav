@@ -24,7 +24,7 @@ class ContactForm extends Component {
         <h2 className={styles.title}>
           <span>Get</span> in touch with us now
         </h2>
-        <form  onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
             name="Name"
@@ -56,6 +56,7 @@ class ContactForm extends Component {
             onChange={this.handleChange}
             label="Subject"
             required
+            height="100px"
           />
           <button>Submit</button>
         </form>

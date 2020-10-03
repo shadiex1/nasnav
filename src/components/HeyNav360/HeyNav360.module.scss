@@ -2,7 +2,7 @@
 
 .HeyNav360 {
   display: flex;
-  // width: 100%;
+  width: 80%;
   margin: 4rem auto;
   padding: 0 10px;
   .description {
@@ -72,18 +72,18 @@
       }
       .gradientBtn {
         border-radius: 10px 10px 10px 0px;
-        background: linear-gradient(
-          90deg,
-          $color-primary 0%,
-          $color-txt-4 100%
-        );
-
+        // background: linear-gradient(
+        //   90deg,
+        //   $color-primary 0%,
+        //   $color-txt-4 100%
+        // );
+        background-color: $color-primary;
         color: $color-white;
       }
     }
   }
   .imgContainer {
-    width: 400px;
+    width: 600px;
     height: 280px;
     // object-fit: fill;
     background-position: center;
@@ -97,11 +97,11 @@
     margin-right: 10px;
     .mobileCover {
       position: relative;
-      transform: translateY(1.5rem);
+      transform: translateY(2rem);
       border-radius: 10px;
-      width: 300px;
+      width: 70%;
       height: 100%;
-      object-fit: contain;
+      // object-fit: contain;
       display: block;
       overflow: hidden;
     }
@@ -110,15 +110,15 @@
       position: absolute;
       transform: translateY(1.5rem);
       border-radius: 10px;
-      height: 250px;
-      object-fit: cover;
+      height: 220px;
+      object-fit: contain;
       display: block;
-      width: 180px;
+      width: 200px;
     }
   }
   @media screen and (max-width: 800px) {
     flex-direction: column;
-    // width: 100%;
+    width: 90%;
     .description {
       display: flex;
       flex-direction: column;
@@ -148,7 +148,7 @@
       margin-right: 0;
       margin: auto;
       .mobileScreen {
-        height: 250px;
+        height: 230px;
       }
     }
   }

@@ -8,14 +8,12 @@ class MenuSidebar extends Component {
   state = {
     showMenuSidebar: false,
   };
-  // componentDidMount() {
-  //   document.body.style.overflow = "auto";
-  // }
+
   componentDidUpdate() {
-    const { open, showPopup } = this.props;
-    if (open || showPopup) {
+    const { open, showPopup, showMap } = this.props;
+    if (open || showPopup || showMap) {
       document.body.style.overflow = "hidden";
-    }  else document.body.style.overflow = "unset";
+    } else document.body.style.overflow = "unset";
   }
   componentWillUnmount() {
 document.body.style.overflow = "auto";
