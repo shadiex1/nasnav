@@ -47,21 +47,22 @@ class Prices extends Component {
       PricesPlan: [
         {
           type: "Starter",
-          price: ["0", "GBP"],
+          price: ["Free"],
+          forever:true
         },
         {
           type: "Standard",
-          price: ["1500", "GBP"],
+          price: ["97", "$"],
 
         },
         {
           type: "Advanced",
-          price: ["3000", "GBP"],
+          price: ["190", "$"],
 
         },
         {
           type: "Elite",
-          price: ["10000", "GBP"],
+          price: ["637", "$"],
 
         },
       ],
@@ -116,13 +117,17 @@ class Prices extends Component {
           icons: 3,
         },
         {
-          title: "SMS/Push notification",
-          text: ["", "10,000", "20,000", "30,000"],
+          title: "Free SSL certificate",
+          icons: 2
         },
         {
-          title: "Custom Theme Support",
-          icons: 2,
+          title: "Custom Themes to brand needs",
+          icons: 1,
         },
+        {
+          title: "Additional fee",
+          text:["","2%","2%","To be agreed upon"]
+        }
       ],
       MobileData: {
         Starter: [

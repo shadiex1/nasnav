@@ -21,12 +21,20 @@ const PricesSheet = (props) => {
             {data.PricesPlan.map((plan) => (
               <div className={styles.plan}>
                 <p className={styles.title}>{plan.type}</p>
-                <span className={styles.price}>{plan.price[0]} <span className={styles.currency}>{plan.price[1]}</span></span>
-                <p className={styles.per}>Per month</p>
+                <span className={styles.price}>
+                  {plan.price[0]}{" "}
+                  <span className={styles.currency}>{plan.price[1]}</span>
+                </span>
+                {plan.forever ? (
+                  <p className={styles.per}>Forever</p>
+                ) : (
+                  <p className={styles.per}>Per month</p>
+                )}
 
                 <Link to="/getstarted" className={styles.getStarted}>
                   <img
-                    src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} alt="get started"
+                    src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"}
+                    alt="get started"
                   />{" "}
                   Get Started
                 </Link>
@@ -64,30 +72,6 @@ const PricesSheet = (props) => {
           );
         })}
       </div>
-      {/* <div className={styles.Services}>
-        <div className={styles.title}>
-          <p>Services</p>
-        </div>
-
-        {data.Features.map((feature) => {
-          return (
-            <div className={styles.feature}>
-              <p>{feature.title}</p>
-              <div className={styles.ticksParent}>
-                {[...Array(feature.icons)].map(
-                  (value = undefined, index = 4) => (
-                    <div className={styles.tickContainer}>
-                      <div className={styles.container}>
-                        <Check />
-                      </div>
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
-          );
-        })}
-      </div> */}
     </div>
   );
 };

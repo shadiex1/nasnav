@@ -8,6 +8,7 @@
   align-items: center;
   position: relative;
   z-index: 2;
+  height: 100vh;
   .searchbar {
     margin: 3rem auto 1rem auto;
     width: 45%;
@@ -141,24 +142,6 @@ position: relative;
   background-color: darken($color-primary, 10%);
 }
 
-// & img {
-//   position: relative;
-//   z-index: 3;
-//   max-width: 100%;
-//   width: auto;
-//   height: auto;
-// }
-
-// & span {
-//   display: block;
-//   position: relative;
-//   z-index: 3;
-//   width: 0;
-//   height: 0;
-//   border-left: 32px solid #fff;
-// 	border-top: 22px solid transparent;
-// 	border-bottom: 22px solid transparent;
-// }
 
 @keyframes pulse-border {
   0% {
@@ -182,25 +165,21 @@ position: relative;
       cursor: pointer;
       position: relative;
       z-index: 3;
-            // animation: blinker 5s linear infinite;
 
     }
 
-    @keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
+    
   }
   .gallery {
     display: flex;
     margin-top: 1rem;
     animation-name: startup;
     animation-duration: 5s;
+    transform: translateY(1rem);
     img {
       object-fit: contain;
-      width: 24rem;
-      height: 33rem;
+      width: 25rem;
+      height: 35rem;
       z-index: 2;
     }
     .sideLeft {
@@ -238,7 +217,7 @@ position: relative;
 }
 @keyframes slideRight {
   0% {
-    transform: translateX(-20rem) rotate(-22deg); //stacked
+    transform: translateX(-25rem) rotate(-22deg); //stacked
   }
 
   100% {
@@ -247,7 +226,7 @@ position: relative;
 }
 @keyframes slideLeft {
   0% {
-    transform: translateX(20rem) rotate(22deg); //stacked
+    transform: translateX(25rem) rotate(22deg); //stacked
   }
 
   100% {
