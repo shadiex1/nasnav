@@ -13,8 +13,11 @@ const PriceCard = (props) => {
             {header.price[0]}{" "}
             <span className={styles.currency}>{header.price[1]}</span>
           </span>
-
-          <span className={styles.per}>per month</span>
+          {header.forever ? (
+            <span className={styles.per}>Forever</span>
+          ) : (
+            <span className={styles.per}>Per month</span>
+          )}
         </div>
         <ul>
           {info[header.type].map((feature, i) => (
