@@ -68,7 +68,7 @@ class Showcase extends Component {
             src={data.screens.screenLeft}
             alt="mobile screen"
           />
-          <img src={data.screens.screenCenter} alt="mobile screen" />
+          <img src={data.screens.screenCenter} className={styles.center} alt="mobile screen" />
           <img
             className={styles.sideRight}
             src={data.screens.screenRight}

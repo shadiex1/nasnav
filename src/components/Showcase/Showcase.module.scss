@@ -106,57 +106,52 @@
     border-radius: 10px 10px 10px 0;
     background: linear-gradient(90deg, $color-primary 40%, $color-txt-4 130%);
     color: $color-white;
-position: relative;
+    position: relative;
 
-&:before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  display: block;
-  width: 2.3rem;
-  height: 2.1rem;
-  background: $color-primary;
-    border-radius: 10px 10px 10px 0;
-  animation: pulse-border 2000ms ease-out infinite;
-}
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      display: block;
+      width: 2.3rem;
+      height: 2.1rem;
+      background: $color-primary;
+      border-radius: 10px 10px 10px 0;
+      animation: pulse-border 2000ms ease-out infinite;
+    }
 
-&:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  display: block;
-  width: 2.5rem;
-  height: 2.3rem;
-  background: $color-primary;
-    border-radius: 10px 10px 10px 0;
-  transition: all 400ms;
-}
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      display: block;
+      width: 2.5rem;
+      height: 2.3rem;
+      background: $color-primary;
+      border-radius: 10px 10px 10px 0;
+      transition: all 400ms;
+    }
 
-&:hover:after {
-  background-color: darken($color-primary, 10%);
-}
+    &:hover:after {
+      background-color: darken($color-primary, 10%);
+    }
 
-
-@keyframes pulse-border {
-  0% {
-    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-    opacity: 0;
-  }
-}
-
-
-
-
+    @keyframes pulse-border {
+      0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+      }
+    }
 
     svg {
       width: 1.1rem;
@@ -165,10 +160,7 @@ position: relative;
       cursor: pointer;
       position: relative;
       z-index: 3;
-
     }
-
-    
   }
   .gallery {
     display: flex;
@@ -178,12 +170,14 @@ position: relative;
     transform: translateY(1rem);
     img {
       object-fit: contain;
-      width: 25rem;
-      height: 35rem;
-      z-index: 2;
+      width: 28rem;
+      height: 100%;
+      z-index: 2000;
+    }
+    .center {
+      width: 20rem;
     }
     .sideLeft {
-      // transform: translateX(20rem) rotate(22deg); //stacked
       transform: translateX(12rem) rotate(0); //left slide
 
       z-index: 1;
@@ -191,15 +185,10 @@ position: relative;
       animation-duration: 3s;
     }
     .sideRight {
-      // transform: translateX(-20rem) rotate(-22deg);//stacked
       transform: translateX(-12rem) rotate(0); // right slide
       animation-name: slideRight;
       animation-duration: 3s;
-      // animation-delay: 4s;
       z-index: 1;
-      &:hover {
-        transform: translateX(-12rem) rotate(0);
-      }
     }
   }
 }
@@ -235,34 +224,32 @@ position: relative;
 }
 
 @media screen and (max-width: 1000px) {
-    .Showcase {
+  .Showcase {
+    width: 100%;
+    .searchbar {
+      width: 50%;
+      margin: auto;
+      margin-bottom: 1rem;
+    }
+    .title {
       width: 100%;
-      .searchbar {
-        width: 50%;
-        margin: auto;
-        margin-bottom: 1rem;
-      }
-      .title {
+      h2 {
         width: 100%;
-        h2 {
-          width: 100%;
-        }
       }
     }
-  
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .Showcase {
-      .searchbar {
-        width: 80%;
-      }
-      .gallery {
-        img {
-          width: auto;
-          height: 27rem;
-        }
+  .Showcase {
+    .searchbar {
+      width: 80%;
+    }
+    .gallery {
+      img {
+        width: auto;
+        height: 23rem;
       }
     }
-  
+  }
 }
