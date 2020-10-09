@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styles from "./HeyNavTheme.module.scss";
 import { MagicIcon } from "../SvgIcons/SvgIcons";
-
+import Gif from "../gifs/02.gif"
 class HeyNavTheme extends Component {
   render() {
     const { data } = this.props;
@@ -54,7 +54,7 @@ class HeyNavTheme extends Component {
             className={styles.mobileCover}
           />
           <img
-            src={data.MobileScreen}
+            src={Gif}
             alt="mobile screen"
             className={styles.mobileScreen}
           />

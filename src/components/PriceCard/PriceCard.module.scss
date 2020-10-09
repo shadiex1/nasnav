@@ -17,13 +17,19 @@
   }
   .priceBox {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     margin: 2rem auto;
+    flex-direction: column;
     .price {
       color: $color-primary;
-      font-size: 45px;
+      font-size: 40px;
       font-weight: bold;
+      // display: flex;
+      // flex-direction: column;
+      .currency{
+        font-size: 20px;
+      }
     }
     .per {
       color: #769497;

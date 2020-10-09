@@ -5,6 +5,11 @@ import Menu from "../../components/Menu/Menu";
 import Gallery from "../../components/Gallery/Gallery";
 import Form from "../../components/Form/Form";
 import FullScreenWrapper from "../../components/FullScreenContainer/FullScreenWrapper";
+import Gif1 from "../../components/gifs/01.gif";
+import Gif2 from "../../components/gifs/02.gif";
+import Gif3 from "../../components/gifs/04.gif";
+
+
 class GetStarted extends Component {
   state = {
     GalleryData: [
@@ -13,21 +18,21 @@ class GetStarted extends Component {
         description:
           "You can simply get your website and all your products online and Google in minutes few",
         BackgroundCover: process.env.PUBLIC_URL + "/assets/layer-106.png",
-        img: process.env.PUBLIC_URL + "/assets/Gif sections/layer-107@3x.png",
+        img: Gif1,
       },
       {
         title: "Get your website with all the products for free ",
         description:
           "You can simply get your website and all your products online and Google in minutes few",
         BackgroundCover: process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-118.png",
-        img: process.env.PUBLIC_URL + "/assets/HeyNavTheme/layer-119.png",
+        img: Gif2,
       },
       {
         title: "Get your website with all the products for free ",
         description:
           "You can simply get your website and all your products online and Google in minutes few",
         BackgroundCover: process.env.PUBLIC_URL + "/assets/layer-106.png",
-        img: process.env.PUBLIC_URL + "/assets/Gif sections/layer-107@3x.png",
+        img: Gif3,
       },
     ],
   };

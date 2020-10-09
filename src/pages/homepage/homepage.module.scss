@@ -1,6 +1,12 @@
+
+@import "../../VariablesScss/variables";
+
 .HeaderFullSreen {
-  background-color: #f2f2ff;
-  position: relative;
+  background: url("/assets/Banner/layer-14-copy@3x.png"),$color-bg-2;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+    position: relative;
 }
 .HowToFullScrn {
   background: url("/assets/Banner/layer-14-copy@3x.png"),

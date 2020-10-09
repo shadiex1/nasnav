@@ -138,7 +138,6 @@ class Stores extends Component {
       .then((res) => res.json())
       .then((shops) => this.setState({ shops: shops }));
     this.checkForNewShops(shops);
-    console.log(shops);
   }
 
   render() {
@@ -163,7 +162,7 @@ class Stores extends Component {
               shopMarker={selectedShopMarker}
               googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
               loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ height: `400px` }} />}
+              containerElement={<div style={{ height: `540px` }} />}
               mapElement={<div style={{ height: `100%` }} />}
             />
           </StoresSkeleton>

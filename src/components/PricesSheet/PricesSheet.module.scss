@@ -8,7 +8,7 @@
   padding: 30px;
   position: relative;
   z-index: 4;
-  box-shadow: 0 0 8px -5px $color-black;
+  box-shadow: 0 0 6px -5px $color-black;
   .prices {
     .choose {
       display: flex;
@@ -67,8 +67,11 @@
         }
         .price {
           color: $color-primary;
-          font-size: 45px;
+          font-size: 40px;
           font-weight: bold;
+          .currency{
+            font-size: 20px;
+          }
         }
         .per {
           color: #769497;
@@ -149,7 +152,7 @@
       .tickContainer {
         display: flex;
         justify-content: center;
-        width: 33%;
+        width: 25%;
         .container {
           background-color: $color-primary;
           border-radius: 50%;

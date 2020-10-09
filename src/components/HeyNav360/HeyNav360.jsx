@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styles from "./HeyNav360.module.scss";
 import { MagicIcon } from "../SvgIcons/SvgIcons";
+import Gif from "../gifs/04.gif";
 
 class HeyNav360 extends Component {
   render() {
@@ -14,12 +15,21 @@ class HeyNav360 extends Component {
           </h2>
           <span className={styles.subtitle}>
             {data.subtitle}
-            <img src={process.env.PUBLIC_URL + "/assets/Gif sections/layer-104@3x.png"} alt="logo" />
+            <img
+              src={
+                process.env.PUBLIC_URL + "/assets/Gif sections/layer-104@3x.png"
+              }
+              alt="logo"
+            />
           </span>
           <p>{data.description}</p>
           <p className={styles.examples}>
             <span className={[styles.btn, styles.gradientBtn].join(" ")}>
-              <img src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"} alt="examples" /> See Examples
+              <img
+                src={process.env.PUBLIC_URL + "/assets/Menu/layer-2@3x.png"}
+                alt="examples"
+              />{" "}
+              See Examples
             </span>
           </p>
           <div className={styles.magic}>
@@ -33,7 +43,9 @@ class HeyNav360 extends Component {
 
         <div
           style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/layer-106.png"} )`,
+            backgroundImage: `url(${
+              process.env.PUBLIC_URL + "/assets/layer-124.png"
+            } )`,
           }}
           className={styles.imgContainer}
         >
@@ -43,7 +55,7 @@ class HeyNav360 extends Component {
             className={styles.mobileCover}
           />
           <img
-            src={data.img}
+            src={Gif}
             alt="mobile screen"
             className={styles.mobileScreen}
           />

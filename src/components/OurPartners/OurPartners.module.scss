@@ -1,7 +1,7 @@
 @import "../../VariablesScss/variables";
 
 .OurPartners {
-  // width: 100%;
+  width: 80%;
   margin: 1rem auto;
   padding: 0 10px;
   h3 {
@@ -48,7 +48,7 @@
       font-size: 30px;
       @media screen and (max-width: 800px) {
         font-size: 20px;
-        width: 70%;
+        width: 90%;
         text-align: center;
       }
       span {

@@ -20,6 +20,9 @@ height: 100vh;
   height: 100vh;
   z-index: 21;
   background-color: rgba(0,0,0,0.75);
+  @media screen and (max-width:600px){
+    height: 900px;
+  }
 }
   @media screen and (max-width: 640px) {
     .storesHeaderWrpr, .storelocatorWrpr {

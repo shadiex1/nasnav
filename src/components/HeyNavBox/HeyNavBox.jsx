@@ -6,6 +6,8 @@ import {
   MapIcon,
   MagicIcon,
 } from "../SvgIcons/SvgIcons";
+import Gif from "../gifs/01.gif";
+
 class HeyNavBox extends Component {
   render() {
     const { data } = this.props;
@@ -58,7 +60,7 @@ class HeyNavBox extends Component {
             className={styles.mobileCover}
           />
           <img
-            src={data.MobileScreen}
+            src={Gif}
             alt="mobile screen"
             className={styles.mobileScreen}
           />

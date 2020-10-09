@@ -229,7 +229,7 @@ class Homepage extends Component {
     },
     HowToData: {
       title: ["How to ge your products to the", "website?"],
-      firstSubtitle: "use a Navbox.",
+      firstSubtitle: "Use a Navbox.",
       firstParagraph:
         "A device that is linked to your website each scan that increasesyour appearance.",
       secondSubtitle: "Use a CSV File",

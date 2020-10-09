@@ -1,7 +1,7 @@
 @import "../../VariablesScss/variables";
 
 .NavBoxGrid {
-  width: 80%;
+  width: 70%;
   margin: auto;
   display: flex;
   align-items: center;
@@ -108,16 +108,31 @@
       }
     }
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     padding: 20px;
     flex-direction: column;
     width: 90%;
     .gridConainer {
-      width: auto;
-    }
-    .grid {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .grid {
       margin-bottom: 2rem;
+      width: 100%;
+      grid-template-columns: repeat(3, 120px);
+      justify-content: center;
+      div{
+        // width: 170px;
+      }
+       .topRight {
+        // height: 100px;
+      }
+      .bottomLeft {
+        // height: 100px;
+      }
     }
+    }
+    
     .description {
       display: flex;
       flex-direction: column;
@@ -132,7 +147,7 @@
     }
   }
   @media screen and (max-width:380px){
-    padding: 20px 10px;
+    padding: 20px 5px;
     width: auto;
     .gridConainer{
       justify-content: center;
@@ -140,6 +155,10 @@
             grid-template-columns: repeat(2, 120px);
 
     }
+    }
+    .description{
+      width: 90%;
+      padding: 0 10px;
     }
     
   }

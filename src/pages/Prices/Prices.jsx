@@ -46,40 +46,132 @@ class Prices extends Component {
     PriceSheetData: {
       PricesPlan: [
         {
-          type: "Free",
-          price: "$0",
+          type: "Starter",
+          price: ["0", "GBP"],
         },
         {
-          type: "Premium",
-          price: "$45",
+          type: "Standard",
+          price: ["1500", "GBP"],
+
         },
         {
-          type: "Enterprise",
-          price: "$65",
+          type: "Advanced",
+          price: ["3000", "GBP"],
+
+        },
+        {
+          type: "Elite",
+          price: ["10000", "GBP"],
+
         },
       ],
       Features: [
         {
-          title: "Credit and debit cards",
+          title: "Online store catalogue page",
+          icons: 4,
+        },
+        {
+          title: "Payment gateway facilitys with banks",
           icons: 3,
         },
         {
-          title: "International payments",
+          title: "Number of locations",
+          // icons: 2,
+          text: ["Unlimited", "Unlimited", "Unlimited", "Unlimited"],
+        },
+        {
+          title: "Online pick up from store ",
+          icons: 4,
+        },
+        {
+          title: "Delivery door to door",
+          icons: 3,
+        },
+        {
+          title: "Total number of products",
+          text: ["Unlimited", "Unlimited", "Unlimited", "Unlimited"],
+        },
+        {
+          title: "We sources product names and images",
+          text: ["1000", "2000", "4000", "Unlimited"],
+        },
+        {
+          title: "Data Entry assistance",
+          icons: 3,
+        },
+        {
+          title: "Promo code feature",
+          icons: 3,
+        },
+        {
+          title: "360 panorama showcase",
+          text: ["", "1-3 Store", "1-5 Store", "1-10 Store"],
+        },
+        {
+          title: "ERP Integrations",
           icons: 2,
         },
         {
-          title: "Card account updater",
-          icons: 2,
+          title: "Abandoned cart recovery",
+          icons: 3,
         },
         {
-          title: "Adaptive Acceptance",
-          icons: 2,
+          title: "SMS/Push notification",
+          text: ["", "10,000", "20,000", "30,000"],
         },
         {
-          title: "Local payment methods",
-          icons: 1,
+          title: "Custom Theme Support",
+          icons: 2,
         },
       ],
+      MobileData: {
+        Starter: [
+          "Online store catalogue page",
+          "Unlimited number of locations",
+          "Online pick up from store",
+          "we source product names and images",
+        ],
+        Standard: [
+          "Online store catalogue page",
+          "Payment gateway facilitys with banks",
+          "Unlimited number of locations",
+          "Online pick up from store",
+          "Delivery door to door",
+          "Unlimited number of products",
+          "we source product names and images",
+          "Data entry assistance",
+          "Promo code feature",
+          "Abandoned cart recovery",
+        ],
+        Advanced: [
+          "Online store catalogue page",
+          "Payment gateway facilitys with banks",
+          "Unlimited number of locations",
+          "Online pick up from store",
+          "Delivery door to door",
+          "Unlimited number of products",
+          "we source product names and images",
+          "Data entry assistance",
+          "Promo code feature",
+          "ERP Integrations",
+          "Abandoned cart recovery",
+          "Custom Theme Support",
+        ],
+        Elite: [
+          "Online store catalogue page",
+          "Payment gateway facilitys with banks",
+          "Unlimited number of locations",
+          "Online pick up from store",
+          "Delivery door to door",
+          "Unlimited number of products",
+          "we source product names and images",
+          "Data entry assistance",
+          "Promo code feature",
+          "ERP Integrations",
+          "Abandoned cart recovery",
+          "Custom Theme Support",
+        ],
+      },
     },
   };
   updateDimensions() {
@@ -113,8 +205,12 @@ class Prices extends Component {
           <EllipseContainer />
           {width <= 1200 ? (
             <div className={styles.priceCardsContainer}>
-              {PriceSheetData.PricesPlan.map((plan,i) => (
-                <PriceCard key={i}  header={plan} info={PriceSheetData.Features} />
+              {PriceSheetData.PricesPlan.map((plan, i) => (
+                <PriceCard
+                  key={i}
+                  header={plan}
+                  info={PriceSheetData.MobileData}
+                />
               ))}
             </div>
           ) : (
@@ -122,7 +218,10 @@ class Prices extends Component {
           )}
         </FullScreenWrapper>
         <FullScreenWrapper className={styles.map}>
-          <Map mapImg={process.env.PUBLIC_URL + "/assets/Map/map.png"} data={MapData} />
+          <Map
+            mapImg={process.env.PUBLIC_URL + "/assets/Map/map.png"}
+            data={MapData}
+          />
           <OurPartners data={OurPartnersData} />
           <Footer />
         </FullScreenWrapper>

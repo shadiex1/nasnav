@@ -21,7 +21,7 @@ const PricesSheet = (props) => {
             {data.PricesPlan.map((plan) => (
               <div className={styles.plan}>
                 <p className={styles.title}>{plan.type}</p>
-                <span className={styles.price}>{plan.price}</span>
+                <span className={styles.price}>{plan.price[0]} <span className={styles.currency}>{plan.price[1]}</span></span>
                 <p className={styles.per}>Per month</p>
 
                 <Link to="/getstarted" className={styles.getStarted}>
@@ -38,7 +38,7 @@ const PricesSheet = (props) => {
 
       <div className={styles.Services}>
         <div className={styles.title}>
-          <p>User interface</p>
+          <p>Services</p>
         </div>
 
         {data.Features.map((feature) => {
@@ -46,21 +46,25 @@ const PricesSheet = (props) => {
             <div className={styles.feature}>
               <p>{feature.title}</p>
               <div className={styles.ticksParent}>
-                {[...Array(feature.icons)].map(
-                  (value = undefined, index = 4) => (
-                    <div className={styles.tickContainer}>
-                      <div className={styles.container}>
-                        <Check />
-                      </div>
-                    </div>
-                  )
-                )}
+                {feature.icons
+                  ? [...Array(feature.icons ? feature.icons : 4)].map(
+                      (value = undefined, index = 4) => (
+                        <div className={styles.tickContainer}>
+                          <div className={styles.container}>
+                            <Check />
+                          </div>
+                        </div>
+                      )
+                    )
+                  : feature.text.map((choice) => (
+                      <div className={styles.tickContainer}>{choice}</div>
+                    ))}
               </div>
             </div>
           );
         })}
       </div>
-      <div className={styles.Services}>
+      {/* <div className={styles.Services}>
         <div className={styles.title}>
           <p>Services</p>
         </div>
@@ -83,7 +87,7 @@ const PricesSheet = (props) => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 };
