@@ -84,7 +84,7 @@
     //  width: 600px;
     width: 70%;
 
-    // height: 400px;
+    height: 400px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -130,9 +130,10 @@ padding: 0 10px;
       }
     }
     .imgContainer {
-      margin-bottom: 2rem;
       margin: auto;
-      width: 80%;
+      width: 80%;      
+      margin-bottom: 2rem;
+
       .mobileCover {
         width: 280px;
         transform: translateY(2rem);
