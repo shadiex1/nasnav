@@ -2,9 +2,11 @@
 .Form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 100px;
   width: calc(45% - 100px);
 // height: 100vh;
+height: 100vh;
   .title {
     text-align: center;
     font-weight: 400;
@@ -28,5 +30,6 @@
   @media screen and (max-width: 1000px) {
     width: auto;
     padding:  20px;
+    height: auto;
   }
 }
