@@ -1,13 +1,9 @@
 @import "../../VariablesScss/variables";
 
 .Header {
-
-  height: 900px;
+height: 900px;
+  // max-height: 900px;
   overflow: hidden;
   width: 100%;
 }
-@media screen and (max-width: 1000px) {
-  .Header {
-    height: 850px;
-  }
-}
+

@@ -7,7 +7,7 @@ import Form from "../../components/Form/Form";
 import FullScreenWrapper from "../../components/FullScreenContainer/FullScreenWrapper";
 import Gif1 from "../../components/gifs/01.gif";
 import Gif2 from "../../components/gifs/02.gif";
-import Gif3 from "../../components/gifs/04.gif";
+// import Gif3 from "../../components/gifs/04.gif";
 
 
 class GetStarted extends Component {
@@ -32,7 +32,7 @@ class GetStarted extends Component {
         description:
           "You can simply get your website and all your products online and Google in minutes few",
         BackgroundCover: process.env.PUBLIC_URL + "/assets/layer-106.png",
-        img: Gif3,
+        img: Gif1,
       },
     ],
   };
