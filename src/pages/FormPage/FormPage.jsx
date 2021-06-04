@@ -127,7 +127,7 @@ class FormPage extends Component {
       ).selected = true; //add green selection
     }
 
-    console.log(current.answer, "answer");
+    // console.log(current.answer, "answer");
     if (prevQuestion.checked && current.checked) {
       if (!nextQuestion) {
         this.setState({
@@ -200,7 +200,7 @@ class FormPage extends Component {
           ))}
         </div>
         <div className={styles.next} ref={this.NextBtnRef}>
-          {nextBtn && <button className={styles.btn}>finish</button>}
+          {nextBtn && <Link to="/" className={styles.btn}>finish</Link>}
         </div>
       </div>
     );

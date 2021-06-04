@@ -15,18 +15,14 @@ class ThreeSixtyView extends Component {
 }
   render() {
     const sliderSettingsBuilder = (shopsLength) => ({
-    // dragging: true,
     infinite: shopsLength > 3 ? true : false,
     autoplay: shopsLength > 3 ? true : false,
     speed: 500,
-    // centerPadding: "60px",
     arrows: true,
     className: styles.slider,
     accessibility: true,
-    // focusOnSelect: true,
     lazyLoad: "ondemand",
     slidesToShow: 6,
-    // slidesToScroll: 1,
     prevArrow: <Arrow />,
     nextArrow: <Arrow rotate />,
     responsive: [

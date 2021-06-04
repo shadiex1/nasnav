@@ -11,7 +11,7 @@ const Shop = (props) => {
         <button
           className={[styles.Shop, !inView && styles.hidden].join(" ")}
           ref={ref}
-          onClick={clicked}
+          // onClick={clicked}
         >
           <div className={styles.innerContainer}>
             <img src={branchImg} alt="branch" />

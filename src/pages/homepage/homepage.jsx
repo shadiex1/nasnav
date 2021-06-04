@@ -212,11 +212,7 @@ class Homepage extends Component {
             process.env.PUBLIC_URL +
             "/assets/DashobardOverview/problem-solving.png",
         },
-        // {
-        //   title: "On google",
-        //   desc: "whole new buying experience that impresses users",
-        //   img: process.env.PUBLIC_URL + "/assets/DashobardOverview/flow.png",
-        // },
+      
       ],
     },
     HeyNav360Data: {
@@ -291,6 +287,12 @@ class Homepage extends Component {
       MapShops: searchQuery,
     });
   };
+  componentDidUpdate() {
+    if (this.state.showMap) {
+      document.body.style.overflow = "hidden";
+    } else document.body.style.overflow = "unset";
+  }
+
   render() {
     const {
       ShowcaseData,
@@ -342,8 +344,7 @@ class Homepage extends Component {
         <FullScreenWrapper className={styles.HowToFullScrn}>
           <DashboardOverview data={DashboardOverviewData} />
         </FullScreenWrapper>
-        <YoutubeVideoSlide videoUrl="8V1LI_EwGUM" />
-
+        <YoutubeVideoSlide videoUrl="lS8_fhPqApY" />
         <ThreeSixtyView data={ThreeSixtyViewData} shops={ShopsData} />
         {/* <Panorama/> */}
         <FullScreenWrapper>

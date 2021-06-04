@@ -1,6 +1,6 @@
 .FormPage {
   width: 100%;
-  background: url("/assets/Banner/layer-14-copy@3x.png"),
+  background: url("/nasnav/assets/Banner/layer-14-copy@3x.png"),
      rgba(75, 68, 255, 1) ;
   background-size: cover;
   background-position: center/top;
@@ -68,16 +68,24 @@
   .btn {
     width: 180px;
     height: 50px;
-    display: block;
-    background-color: #13d79d;
+    background-color: white;
     border-radius: 20px;
     border: none;
     outline: none;
     margin-top: 3rem;
-    color: white;
+    color: black;
     cursor: pointer;
     justify-self: end;
     text-transform: capitalize;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+      background-color: #13d79d;
+      color: white;
+    }
   }
   @media screen and (max-width: 1000px) {
     .header {

@@ -122,23 +122,23 @@ class Stores extends Component {
     };
   }
 
-  componentDidMount() {
-    const { name } = this.props;
-    const { shops } = this.state;
-    fetch(`https://backend.nasnav.org/navbox/location_shops?name=${name}`)
-      .then((res) => res.json())
-      .then((shops) => this.setState({ shops: shops }));
-    this.checkForNewShops(shops);
-  }
+  // componentDidMount() {
+  //   const { name } = this.props;
+  //   const { shops } = this.state;
+  //   fetch(`https://backend.nasnav.org/navbox/location_shops?name=${name}`)
+  //     .then((res) => res.json())
+  //     .then((shops) => this.setState({ shops: shops }));
+  //   this.checkForNewShops(shops);
+  // }
 
-  componentDidUpdate() {
-    const { name } = this.props;
-    const { shops } = this.state;
-    fetch(`https://backend.nasnav.org/navbox/location_shops?name=${name}`)
-      .then((res) => res.json())
-      .then((shops) => this.setState({ shops: shops }));
-    this.checkForNewShops(shops);
-  }
+  // componentDidUpdate() {
+  //   const { name } = this.props;
+  //   const { shops } = this.state;
+  //   fetch(`https://backend.nasnav.org/navbox/location_shops?name=${name}`)
+  //     .then((res) => res.json())
+  //     .then((shops) => this.setState({ shops: shops }));
+  //   this.checkForNewShops(shops);
+  // }
 
   render() {
     const { filteredShops, shopsFilter, selectedShop } = this.state;

@@ -10,7 +10,7 @@ class PopupContainer extends Component {
         <div className={styles.PopupContainer}>
           <div onClick={toggle} className={styles.overlay}></div>
           <div className={styles.videoContainer}>
-            <YoutubeVideoSlide videoUrl="8V1LI_EwGUM" />
+            <YoutubeVideoSlide videoUrl="lS8_fhPqApY" />
           </div>
         </div>
       )
